@@ -25,6 +25,8 @@ class TypeWriter {
     let typeSpeed = this.isDeleting ? this.deleteSpeed : this.speed;
 
     if (!this.isDeleting && this.charIndex === currentText.length) {
+      //remove cursor when typing is complete
+      this.element.classList.add("typing-complete");
       return;
     } else if (this.isDeleting && this.charIndex === 0) {
       this.isDeleting = false;

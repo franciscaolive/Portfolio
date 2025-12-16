@@ -203,6 +203,11 @@ body {
   min-height: 1.2em;
 }
 
+.typing-text.typing-complete {
+  border-right: none;
+  animation: none;
+}
+
 .hero-subheader {
   font-size: 1.4rem;
   color: var(--text-secondary);
