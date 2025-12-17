@@ -17,6 +17,7 @@
   position: relative;
   font-family: "Inter", sans-serif;
   letter-spacing: 0.3px;
+  user-select: none;
 }
 
 .lang-btn:hover::after {

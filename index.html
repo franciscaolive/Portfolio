@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/language-switcher.css" />
+    <link rel="stylesheet" href="styles/carousel.css" />
   </head>
   <body>
     <header class="header">
@@ -160,6 +161,69 @@
       <section id="projects" class="projects-section">
         <div class="section-content">
           <h2 class="section-title" data-i18n="projectsTitle">projetos</h2>
+
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="assets/images/placeholder1.jpg" alt="Slide 1" />
+              <div class="slide-caption">
+                <h3 class="slide-title" data-i18n="slide1Title">
+                  melhor projeto 1
+                </h3>
+                <p class="slide-description" data-i18n="slide1Desc">
+                  explicaçao
+                </p>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/images/placeholder2.jpg" alt="Slide 2" />
+              <div class="slide-caption">
+                <h3 class="slide-title" data-i18n="slide2Title">
+                  melhor projeto 2
+                </h3>
+                <p class="slide-description" data-i18n="slide2Desc">
+                  explicaçao
+                </p>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/images/placeholder3.jpg" alt="Slide 3" />
+              <div class="slide-caption">
+                <h3 class="slide-title" data-i18n="slide3Title">
+                  melhor projeto 3
+                </h3>
+                <p class="slide-description" data-i18n="slide3Desc">
+                  explicaçao
+                </p>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/images/placeholder4.jpg" alt="Slide 4" />
+              <div class="slide-caption">
+                <h3 class="slide-title" data-i18n="slide4Title">
+                  melhor projeto 4
+                </h3>
+                <p class="slide-description" data-i18n="slide4Desc">
+                  explicaçao
+                </p>
+              </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <div
+            style="text-align: center; margin-top: -10px; margin-bottom: 30px"
+          >
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+
           <div class="projects-grid">
             <div class="project-card">
               <img src="assets/images/capinha.png" alt="Kit de Sobrevivência" />
@@ -235,6 +299,7 @@
     <script src="js/theme-toggle.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/typing.js"></script>
+    <script src="js/slideshow.js"></script>
     <script src="js/smooth-scroll.js"></script>
   </body>
 </html>

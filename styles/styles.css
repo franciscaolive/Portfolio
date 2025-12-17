@@ -46,6 +46,16 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: transparent;
+}
+
+button,
+a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background: var(--bg-primary);
@@ -110,6 +120,7 @@ body {
   text-transform: lowercase;
   letter-spacing: 0.3px;
   transition: color 0.3s ease;
+  user-select: none;
 }
 
 .navbar-links a:hover {
@@ -429,7 +440,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
