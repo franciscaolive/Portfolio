@@ -8,11 +8,11 @@ const translations = {
     projectsTitle: "projetos",
     gradYear: "2025 - Presente",
     gradTitle: "Mestrado em Multimédia",
-    gradInstitution: "Faculdade de Engenharia da Universidade do Porto",
+    gradInstitution: "Faculdade de Engenharia da Universidade do Porto - FEUP",
     bachelorYear: "2022 - 2025",
     bachelorTitle: "Licenciatura em Multimédia",
     bachelorInstitution:
-      "Escola Superior de Media Artes e Design, Politécnico do Porto",
+      "Escola Superior de Media Artes e Design, Politécnico do Porto - ESMAD",
     highschoolYear: "2019 - 2022",
     highschoolTitle: "Ensino Secundário",
     highschoolInstitution:
@@ -47,11 +47,11 @@ const translations = {
     projectsTitle: "projects",
     gradYear: "2025 - Present",
     gradTitle: "Master's Degree in Multimedia",
-    gradInstitution: "Faculty of Engineering, University of Porto",
+    gradInstitution: "Faculty of Engineering, University of Porto - FEUP",
     bachelorYear: "2022 - 2025",
     bachelorTitle: "Bachelor's Degree in Multimedia",
     bachelorInstitution:
-      "School of Media Arts and Design, Polytechnic of Porto",
+      "School of Media Arts and Design, Polytechnic of Porto - ESMAD",
     highschoolYear: "2019 - 2022",
     highschoolTitle: "High School",
     highschoolInstitution: "Rocha Peixoto Secondary School, Póvoa de Varzim",
