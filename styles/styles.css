@@ -100,9 +100,7 @@ body {
 
 .cursor-follower.hover {
   opacity: 0.6;
-}
-  transform: scale(1.4);
-  opacity: 0.4;
+  transform: scale(1.4) nj;
 }
 
 @media (max-width: 768px) {
