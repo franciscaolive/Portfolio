@@ -13,17 +13,17 @@
 }
 
 :root[data-theme="dark"] {
-  --bg-primary: #1a2332;
-  --bg-secondary: #0f1419;
-  --text-primary: #f0f0f0;
-  --text-secondary: #b8c5d6;
-  --accent-color: #7b9bb8;
-  --accent-secondary: #b8c5d6;
-  --border-color: #2d3748;
-  --card-bg: #232f42;
-  --card-hover: #2a3a52;
-  --header-bg: rgba(26, 35, 50, 0.95);
-  --overlay-bg: rgba(26, 35, 50, 0.95);
+  --bg-primary: #212830;
+  --bg-secondary: #181d23;
+  --text-primary: #e6edf3;
+  --text-secondary: #9198a1;
+  --accent-color: #8b9d83;
+  --accent-secondary: #6b7c63;
+  --border-color: #30363d;
+  --card-bg: #2d333b;
+  --card-hover: #373e47;
+  --header-bg: rgba(33, 40, 48, 0.95);
+  --overlay-bg: rgba(33, 40, 48, 0.95);
 }
 
 :root {
