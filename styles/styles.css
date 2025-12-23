@@ -252,6 +252,22 @@ body {
   gap: 16px;
 }
 
+.ascii-art {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--accent-color);
+  opacity: 0.8;
+  margin-bottom: 20px;
+  white-space: pre;
+  text-align: left;
+  transition: opacity 0.3s ease;
+}
+
+.ascii-art:hover {
+  opacity: 1;
+}
+
 .typing-text {
   font-size: 3rem;
   color: var(--accent-color);
