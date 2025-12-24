@@ -35,6 +35,7 @@ const translations = {
     project3: "Projeto 3",
     project4: "Projeto 4",
     project5: "Projeto 5",
+    project6: "Projeto 6",
   },
   en: {
     about: "about me",
@@ -71,6 +72,7 @@ const translations = {
     project3: "Project 3",
     project4: "Project 4",
     project5: "Project 5",
+    project6: "Project 6",
   },
 };
 
