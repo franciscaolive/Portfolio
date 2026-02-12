@@ -1,4 +1,4 @@
-### portfolio ⋆.ೃ࿔\･*:･
+### portfolio ⋆.ೃ࿔*:･
 
 My personal Portfolio showcasing my work.
 

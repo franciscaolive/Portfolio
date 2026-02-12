@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Francisca Miranda</title>
+        <link rel="stylesheet" href="src/styles/main.css">
+    </head>
+    <body>
+        <!-- fixed frmae -->
+        <div class="frame-top"></div>
+        <div class="frame-right"></div>
+        <div class="frame-bottom"></div>
+        <div class="frame-left"></div>
+        
+        <nav>
+            <div class="nav-left">
+                <a href="#home" class="active">home</a>
+                <a href="#about">about me</a>
+                <a href="#projects">projects</a>
+            </div>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button>português</button>
+                    <span>/</span>
+                    <button>english</button>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <img src="src/assets/icons/moonLightMode.png" alt="Theme toggle" class="theme-icon">
+                </button>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/francisca-miranda-18702b347" target="_blank" aria-label="LinkedIn">
+                        <img src="src/assets/icons/linkedinLightMode.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://github.com/franciscaolive" target="_blank" aria-label="GitHub">
+                        <img src="src/assets/icons/githubLightMode.png" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href="mailto:franciscaolivmir@email.com" aria-label="Email">
+                        <img src="src/assets/icons/emailLightMode.png" alt="Email" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <section id="home" class="hero-section">
+            <div class="name-text">Francisca Oliveira Miranda</div>
+            <div class="portfolio-text">Portfolio</div>
+            <div class="subtitle-text">designer & developer</div>
+            <a href="#projects" class="view-projects-btn">View Projects</a>
+        </section>
+        
+        <section id="about" class="about-section">
+            <div class="about-header">
+                <h2 class="about-title">About Me</h2>
+                <div class="separator-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="about-text">
+                        <p>I’m a 21-year-old <strong>designer</strong> and <strong>developer</strong> from <strong>Porto, Portugal</strong>. In 2025, I completed my Bachelor’s degree in Multimedia at ESMAD - Escola Superior de Media Artes e Design. I’m <strong>currently pursuing a Master’s degree</strong> in Multimedia at FEUP - Faculdade de Engenharia da Universidade do Porto.</p>
+                        <p>My work centers around design and game development, within the broader landscape of multimedia. With foundations in both art and technology, I am passionate abbout creating innovative ways to merge the two.</p>
+                    </div>
+                </div>
+                
+                <div class="about-right">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <strong>Design:</strong> Illustrator, Photoshop, InDesign, Figma, Procreate
+                        </div>
+                        <div class="skill-category">
+                            <strong>Video:</strong> After Effects, Premiere Pro, DaVinci Resolve, Final Cut Pro
+                        </div>
+                        <div class="skill-category">
+                            <strong>3D:</strong> Maya, Blender, Motion Builder
+                        </div>
+                        <div class="skill-category">
+                            <strong>Games:</strong> Unity, Godot
+                        </div>
+                        <div class="skill-category">
+                            <strong>Development:</strong> JavaScript, Java, C#, GDScript
+                        </div>
+                    </div>
+                    <h2 class="skillset-title">Skillset</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="projects-header">
+                <div class="separator-line"></div>
+                <h2 class="projects-title">Projects</h2>
+            </div>
+            
+            <div class="slideshow-container">
+                <button class="slideshow-arrow slideshow-arrow-left" aria-label="Previous slide">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M25 10 L15 20 L25 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="slideshow-content">
+                    <div class="slide active">
+                        <img src="src/assets/images/" alt="Project 1">
+                        <div class="slide-info">
+                            <h3>destaque</h3>
+                            <p>descrição</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="src/assets/images/" alt="Project 2">
+                        <div class="slide-info">
+                            <h3>destaque</h3>
+                            <p>descri</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="src/assets/images/" alt="Project 3">
+                        <div class="slide-info">
+                            <h3>descri</h3>
+                            <p>descri</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="slideshow-arrow slideshow-arrow-right" aria-label="Next slide">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M15 10 L25 20 L15 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="slide-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="src/assets/images/" alt="Gallery item 1">
+                    <div class="gallery-info">
+                        <h4>proj1</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="src/assets/images/" alt="Gallery item 2">
+                    <div class="gallery-info">
+                        <h4>proj2</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="src/assets/images/" alt="Gallery item 3">
+                    <div class="gallery-info">
+                        <h4>proj3</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="src/scripts/main.js"></script>
+    </body>
+</html>

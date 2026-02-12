@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "home",
+    "about": "about me",
+    "projects": "projects"
+  },
+  "hero": {
+    "title": "Portfolio",
+    "subtitle": "designer & developer",
+    "cta": "View Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": [
+      "I'm a 21-year-old <strong>designer</strong> and <strong>developer</strong> from <strong>Porto, Portugal</strong>. In 2025, I completed my Bachelor's degree in Multimedia at ESMAD - Escola Superior de Media Artes e Design. I'm <strong>currently pursuing a Master's degree</strong> in Multimedia at FEUP - Faculdade de Engenharia da Universidade do Porto.",
+      "My work centers around <strong>design and game development</strong>, within the broader landscape of multimedia. With foundations in both art and technology, I am passionate about creating innovative ways to merge the two."
+    ],
+    "skillsetTitle": "Skillset",
+    "skills": {
+      "design": "Design: Illustrator, Photoshop, InDesign, Figma, Procreate",
+      "video": "Video: After Effects, Premiere Pro, DaVinci Resolve, Final Cut Pro",
+      "3d": "3D: Maya, Blender, Motion Builder",
+      "games": "Games: Unity, Godot",
+      "development": "Development: JavaScript, Java, C#, GDScript"
+    }
+  }
+}

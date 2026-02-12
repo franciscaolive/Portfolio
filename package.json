@@ -1,0 +1,26 @@
+{
+  "name": "kikinha-gameplays",
+  "version": "0.1.0",
+  "description": "Portfolio",
+  "scripts": {
+    "dev": "serve -l 4173 .",
+    "preview": "serve -s .",
+    "lint": "echo 'No lint step yet'",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscaolive/Portfolio"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Francisca Miranda",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
