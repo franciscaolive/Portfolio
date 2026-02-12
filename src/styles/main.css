@@ -1,3 +1,7 @@
+/* fffaf4 - light mode
+9caf88 - green
+3b3a39 - dark mode */
+
 @font-face {
     font-family: 'PPEditorial';
     src: url('../assets/fonts/PPEditorialOld-Ultralight.otf') format('opentype');
@@ -363,7 +367,7 @@ nav {
 
 .projects-section {
     min-height: 100vh;
-    padding: 4rem 5rem 6rem 5rem;
+    padding: 4rem 5rem 3.5rem 5rem;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
@@ -635,7 +639,7 @@ body.dark-mode .gallery-item {
     }
 
     .projects-section {
-        padding: 3rem 2.5rem 5rem;
+        padding: 3rem 2.5rem 3.5rem;
         --projects-width: 900px;
     }
 
@@ -707,7 +711,7 @@ body.dark-mode .gallery-item {
 
     .projects-section {
         --projects-width: 100%;
-        padding: 3rem 1.75rem 4.5rem;
+        padding: 3rem 1.75rem 3.5rem;
     }
 
     .projects-header {
@@ -790,7 +794,7 @@ body.dark-mode .gallery-item {
     }
 
     .projects-section {
-        padding: 3rem 1.25rem 4rem;
+        padding: 3rem 1.25rem 3rem;
     }
 
     .projects-title {
@@ -875,7 +879,7 @@ body.dark-mode .gallery-item {
 .footer {
     background-color: #fffaf4;
     padding: 2.5rem 4rem;
-    margin: 4rem 10px 10px 10px;
+    margin: 2rem 10px 4px 10px;
     text-align: center;
     transition: background-color 0.5s ease-in-out;
 }
@@ -898,7 +902,7 @@ body.dark-mode .footer-text {
 @media (max-width: 768px) {
     .footer {
         padding: 2rem 2rem;
-        margin: 3rem 10px 10px 10px;
+        margin: 2rem 10px 4px 10px;
     }
 
     .footer-text {
@@ -909,7 +913,7 @@ body.dark-mode .footer-text {
 @media (max-width: 540px) {
     .footer {
         padding: 1.5rem 1rem;
-        margin: 2.5rem 10px 10px 10px;
+        margin: 2rem 10px 4px 10px;
     }
 
     .footer-text {
