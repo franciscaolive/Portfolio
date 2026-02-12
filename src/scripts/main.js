@@ -110,6 +110,12 @@ function updateLanguage(lang) {
         skillCategories[4].innerHTML = t.about.skills.development.replace(/^(.*?):/, '<strong>$1:</strong>');
     }
     
+    //update footer
+    const footerText = document.querySelector('.footer-text');
+    if (footerText && t.footer) {
+        footerText.textContent = t.footer.copyright;
+    }
+    
     //update which language button is highlighted as active
     document.querySelectorAll('.language-toggle button').forEach(btn => {
         btn.classList.remove('active');

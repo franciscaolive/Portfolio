@@ -863,7 +863,56 @@ body.dark-mode .gallery-item {
         font-size: 1.4rem;
     }
 
+    .slide-info h3 {
+        font-size: 1.4rem;
+    }
+
     .slide-info p {
         font-size: 1rem;
+    }
+}
+
+.footer {
+    background-color: #fffaf4;
+    padding: 2.5rem 4rem;
+    margin: 4rem 10px 10px 10px;
+    text-align: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+body.dark-mode .footer {
+    background-color: #3b3a39;
+}
+
+.footer-text {
+    font-family: 'PPEditorial', serif;
+    font-size: 1.1rem;
+    color: #333;
+    transition: color 0.5s ease-in-out;
+}
+
+body.dark-mode .footer-text {
+    color: #fffaf4;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 2rem;
+        margin: 3rem 10px 10px 10px;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer {
+        padding: 1.5rem 1rem;
+        margin: 2.5rem 10px 10px 10px;
+    }
+
+    .footer-text {
+        font-size: 0.95rem;
     }
 }

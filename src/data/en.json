@@ -23,5 +23,8 @@
       "games": "Games: Unity, Godot",
       "development": "Development: JavaScript, Java, C#, GDScript"
     }
+  },
+  "footer": {
+    "copyright": "© 2026 | Francisca Oliveira Miranda"
   }
 }
