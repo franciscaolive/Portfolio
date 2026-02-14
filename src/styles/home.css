@@ -90,7 +90,7 @@ body.dark-mode .view-projects-btn {
     text-decoration: underline;
     text-underline-offset: 4px;
     transition: color 0.3s ease;
-    text-transform: uppercase;
+    text-transform:capitalize;
 }
 
 .cv-link:hover {
