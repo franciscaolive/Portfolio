@@ -90,6 +90,7 @@ body.dark-mode .view-projects-btn {
     text-decoration: underline;
     text-underline-offset: 4px;
     transition: color 0.3s ease;
+    text-transform: uppercase;
 }
 
 .cv-link:hover {
@@ -121,7 +122,7 @@ body.dark-mode .cv-link {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 2.5rem;
-    align-items: start;
+    align-items: end;
 }
 
 .about-left {
@@ -151,6 +152,7 @@ body.dark-mode .cv-link {
     max-width: 280px;
     justify-self: end;
     left: -60px;
+    margin-top: 0;
 }
 
 .skillset-title {
