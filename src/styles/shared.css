@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'PPEditorial';
+    src: url('../assets/fonts/PPEditorialOld-Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Compendium';
+    src: url('../assets/fonts/Compendium W00 Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fffaf4;
+    font-family: 'PPEditorial', serif;
+    position: relative;
+    color: #333;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+body.dark-mode {
+    background-color: #3b3a39;
+    color: #fffaf4;
+}
+
+body.dark-mode nav {
+    background-color: #3b3a39;
+}
+
+body.dark-mode .nav-left a,
+body.dark-mode .language-toggle button,
+body.dark-mode .language-toggle span {
+    color: #fffaf4;
+}
+
+.frame-top,
+.frame-right,
+.frame-bottom,
+.frame-left {
+    position: fixed;
+    background-color: #9caf88;
+    z-index: 9999;
+}
+
+.frame-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.frame-right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+}
+
+.frame-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.frame-left {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #fffaf4;
+    z-index: 100;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.nav-left {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-left a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.5s ease-in-out;
+}
+
+.nav-left a:hover {
+    color: #9caf88;
+}
+
+.nav-left a.active {
+    text-decoration: underline;
+    text-decoration-color: #9caf88;
+    text-underline-offset: 4px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.language-toggle {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.language-toggle button {
+    background: none;
+    border: none;
+    color: #333;
+    font-family: 'PPEditorial', serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+}
+
+.language-toggle button:hover {
+    color: #9caf88;
+}
+
+.language-toggle button.active {
+    text-decoration: underline;
+    text-decoration-color: #9caf88;
+    text-underline-offset: 4px;
+}
+
+.language-toggle span {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.5s ease-in-out;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.theme-toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+.separator-line {
+    width: 480px;
+    height: 1px;
+    background-color: #9caf88;
+    margin-bottom: 24px;
+}
+
+.footer {
+    background-color: #fffaf4;
+    padding: 2.5rem 4rem;
+    margin: 0.5rem 10px 4px 10px;
+    text-align: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+body.dark-mode .footer {
+    background-color: #3b3a39;
+}
+
+.footer-text {
+    font-family: 'PPEditorial', serif;
+    font-size: 1.1rem;
+    color: #333;
+    transition: color 0.5s ease-in-out;
+}
+
+body.dark-mode .footer-text {
+    color: #fffaf4;
+}

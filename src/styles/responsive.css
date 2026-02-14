@@ -1,0 +1,308 @@
+@media (max-width: 1200px) {
+    nav {
+        padding: 1.25rem 2.5rem;
+    }
+
+    .nav-left a,
+    .language-toggle button,
+    .language-toggle span {
+        font-size: 1.25rem;
+    }
+
+    .name-text {
+        left: 12rem;
+        bottom: 26rem;
+    }
+
+    .portfolio-text {
+        left: 5rem;
+        bottom: 18rem;
+        font-size: 120pt;
+    }
+
+    .subtitle-text {
+        left: 24rem;
+        bottom: 12rem;
+    }
+
+    .view-projects-btn {
+        left: 25rem;
+        bottom: 9rem;
+    }
+
+    .about-section {
+        padding: 3rem 2.5rem 3.5rem;
+    }
+
+    .about-title {
+        font-size: 64pt;
+    }
+
+    .about-content {
+        grid-template-columns: 1.05fr 0.95fr;
+    }
+
+    .skillset-title {
+        font-size: 60pt;
+        left: -40px;
+    }
+
+    .separator-line {
+        width: 100%;
+    }
+
+    .projects-section {
+        padding: 3rem 2.5rem 3.5rem;
+        --projects-width: 900px;
+    }
+
+    .projects-title {
+        font-size: 64pt;
+    }
+
+    .slideshow-container {
+        height: 260px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 1rem 1.75rem;
+    }
+
+    .nav-left {
+        gap: 1.5rem;
+    }
+
+    .nav-right {
+        gap: 1rem;
+    }
+
+    .name-text {
+        left: 6rem;
+        bottom: 24rem;
+        font-size: 1.6rem;
+    }
+
+    .portfolio-text {
+        left: 3rem;
+        bottom: 16rem;
+        font-size: 100pt;
+    }
+
+    .subtitle-text {
+        left: 18rem;
+        bottom: 10rem;
+        font-size: 1.6rem;
+    }
+
+    .view-projects-btn {
+        left: 18.5rem;
+        bottom: 7rem;
+        font-size: 1.5rem;
+    }
+
+    .about-section {
+        padding: 3rem 1.75rem 3.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-right {
+        left: 0;
+        max-width: none;
+        justify-self: start;
+    }
+
+    .skillset-title {
+        left: 0;
+        margin-top: -0.25rem;
+    }
+
+    .projects-section {
+        --projects-width: 100%;
+        padding: 3rem 1.75rem 3.5rem;
+    }
+
+    .projects-header {
+        justify-content: space-between;
+    }
+
+    .slideshow-container {
+        border-radius: 18px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .nav-left {
+        gap: 1rem;
+    }
+
+    .nav-left a,
+    .language-toggle button,
+    .language-toggle span {
+        font-size: 1.1rem;
+    }
+
+    .theme-toggle img,
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 6rem 1.25rem 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .name-text,
+    .portfolio-text,
+    .subtitle-text,
+    .view-projects-btn {
+        position: static;
+    }
+
+    .portfolio-text {
+        font-size: clamp(64pt, 18vw, 96pt);
+        line-height: 1.05;
+    }
+
+    .name-text,
+    .subtitle-text,
+    .view-projects-btn {
+        font-size: 1.3rem;
+    }
+
+    .view-projects-btn {
+        align-self: flex-start;
+    }
+
+    .about-section {
+        padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    .about-title {
+        font-size: 48pt;
+    }
+
+    .skillset-title {
+        font-size: 44pt;
+    }
+
+    .projects-section {
+        padding: 3rem 1.25rem 3rem;
+    }
+
+    .projects-title {
+        font-size: 48pt;
+    }
+
+    .projects-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .slideshow-container {
+        height: 230px;
+        border-radius: 16px;
+    }
+
+    .slideshow-arrow {
+        padding: 0.75rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 540px) {
+    nav {
+        padding: 0.9rem 1rem;
+    }
+
+    .nav-left a,
+    .language-toggle button,
+    .language-toggle span {
+        font-size: 1rem;
+    }
+
+    .name-text,
+    .subtitle-text,
+    .view-projects-btn {
+        font-size: 1.15rem;
+    }
+
+    .portfolio-text {
+        font-size: clamp(52pt, 16vw, 76pt);
+    }
+
+    .about-title {
+        font-size: 40pt;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+
+    .skillset-title {
+        font-size: 36pt;
+    }
+
+    .projects-title {
+        font-size: 40pt;
+    }
+
+    .slideshow-container {
+        height: 200px;
+    }
+
+    .slide-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .slide-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 2rem;
+        margin: 0.5rem 10px 4px 10px;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem 10px 4px 10px;
+    }
+
+    .footer-text {
+        font-size: 0.95rem;
+    }
+}

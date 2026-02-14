@@ -1,0 +1,272 @@
+.projects-section {
+    min-height: 100vh;
+    padding: 4rem 5rem 3.5rem 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --projects-width: 980px;
+    scroll-margin-top: 80px;
+}
+
+.projects-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-content: flex-end;
+    width: min(100%, var(--projects-width));
+}
+
+.projects-header .separator-line {
+    flex: 1;
+    height: 1px;
+    background-color: #9caf88;
+    margin-bottom: 24px;
+}
+
+.projects-title {
+    font-family: 'Compendium', serif;
+    font-size: 80pt;
+    color: #9caf88;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.slideshow-container {
+    position: relative;
+    width: min(100%, var(--projects-width));
+    height: 300px;
+    background-color: rgba(156, 175, 136, 0.15);
+    border-radius: 26px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+body.dark-mode .slideshow-container {
+    background-color: rgba(156, 175, 136, 0.2);
+}
+
+.slideshow-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    width: min(90%, 640px);
+}
+
+.slide-info h3 {
+    font-family: 'PPEditorial', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .slide-info h3 {
+    color: #fffaf4;
+}
+
+.slide-info p {
+    font-family: 'PPEditorial', serif;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+body.dark-mode .slide-info p {
+    color: #ccc;
+}
+
+.slideshow-arrow {
+    position: absolute;
+    background: none;
+    border: none;
+    color: #9caf88;
+    cursor: pointer;
+    z-index: 10;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.slideshow-arrow:hover {
+    opacity: 0.7;
+}
+
+.slideshow-arrow-left {
+    left: 1.5rem;
+}
+
+.slideshow-arrow-right {
+    right: 1.5rem;
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+.indicator {
+    width: 30px;
+    height: 2px;
+    background-color: rgba(156, 175, 136, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #9caf88;
+}
+
+.indicator:hover {
+    background-color: rgba(156, 175, 136, 0.6);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: min(100%, var(--projects-width));
+}
+
+.gallery-item {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background-color: rgba(156, 175, 136, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark-mode .gallery-item {
+    background-color: rgba(156, 175, 136, 0.2);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    opacity: 0;
+}
+
+.gallery-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.gallery-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-info {
+    opacity: 1;
+}
+
+.gallery-info h4 {
+    font-family: 'PPEditorial', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.gallery-caption {
+    font-family: 'PPEditorial', serif;
+    font-size: 0.95rem;
+    color: #333;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+body.dark-mode .gallery-info h4 {
+    color: #fffaf4;
+}
+
+body.dark-mode .gallery-caption {
+    color: #fffaf4;
+}

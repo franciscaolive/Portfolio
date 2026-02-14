@@ -47,6 +47,8 @@ jspm_packages/
 
 *.tgz
 
+.prettiercache
+
 .yarn-integrity
 .yarn/cache
 .yarn/unplugged

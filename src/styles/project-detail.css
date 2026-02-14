@@ -1,0 +1,15 @@
+.project-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 2rem 4rem;
+    text-align: center;
+}
+
+.project-page h1 {
+    font-family: 'PPEditorial', serif;
+    font-size: 3rem;
+    color: inherit;
+    margin: 0;
+}

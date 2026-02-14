@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "serve -l 4173 .",
     "preview": "serve -s .",
-    "lint": "echo 'No lint step yet'",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "node": ">=20"
   },
   "devDependencies": {
-    "serve": "^14.2.5"
+    "serve": "^14.2.5",
+    "prettier": "^3.3.3"
   }
 }
