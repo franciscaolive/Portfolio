@@ -77,6 +77,29 @@ body.dark-mode .view-projects-btn {
     padding-top: 6rem;
 }
 
+.about-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cv-link {
+    font-family: 'PPEditorial', serif;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.cv-link:hover {
+    color: #9caf88;
+}
+
+body.dark-mode .cv-link {
+    color: #fffaf4;
+}
+
 .about-header {
     display: flex;
     align-items: flex-end;

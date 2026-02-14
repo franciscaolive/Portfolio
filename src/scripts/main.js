@@ -118,6 +118,14 @@ function updateLanguage(lang) {
             element.textContent = element.getAttribute('data-lang-pt');
         }
     });
+
+    document.querySelectorAll('[data-href-en][data-href-pt]').forEach(element => {
+        if (lang === 'en') {
+            element.setAttribute('href', element.getAttribute('data-href-en'));
+        } else {
+            element.setAttribute('href', element.getAttribute('data-href-pt'));
+        }
+    });
     
     const languageButtons = document.querySelectorAll('.language-toggle button');
     languageButtons.forEach(btn => {
