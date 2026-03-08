@@ -327,7 +327,7 @@ strong {
 
 #themeIcon {
   transform-origin: center;
-  transform: translateY(2px);
+  transform: translateY(var(--theme-icon-offset-y, 2px));
 }
 
 #themeToggle.theme-toggle-animate #themeIcon {
@@ -336,15 +336,15 @@ strong {
 
 @keyframes themeIconToggle {
   0% {
-    transform: translateY(2px) rotate(-35deg) scale(0.7);
+    transform: translateY(var(--theme-icon-offset-y, 2px)) rotate(-35deg) scale(0.7);
     opacity: 0.35;
   }
   60% {
-    transform: translateY(2px) rotate(12deg) scale(1.14);
+    transform: translateY(var(--theme-icon-offset-y, 2px)) rotate(12deg) scale(1.14);
     opacity: 1;
   }
   100% {
-    transform: translateY(2px) rotate(0deg) scale(1);
+    transform: translateY(var(--theme-icon-offset-y, 2px)) rotate(0deg) scale(1);
     opacity: 1;
   }
 }
@@ -383,7 +383,7 @@ strong {
   justify-content: center;
   align-items: flex-end;
   gap: 44px;
-  margin: 0 0 20px;
+  margin: 8px 0 20px;
   flex: 0 0 auto;
 }
 
@@ -664,6 +664,16 @@ strong {
     display: block;
     height: 82px;
     width: auto;
+  }
+
+  #themeIcon {
+    width: 22px;
+    height: 22px;
+    --theme-icon-offset-y: 3px;
+  }
+
+  #themeToggle {
+    height: 22px;
   }
 
   .identity {

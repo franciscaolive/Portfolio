@@ -11,6 +11,7 @@ const filterButtons = document.querySelectorAll('.project-filter');
 
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
+const mobileMarkIcon = document.getElementById('mobileMarkIcon');
 const contactToggle = document.getElementById('contactToggle');
 const contactMenu = document.getElementById('contactMenu');
 const burgerButton = document.getElementById('burgerButton');
@@ -59,12 +60,13 @@ const writeStored = (key, value) => {
 };
 
 const applyThemeIcons = (theme) => {
-  if (!themeIcon) {
-    return;
-  }
-
   const dark = theme === 'dark';
-  themeIcon.src = resolvePath(`assets/icons/${dark ? 'theme-sun.svg' : 'theme-moon.svg'}`);
+  if (themeIcon) {
+    themeIcon.src = resolvePath(`assets/icons/${dark ? 'sun.png' : 'moon.png'}`);
+  }
+  if (mobileMarkIcon) {
+    mobileMarkIcon.src = resolvePath(`assets/icons/${dark ? 'mobileIconNight.png' : 'mobileIcon.png'}`);
+  }
 };
 
 const setTheme = (theme) => {
