@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francisca Miranda</title>
+    <script src="scripts/theme-init.js"></script>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="mobile-topbar">
+          <div class="mobile-mark" aria-label="Francisca Miranda">
+            <span class="script-letter">F</span><span class="script-letter">M</span>
+          </div>
+          <button class="burger-button" id="burgerButton" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="sidebar-content">
+          <header class="identity">
+            <h1>
+              <span class="name-line name-line-top">
+                <span class="script-letter">F</span><span class="name-rest">rancisca</span>
+              </span>
+              <span class="name-line name-line-bottom">
+                <span class="script-letter">M</span><span class="name-rest">iranda</span>
+              </span>
+            </h1>
+          </header>
+
+          <section class="about" data-i18n="about">
+            <p></p>
+          </section>
+
+          <section class="skillset" data-i18n="skills">
+            <h2><span class="script-letter">S</span><span class="skill-rest">killset</span></h2>
+            <div class="skills-body"></div>
+          </section>
+        </div>
+
+        <footer class="sidebar-footer">
+          <button class="icon-action" id="themeToggle" type="button" aria-label="Toggle theme">
+            <img id="themeIcon" src="assets/icons/theme-moon.svg" alt="Theme icon" />
+          </button>
+
+          <div class="contact-group">
+            <button class="text-action contact-toggle" id="contactToggle" type="button" data-i18n-key="contactMe" aria-expanded="false">
+              Contact Me
+            </button>
+            <div class="contact-menu" id="contactMenu" role="menu" aria-label="Contact links">
+              <a href="https://github.com/kikinhagameplays" target="_blank" rel="noreferrer" role="menuitem">GitHub</a>
+              <a href="mailto:franciscaolivmir@gmail.com" role="menuitem">Email</a>
+              <a href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noreferrer" role="menuitem">LinkedIn</a>
+            </div>
+          </div>
+
+          <a class="text-action cv-action" href="assets/CVFranciscaMiranda.pdf" download>CV</a>
+
+          <div class="language-toggle" role="group" aria-label="Language selection">
+            <button class="text-action lang-option" data-lang="pt" type="button">PT</button>
+            <span class="lang-separator">/</span>
+            <button class="text-action lang-option active-lang" data-lang="eng" type="button">ENG</button>
+          </div>
+        </footer>
+      </aside>
+
+      <main class="content">
+        <nav class="project-nav" aria-label="Project categories">
+          <button class="project-filter active" data-filter="all" data-i18n-key="all" type="button">All</button>
+          <button class="project-filter" data-filter="design" data-i18n-key="design" type="button">Design</button>
+          <button class="project-filter" data-filter="games" data-i18n-key="games" type="button">Games</button>
+        </nav>
+
+        <section class="project-grid" aria-label="Projects"></section>
+      </main>
+    </div>
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

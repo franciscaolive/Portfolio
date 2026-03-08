@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project | Francisca Miranda</title>
+    <script src="../scripts/theme-init.js"></script>
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="mobile-topbar">
+          <a href="../index.html" class="mobile-mark unstyled-link" aria-label="Francisca Miranda">
+            <span class="script-letter">F</span><span class="script-letter">M</span>
+          </a>
+          <button class="burger-button" id="burgerButton" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="sidebar-content">
+          <header class="identity">
+            <a href="../index.html" class="unstyled-link">
+              <h1>
+                <span class="name-line name-line-top">
+                  <span class="script-letter">F</span><span class="name-rest">rancisca</span>
+                </span>
+                <span class="name-line name-line-bottom">
+                  <span class="script-letter">M</span><span class="name-rest">iranda</span>
+                </span>
+              </h1>
+            </a>
+          </header>
+
+          <section class="about" data-i18n="about">
+            <p></p>
+          </section>
+
+          <section class="skillset" data-i18n="skills">
+            <h2><span class="script-letter">S</span><span class="skill-rest">killset</span></h2>
+            <div class="skills-body"></div>
+          </section>
+        </div>
+
+        <footer class="sidebar-footer">
+          <button class="icon-action" id="themeToggle" type="button" aria-label="Toggle theme">
+            <img id="themeIcon" src="../assets/icons/theme-moon.svg" alt="Theme icon" />
+          </button>
+
+          <div class="contact-group">
+            <button class="text-action contact-toggle" id="contactToggle" type="button" data-i18n-key="contactMe" aria-expanded="false">
+              Contact Me
+            </button>
+            <div class="contact-menu" id="contactMenu" role="menu" aria-label="Contact links">
+              <a href="https://github.com/kikinhagameplays" target="_blank" rel="noreferrer" role="menuitem">GitHub</a>
+              <a href="mailto:franciscaolivmir@gmail.com" role="menuitem">Email</a>
+              <a href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noreferrer" role="menuitem">LinkedIn</a>
+            </div>
+          </div>
+
+          <a class="text-action cv-action" href="../assets/CVFranciscaMiranda.pdf" download>CV</a>
+
+          <div class="language-toggle" role="group" aria-label="Language selection">
+            <button class="text-action lang-option" data-lang="pt" type="button">PT</button>
+            <span class="lang-separator">/</span>
+            <button class="text-action lang-option active-lang" data-lang="eng" type="button">ENG</button>
+          </div>
+        </footer>
+      </aside>
+
+      <main class="content">
+        <article class="project-detail">
+          <header class="project-header">
+            <h2>
+              <span class="script-letter project-initial">P</span>
+              <span class="name-rest project-name-rest" data-project-id="1">roject</span>
+            </h2>
+            <a href="../index.html" class="back-link">
+              <span data-i18n-key="back">Back</span>
+            </a>
+          </header>
+
+          <div class="project-image"></div>
+
+          <div class="project-description">
+            <div class="description-column">
+              <p data-project-description="left"></p>
+            </div>
+            <div class="description-column">
+              <p data-project-description="right"></p>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <script src="../scripts/main.js" defer></script>
+  </body>
+</html>

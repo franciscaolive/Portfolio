@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "category": "design",
+      "cover": "assets/projects/projcover1.jpg",
+      "href": "projects/project.html?id=1"
+    },
+    {
+      "id": "2",
+      "category": "games",
+      "cover": "assets/projects/projcover2.jpg",
+      "href": "projects/project.html?id=2"
+    },
+    {
+      "id": "3",
+      "category": "design",
+      "cover": "assets/projects/projcover3.jpg",
+      "href": "projects/project.html?id=3"
+    },
+    {
+      "id": "4",
+      "category": "games",
+      "cover": "assets/projects/projcover4.jpg",
+      "href": "projects/project.html?id=4"
+    },
+    {
+      "id": "5",
+      "category": "design",
+      "cover": "assets/projects/projcover5.jpg",
+      "href": "projects/project.html?id=5"
+    },
+    {
+      "id": "6",
+      "category": "games",
+      "cover": "assets/projects/projcover6.jpg",
+      "href": "projects/project.html?id=6"
+    }
+  ]
+}
