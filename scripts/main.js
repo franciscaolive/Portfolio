@@ -5,7 +5,7 @@ const skillsBody = document.querySelector('[data-i18n="skills"] .skills-body');
 const i18nTextNodes = document.querySelectorAll('[data-i18n-key]');
 const projectTitleRest = document.querySelector('.project-name-rest[data-project-id]');
 const projectTitleInitial = document.querySelector('.project-initial');
-const projectDescriptionNodes = document.querySelectorAll('[data-project-description]');
+const projectDescriptionNodes = document.querySelectorAll('.description-column[data-project-description]');
 const projectGrid = document.querySelector('.project-grid');
 const filterButtons = document.querySelectorAll('.project-filter');
 
@@ -235,10 +235,28 @@ const applyProjectPageContent = (translations) => {
 
   projectDescriptionNodes.forEach((node) => {
     const side = node.dataset.projectDescription;
-    const text = projectData.description?.[side];
-    if (side && text) {
-      node.textContent = text;
+    const content = side ? projectData.description?.[side] : null;
+    if (!side || !content) {
+      return;
     }
+
+    const paragraphs = Array.isArray(content)
+      ? content.filter((paragraph) => typeof paragraph === 'string' && paragraph.trim().length > 0)
+      : [content, content];
+
+    if (!paragraphs.length) {
+      return;
+    }
+
+    node.innerHTML = '';
+    paragraphs.forEach((paragraph, index) => {
+      const p = document.createElement('p');
+      p.textContent = paragraph;
+      if (index === 1) {
+        p.classList.add('indented-paragraph');
+      }
+      node.append(p);
+    });
   });
 
   document.title = `${title} | Francisca Miranda`;

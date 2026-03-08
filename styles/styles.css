@@ -461,11 +461,12 @@ strong {
   color: #ffffff;
   padding: 10px 24px;
   border: 1px solid #ffffff;
+  background: transparent;
   transition: background 0.2s ease, color 0.2s ease;
+  pointer-events: auto;
 }
 
-.project-overlay,
-.view-button {
+.project-overlay {
   pointer-events: none;
 }
 
@@ -535,7 +536,7 @@ strong {
 .project-image {
   background: var(--card);
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 4.5;
   margin-bottom: 30px;
   transition: background 0.3s ease;
 }
@@ -552,6 +553,12 @@ strong {
   font-family: "PP Editorial Ultralight", serif;
   font-size: 18px;
   line-height: 1.6;
+}
+
+.description-column p + p,
+.description-column .indented-paragraph {
+  margin-top: 0;
+  text-indent: 3em;
 }
 
 @media (max-width: 1150px) {
