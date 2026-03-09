@@ -560,6 +560,58 @@ strong {
   text-indent: 3em;
 }
 
+@media (max-height: 860px) and (min-width: 781px) {
+  .layout,
+  .content {
+    height: 100dvh;
+  }
+
+  .sidebar {
+    padding: 30px 30px 20px;
+  }
+
+  .name-line-bottom {
+    margin-top: 18px;
+    margin-left: 72px;
+  }
+
+  .about {
+    margin-top: 18px;
+  }
+
+  .skillset {
+    margin-top: 22px;
+  }
+
+  .skillset h2 {
+    margin-bottom: 16px;
+  }
+
+  .sidebar-footer {
+    gap: 12px;
+  }
+
+  .text-action,
+  .lang-separator,
+  .cv-action {
+    font-size: 22px;
+  }
+
+  .text-action,
+  .lang-separator {
+    height: 22px;
+  }
+
+  .icon-action img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .icon-action {
+    height: 22px;
+  }
+}
+
 @media (max-width: 1150px) {
   body {
     overflow: auto;
