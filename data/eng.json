@@ -23,12 +23,13 @@
   "projects": {
     "1": {
       "title": "ImmersivusX",
+      "pageTitle": "ImmersivusX - City of the Future",
       "videos": [
         "https://www.dropbox.com/scl/fi/x59ppioieev9yx33rprse/A-cidade-do-futuro_estreia.mp4?rlkey=50in0k26uqri8xozy9vaxq6tc&st=ahfxkizx&dl=0"
       ],
       "description": {
-        "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
-        "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."
+        "left": "In collaboration with Ocubo and Alfandega do Porto, this project was developed for the course unit Multimedia. This project's goal was to conceptually explore our visions of a futuristic city.",
+        "right": "Through 2D and 3D animations, mixing the real and the digital, the intention is to take spectators on a journey that explores the limits of human evolution. It is also presented as A Cidade do Futuro / City of the Future."
       }
     },
     "2": {
@@ -55,9 +56,20 @@
     },
     "3": {
       "title": "Serpentina",
+      "videos": [
+        "https://youtu.be/lfVvWxD7-uo"
+      ],
       "description": {
-        "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
-        "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."
+        "left": [
+          "Serpentina was developed for the course unit Digital Games, where we were challenged to add a meaningful twist to a classic arcade title. We chose Snake, a game with a familiar top-down 2D structure and a clear rhythm of movement, growth, and survival, and reimagined that rhythm through a single disruptive mechanic.",
+          "Players control the snake with W/A/S/D or arrow keys and collect strawberries that appear randomly inside the arena. Each strawberry increases the snake by one segment, but every three strawberries the controls invert, so up becomes down and left becomes right. That shift forces players to constantly remap their thinking, while still preserving the recognizable Snake loop of avoiding walls and self-collision.",
+          "Using the MDA perspective, our goal was to move the aesthetic experience away from steady mastery and toward adaptation, tension, and cognitive disruption. Rather than relying only on increasing snake length for difficulty, we introduced periodic uncertainty and turned movement itself into a strategic decision about timing, positioning, and risk. Even with a relatively small code intervention, the experiential impact was significant, aligning with our intent to make minimal mechanical changes with maximum effect."
+        ],
+        "right": [
+          "Technically, we implemented this in Godot's 2D framework with a strawberry counter that triggers inversion at every multiple of three, a dynamic input remapping layer that switches between normal and reversed controls, and state persistence until the next threshold.",
+          "Our intended outcomes were to amplify cognitive challenge, introduce productive frustration, and increase replayability by ensuring that inversion moments happen in different spatial contexts each run. We also expected the mechanic to have a cognitive-training quality, since players must interrupt learned motor patterns and continuously rebuild control logic in real time.",
+          "Playtesting largely confirmed those goals. Players quickly recognized the mental challenge dimension, and although early runs produced frequent failures during inversion phases, that difficulty increased engagement rather than causing abandonment. Overall, Serpentina achieved the desired transformation: it kept the identity of Snake intact while creating a more adaptive, unpredictable, and cognitively demanding experience."
+        ]
       }
     },
     "4": {
@@ -105,8 +117,15 @@
         "https://youtu.be/UZF27H3VDck"
       ],
       "description": {
-        "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
-        "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."
+        "left": [
+          "Glitch Box is an interactive installation, inspired by the Nintendo game Super Mario, that allows the spectator to interact with a 3D asset: a surprise box. Every time the spectator touches this box, it plays a sound and disappears, appearing elsewhere, ready to repeat that event. The box can randomly appear in any part of the screen, and the spectator has to move around the entire room to be able to successfully play.",
+          "My colleague Alice Logvina and I developed this project together under the guidance of Professor Tiago Dionisio. We chose to use a Kinect in combination with Max and Processing, and created a patch that communicates via OSC. We integrated the 3D patch with the full scene, including elements like the castle, clouds, and the mystery box, which became the centerpiece of the interactive experience."
+        ],
+        "right": [
+          "In Max, we were able to associate spheres with the hands, which allowed us to detect movements and generate real-time interactions.",
+          "We worked on the collision between objects and the hands, creating distinct sound responses for each one, and adjusted the movement axes for greater realism. To improve the scene lighting, we explored Max documentation and added light parameters that made the environment brighter and more immersive.",
+          "The clouds were animated to bring more dynamism to the installation, and to complete the experience, we decided to include the Super Mario music, which plays on a loop throughout the interaction."
+        ]
       }
     }
   }

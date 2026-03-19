@@ -23,6 +23,7 @@
   "projects": {
     "1": {
       "title": "ImmersivusX",
+      "pageTitle": "ImmersivusX - A Cidade do Futuro",
       "videos": [
         "https://www.dropbox.com/scl/fi/x59ppioieev9yx33rprse/A-cidade-do-futuro_estreia.mp4?rlkey=50in0k26uqri8xozy9vaxq6tc&st=ahfxkizx&dl=0"
       ],
@@ -55,6 +56,9 @@
     },
     "3": {
       "title": "Serpentina",
+      "videos": [
+        "https://youtu.be/lfVvWxD7-uo"
+      ],
       "description": {
         "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
         "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."

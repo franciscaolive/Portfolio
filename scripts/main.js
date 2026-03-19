@@ -159,7 +159,8 @@ const renderProjectGrid = (projects, translations) => {
 
   projectGrid.innerHTML = projects
     .map((project) => {
-      const title = translations.projects?.[project.id]?.title || `Project ${project.id}`;
+      const projectText = translations.projects?.[project.id] || {};
+      const title = projectText.previewTitle || projectText.title || `Project ${project.id}`;
       const coverStyle = project.cover
         ? ` style="background-image: url('${resolvePath(project.cover)}');"`
         : '';
@@ -466,7 +467,7 @@ const applyProjectPageContent = (translations) => {
     return;
   }
 
-  const title = projectData.title || `Project ${pageProjectId}`;
+  const title = projectData.pageTitle || projectData.title || `Project ${pageProjectId}`;
   const firstChar = title.charAt(0);
   const remaining = title.slice(1);
 
@@ -489,7 +490,7 @@ const applyProjectPageContent = (translations) => {
 
     const paragraphs = Array.isArray(content)
       ? content.filter((paragraph) => typeof paragraph === 'string' && paragraph.trim().length > 0)
-      : [content, content];
+      : [content];
 
     if (!paragraphs.length) {
       return;
