@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": "2",
-      "category": "games",
+      "category": "design",
       "cover": "assets/projects/JenkinsCapa.png",
       "href": "projects/project.html?id=2"
     },
@@ -14,25 +14,25 @@
     },
     {
       "id": "4",
-      "category": "games",
+      "category": "design",
       "cover": "assets/projects/KitdeSobrevivenciaCover.png",
       "href": "projects/project.html?id=4"
     },
     {
       "id": "5",
-      "category": "design",
+      "category": "games",
       "cover": "assets/projects/AfterglowCapa.png",
       "href": "projects/project.html?id=5"
     },
     {
       "id": "3",
-      "category": "design",
+      "category": "games",
       "cover": "assets/projects/SerpentinaCove.png",
       "href": "projects/project.html?id=3"
     },
     {
       "id": "6",
-      "category": "games",
+      "category": "design",
       "cover": "assets/projects/GlitchBoxProjCover.png",
       "href": "projects/project.html?id=6"
     }
