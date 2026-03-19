@@ -737,6 +737,11 @@ strong {
     overflow: auto;
   }
 
+  body.is-project-page {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   .layout {
     height: auto;
     grid-template-columns: 1fr;
@@ -793,6 +798,8 @@ strong {
 
   .project-detail {
     padding: 0 30px;
+    height: auto;
+    overflow: visible;
   }
 
   .project-header h2 {
@@ -805,6 +812,11 @@ strong {
 }
 
 @media (max-width: 780px) {
+  body.is-project-page {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   body.is-project-page .sidebar {
     padding-bottom: 0;
     border-bottom: none;
