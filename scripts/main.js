@@ -6,6 +6,11 @@ const i18nTextNodes = document.querySelectorAll('[data-i18n-key]');
 const projectTitleRest = document.querySelector('.project-name-rest[data-project-id]');
 const projectTitleInitial = document.querySelector('.project-initial');
 const projectDescriptionNodes = document.querySelectorAll('.description-column[data-project-description]');
+const projectDescriptionSection = document.querySelector('.project-description');
+const projectDetailNode = document.querySelector('.project-detail');
+const projectVideosNode = document.querySelector('[data-project-videos]');
+const projectPostTextNode = document.querySelector('[data-project-post-text]');
+const projectBookNode = document.querySelector('[data-project-book]');
 const projectGrid = document.querySelector('.project-grid');
 const filterButtons = document.querySelectorAll('.project-filter');
 
@@ -230,6 +235,221 @@ const renderSkills = (skills) => {
   skillsBody.append(fragment);
 };
 
+const toEmbeddableVideoUrl = (url) => {
+  if (typeof url !== 'string' || !url.trim()) {
+    return '';
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+    if (parsedUrl.hostname.includes('dropbox.com')) {
+      parsedUrl.searchParams.delete('dl');
+      parsedUrl.searchParams.set('raw', '1');
+      return parsedUrl.toString();
+    }
+    return url;
+  } catch {
+    return url;
+  }
+};
+
+const toYouTubeEmbedUrl = (url) => {
+  if (typeof url !== 'string' || !url.trim()) {
+    return '';
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+    const host = parsedUrl.hostname.replace('www.', '');
+
+    if (host === 'youtu.be') {
+      const videoId = parsedUrl.pathname.replace('/', '');
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    }
+
+    if (host === 'youtube.com' || host === 'm.youtube.com') {
+      if (parsedUrl.pathname === '/watch') {
+        const videoId = parsedUrl.searchParams.get('v');
+        return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+      }
+
+      if (parsedUrl.pathname.startsWith('/embed/')) {
+        return parsedUrl.toString();
+      }
+    }
+
+    return '';
+  } catch {
+    return '';
+  }
+};
+
+const renderProjectVideos = (projectData) => {
+  if (!projectVideosNode) {
+    return;
+  }
+
+  const videos = Array.isArray(projectData?.videos)
+    ? projectData.videos.filter((url) => typeof url === 'string' && url.trim().length > 0)
+    : [];
+
+  if (!videos.length) {
+    projectVideosNode.innerHTML = '';
+    projectVideosNode.hidden = true;
+    return;
+  }
+
+  projectVideosNode.hidden = false;
+  projectVideosNode.innerHTML = videos
+    .map((url, index) => {
+      const youtubeEmbedUrl = toYouTubeEmbedUrl(url);
+      if (youtubeEmbedUrl) {
+        return `
+          <iframe
+            class="project-video-frame"
+            src="${youtubeEmbedUrl}"
+            title="Project video ${index + 1}"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        `;
+      }
+
+      const embedUrl = toEmbeddableVideoUrl(url);
+      return `
+        <video class="project-video" controls playsinline preload="metadata" aria-label="Project video ${index + 1}">
+          <source src="${embedUrl}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      `;
+    })
+    .join('');
+};
+
+const renderProjectBook = (projectData, translations) => {
+  if (!projectBookNode) {
+    return;
+  }
+
+  const pages = Array.isArray(projectData?.bookPages)
+    ? projectData.bookPages.filter((page) => typeof page === 'string' && page.trim().length > 0)
+    : [];
+
+  if (!pages.length) {
+    projectBookNode.hidden = true;
+    projectBookNode.innerHTML = '';
+    return;
+  }
+
+  const prevLabel = translations.labels?.bookPrev || 'Previous';
+  const nextLabel = translations.labels?.bookNext || 'Next';
+  const pageLabel = translations.labels?.bookPage || 'Pages';
+  const pagesPerSpread = 1;
+  const totalSpreads = Math.ceil(pages.length / pagesPerSpread);
+  let currentSpread = 0;
+
+  projectBookNode.hidden = false;
+
+  const renderSpread = () => {
+    const startIndex = currentSpread * pagesPerSpread;
+    const visiblePages = pages.slice(startIndex, startIndex + pagesPerSpread);
+    const statusText = pagesPerSpread === 1
+      ? `${pageLabel} ${startIndex + 1}/${pages.length}`
+      : `${pageLabel} ${startIndex + 1}-${Math.min(startIndex + pagesPerSpread, pages.length)}/${pages.length}`;
+
+    projectBookNode.innerHTML = `
+      <div class="book-spread">
+        ${visiblePages
+          .map(
+            (pagePath, index) =>
+              `<img class="book-page" src="${resolvePath(pagePath)}" alt="Book page ${startIndex + index + 1}" loading="lazy" />`
+          )
+          .join('')}
+      </div>
+      <div class="book-controls">
+        <button class="book-button" data-book-prev type="button">${prevLabel}</button>
+        <span class="book-status">${statusText}</span>
+        <button class="book-button" data-book-next type="button">${nextLabel}</button>
+      </div>
+    `;
+
+    const prevButton = projectBookNode.querySelector('[data-book-prev]');
+    const nextButton = projectBookNode.querySelector('[data-book-next]');
+
+    if (prevButton) {
+      prevButton.disabled = currentSpread === 0;
+      prevButton.addEventListener('click', () => {
+        if (currentSpread === 0) {
+          return;
+        }
+        currentSpread -= 1;
+        renderSpread();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.disabled = currentSpread >= totalSpreads - 1;
+      nextButton.addEventListener('click', () => {
+        if (currentSpread >= totalSpreads - 1) {
+          return;
+        }
+        currentSpread += 1;
+        renderSpread();
+      });
+    }
+  };
+
+  renderSpread();
+};
+
+const renderProjectPostText = (projectData) => {
+  if (!projectPostTextNode) {
+    return;
+  }
+
+  const content = projectData?.postVideoText;
+  const paragraphs = Array.isArray(content)
+    ? content.filter((paragraph) => typeof paragraph === 'string' && paragraph.trim().length > 0)
+    : typeof content === 'string' && content.trim().length > 0
+      ? [content]
+      : [];
+
+  if (!paragraphs.length) {
+    projectPostTextNode.hidden = true;
+    projectPostTextNode.innerHTML = '';
+    return;
+  }
+
+  projectPostTextNode.hidden = false;
+  projectPostTextNode.innerHTML = paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('');
+};
+
+const positionProjectDescription = (projectId, projectData) => {
+  if (!projectDescriptionSection || !projectDetailNode || !projectVideosNode) {
+    return;
+  }
+
+  const videos = Array.isArray(projectData?.videos)
+    ? projectData.videos.filter((url) => typeof url === 'string' && url.trim().length > 0)
+    : [];
+
+  const shouldPlaceBetweenVideos = projectId === '2' && videos.length >= 2;
+
+  if (shouldPlaceBetweenVideos) {
+    const renderedVideos = projectVideosNode.querySelectorAll('.project-video');
+    if (renderedVideos.length >= 2) {
+      projectVideosNode.insertBefore(projectDescriptionSection, renderedVideos[1]);
+      return;
+    }
+  }
+
+  if (projectDescriptionSection.parentElement !== projectDetailNode || projectDescriptionSection.previousElementSibling !== projectVideosNode) {
+    projectDetailNode.appendChild(projectDescriptionSection);
+  }
+};
+
 const applyProjectPageContent = (translations) => {
   if (!isProjectPage || !projectTitleRest) {
     return;
@@ -240,6 +460,9 @@ const applyProjectPageContent = (translations) => {
 
   const projectData = translations.projects?.[pageProjectId];
   if (!projectData) {
+    renderProjectVideos(null);
+    renderProjectPostText(null);
+    positionProjectDescription(pageProjectId, null);
     return;
   }
 
@@ -252,6 +475,10 @@ const applyProjectPageContent = (translations) => {
   }
 
   projectTitleRest.textContent = remaining;
+  renderProjectVideos(projectData);
+  renderProjectPostText(projectData);
+  renderProjectBook(projectData, translations);
+  positionProjectDescription(pageProjectId, projectData);
 
   projectDescriptionNodes.forEach((node) => {
     const side = node.dataset.projectDescription;
