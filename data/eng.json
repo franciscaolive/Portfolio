@@ -107,8 +107,16 @@
         "https://youtu.be/hAKl-SoCxt8"
       ],
       "description": {
-        "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
-        "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."
+        "left": [
+          "Afterglow was developed in the final semester of the Multimedia degree as an individual project that combines game design, illustration, interface design, animation, and programming. The project explores how a point-and-click structure can support a calm and immersive experience centered on atmosphere rather than urgency.",
+          "Set in a visually stylized world inspired by cozy gaming and contemporary visual culture, the game invites players to move through spaces at their own pace, discovering interactions through observation and curiosity. Instead of directing the player through explicit instructions, the experience encourages intuitive exploration.",
+          "This approach is reinforced by a mostly diegetic interface, where information emerges from the game world itself. By reducing external UI noise and relying on visual cues, the project prioritizes emotional continuity, detail, and a sense of presence."
+        ],
+        "right": [
+          "Mechanically, Afterglow remains intentionally light: players navigate environments, inspect objects, and uncover hidden elements, with progression built around free-form interaction rather than task pressure. The absence of strict goals or tutorials turns replayability into a natural consequence of discovery.",
+          "Conceptually, the project also reflects on gender representation, accessibility, and the value of aesthetics in game design. It positions visual sensibility as a legitimate design language and contributes to a broader conversation about more diverse, welcoming forms of play.",
+          "As a final outcome, Afterglow became both a personal and academic milestone: a cohesive project that demonstrates technical growth while preserving a clear artistic identity across illustration, design, sound, and interaction."
+        ]
       }
     },
     "6": {

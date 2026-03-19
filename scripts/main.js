@@ -10,6 +10,7 @@ const projectDescriptionSection = document.querySelector('.project-description')
 const projectDetailNode = document.querySelector('.project-detail');
 const projectVideosNode = document.querySelector('[data-project-videos]');
 const projectPostTextNode = document.querySelector('[data-project-post-text]');
+const projectReportNode = document.querySelector('[data-project-report]');
 const projectBookNode = document.querySelector('[data-project-book]');
 const projectGrid = document.querySelector('.project-grid');
 const filterButtons = document.querySelectorAll('.project-filter');
@@ -427,6 +428,38 @@ const renderProjectPostText = (projectData) => {
   projectPostTextNode.innerHTML = paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('');
 };
 
+const renderProjectReport = (projectData) => {
+  if (!projectReportNode) {
+    return;
+  }
+
+  const report = projectData?.report;
+  const href = typeof report === 'string'
+    ? report
+    : typeof report?.href === 'string'
+      ? report.href
+      : '';
+
+  if (!href.trim()) {
+    projectReportNode.hidden = true;
+    projectReportNode.innerHTML = '';
+    return;
+  }
+
+  const label = typeof report === 'object' && typeof report?.label === 'string' && report.label.trim()
+    ? report.label
+    : 'Download Report (PDF)';
+
+  projectReportNode.hidden = false;
+  projectReportNode.innerHTML = `
+    <a class="project-report-link" href="${resolvePath(href)}" target="_blank" rel="noreferrer">${label}</a>
+  `;
+
+  if (projectDetailNode && projectReportNode.parentElement === projectDetailNode) {
+    projectDetailNode.appendChild(projectReportNode);
+  }
+};
+
 const positionProjectDescription = (projectId, projectData) => {
   if (!projectDescriptionSection || !projectDetailNode || !projectVideosNode) {
     return;
@@ -463,6 +496,7 @@ const applyProjectPageContent = (translations) => {
   if (!projectData) {
     renderProjectVideos(null);
     renderProjectPostText(null);
+    renderProjectReport(null);
     positionProjectDescription(pageProjectId, null);
     return;
   }
@@ -480,6 +514,7 @@ const applyProjectPageContent = (translations) => {
   renderProjectPostText(projectData);
   renderProjectBook(projectData, translations);
   positionProjectDescription(pageProjectId, projectData);
+  renderProjectReport(projectData);
 
   projectDescriptionNodes.forEach((node) => {
     const side = node.dataset.projectDescription;

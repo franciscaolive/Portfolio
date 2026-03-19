@@ -98,9 +98,21 @@
       "videos": [
         "https://youtu.be/hAKl-SoCxt8"
       ],
+      "report": {
+        "href": "assets/cvs/40220423_Francisca_Miranda_Relatorio.pdf",
+        "label": "Descarregar Relatorio (PDF)"
+      },
       "description": {
-        "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
-        "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."
+        "left": [
+          "Afterglow foi desenvolvido no último semestre da Licenciatura em Multimédia como um projeto individual que cruza design de jogos, ilustração, interface, animação e programação. O projeto explora como a estrutura point-and-click pode sustentar uma experiência calma e imersiva, focada na atmosfera em vez da urgência.",
+          "Inserido num universo visual estilizado, inspirado em cozy gaming e em referências de cultura visual contemporânea, o jogo convida o jogador a explorar os espaços ao seu ritmo, descobrindo interações através da observação e da curiosidade. Em vez de conduzir o jogador com instruções explícitas, a experiência favorece uma descoberta mais intuitiva.",
+          "Esta abordagem é reforçada por uma interface maioritariamente diegética, onde a informação surge a partir do próprio mundo do jogo. Ao reduzir elementos externos de interface e apostar em pistas visuais, o projeto privilegia continuidade emocional, detalhe e presença."
+        ],
+        "right": [
+          "A nível mecânico, Afterglow mantém-se deliberadamente simples: o jogador percorre ambientes, observa objetos e descobre elementos escondidos, com uma progressão assente na interação livre e não na pressão por objetivos. A ausência de tutoriais rígidos e metas explícitas transforma a repetição em vontade natural de voltar a explorar.",
+          "Conceptualmente, o projeto reflete sobre representação de género, acessibilidade e o papel da estética no design de videojogos. Afirma a sensibilidade visual como linguagem de projeto legítima e contribui para pensar formas de jogo mais diversas e acolhedoras.",
+          "Como resultado final, Afterglow tornou-se uma conquista pessoal e académica: um projeto coeso que demonstra crescimento técnico, mantendo uma identidade artística clara entre ilustração, design, som e interação."
+        ]
       }
     },
     "6": {
