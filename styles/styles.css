@@ -653,6 +653,10 @@ strong {
   padding-bottom: 40px;
 }
 
+.project-description.single-column {
+  grid-template-columns: 1fr;
+}
+
 .project-media .project-description {
   padding-bottom: 0;
 }

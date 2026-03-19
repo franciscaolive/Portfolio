@@ -215,6 +215,16 @@ const renderAbout = (about) => {
   aboutSection.append(fragment);
 };
 
+const toParagraphArray = (value) => {
+  if (Array.isArray(value)) {
+    return value.filter((paragraph) => typeof paragraph === 'string' && paragraph.trim().length > 0);
+  }
+  if (typeof value === 'string' && value.trim().length > 0) {
+    return [value];
+  }
+  return [];
+};
+
 const renderSkills = (skills) => {
   if (!skillsBody || !Array.isArray(skills)) {
     return;
@@ -552,6 +562,7 @@ const applyProjectPageContent = (translations) => {
   }
 
   const title = projectData.pageTitle || projectData.title || `Project ${pageProjectId}`;
+  const singleColumnDescription = projectData.descriptionLayout === 'single';
   const firstChar = title.charAt(0);
   const remaining = title.slice(1);
 
@@ -569,16 +580,35 @@ const applyProjectPageContent = (translations) => {
 
   projectDescriptionNodes.forEach((node) => {
     const side = node.dataset.projectDescription;
-    const content = side ? projectData.description?.[side] : null;
-    if (!side || !content) {
+    if (!side) {
       return;
     }
 
-    const paragraphs = Array.isArray(content)
-      ? content.filter((paragraph) => typeof paragraph === 'string' && paragraph.trim().length > 0)
-      : [content];
+    if (singleColumnDescription && side === 'right') {
+      node.hidden = true;
+      node.innerHTML = '';
+      return;
+    }
+
+    node.hidden = false;
+
+    const leftContent = projectData.description?.left;
+    const rightContent = projectData.description?.right;
+    const content = singleColumnDescription
+      ? side === 'left'
+        ? [...toParagraphArray(leftContent), ...toParagraphArray(rightContent)]
+        : null
+      : projectData.description?.[side];
+
+    if (!content) {
+      node.innerHTML = '';
+      return;
+    }
+
+    const paragraphs = toParagraphArray(content);
 
     if (!paragraphs.length) {
+      node.innerHTML = '';
       return;
     }
 
@@ -592,6 +622,10 @@ const applyProjectPageContent = (translations) => {
       node.append(p);
     });
   });
+
+  if (projectDescriptionSection) {
+    projectDescriptionSection.classList.toggle('single-column', singleColumnDescription);
+  }
 
   document.title = `${title} | Francisca Miranda`;
 };

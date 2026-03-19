@@ -24,6 +24,7 @@
     "1": {
       "title": "ImmersivusX",
       "pageTitle": "ImmersivusX - A Cidade do Futuro",
+      "descriptionLayout": "single",
       "videos": [
         "https://www.dropbox.com/scl/fi/x59ppioieev9yx33rprse/A-cidade-do-futuro_estreia.mp4?rlkey=50in0k26uqri8xozy9vaxq6tc&st=ahfxkizx&dl=0"
       ],
@@ -74,6 +75,8 @@
     },
     "4": {
       "title": "Kit de Sobrevivência",
+      "pageTitle": "Kit de Sobrevivência ao Ensino Superior",
+      "descriptionLayout": "single",
       "bookPages": [
         "assets/projects/livro/livro1.png",
         "assets/projects/livro/livro2.png",
@@ -97,8 +100,8 @@
         "assets/projects/livro/livro20.png"
       ],
       "description": {
-        "left": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis.",
-        "right": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur fermentum ante a pulvinar. Proin a odio a urna faucibus porttitor sed a arcu. Cras sed maximus risus, eget ultricies libero. Vestibulum luctus maximus auctor. Quisque lobortis risus et dui cursus hendrerit. Suspendisse eleifend venenatis sagittis."
+        "left": "Kit de Sobrevivência ao Ensino Superior foi desenvolvido no âmbito da unidade curricular Design de Comunicação II, cujo desafio era criar um guia sarcástico sobre a vida universitária. O projeto recorre ao humor e à ironia para transformar situações familiares dos estudantes numa narrativa visual simultaneamente crítica e divertida.",
+        "right": "A publicação foi produzida com Illustrator, InDesign e Procreate, cruzando estrutura editorial com linguagem ilustrada. Todas as páginas foram ilustradas por mim no Procreate."
       }
     },
     "5": {
