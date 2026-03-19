@@ -15,6 +15,7 @@ const mobileMarkIcon = document.getElementById('mobileMarkIcon');
 const contactToggle = document.getElementById('contactToggle');
 const contactMenu = document.getElementById('contactMenu');
 const burgerButton = document.getElementById('burgerButton');
+const cvDownloadLink = document.querySelector('.cv-action');
 const sidebar = document.querySelector('.sidebar');
 const isProjectPage = Boolean(document.querySelector('.project-detail'));
 
@@ -22,6 +23,10 @@ const LANG_STORAGE_KEY = 'portfolio_lang';
 const THEME_STORAGE_KEY = 'portfolio_theme';
 const DEFAULT_LANG = 'eng';
 const DEFAULT_THEME = 'light';
+const CV_PATHS = {
+  eng: 'assets/cvs/CVFranciscaMirandaEnglish.pdf',
+  pt: 'assets/cvs/CVFranciscaMirandaPortugues.pdf'
+};
 
 const translationCache = {};
 let projectsCache = null;
@@ -67,6 +72,16 @@ const applyThemeIcons = (theme) => {
   if (mobileMarkIcon) {
     mobileMarkIcon.src = resolvePath(`assets/icons/${dark ? 'mobileIconNight.png' : 'mobileIcon.png'}`);
   }
+};
+
+const applyCvLink = (lang) => {
+  if (!cvDownloadLink) {
+    return;
+  }
+
+  const normalizedLang = normalizeLang(lang);
+  const cvPath = CV_PATHS[normalizedLang] || CV_PATHS[DEFAULT_LANG];
+  cvDownloadLink.setAttribute('href', resolvePath(cvPath));
 };
 
 const setTheme = (theme) => {
@@ -287,6 +302,7 @@ const switchLanguage = async (lang) => {
 
     currentLang = normalizedLang;
     applyLanguage(translations);
+    applyCvLink(currentLang);
 
     if (projectGrid) {
       renderProjectGrid(projects, translations);
