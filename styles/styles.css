@@ -38,8 +38,13 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "PP Editorial Ultralight", serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.is-project-page {
+  overflow: hidden;
 }
 
 body[data-theme="dark"] {
