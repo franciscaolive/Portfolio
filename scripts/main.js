@@ -155,8 +155,11 @@ const renderProjectGrid = (projects, translations) => {
   projectGrid.innerHTML = projects
     .map((project) => {
       const title = translations.projects?.[project.id]?.title || `Project ${project.id}`;
+      const coverStyle = project.cover
+        ? ` style="background-image: url('${resolvePath(project.cover)}');"`
+        : '';
       return `
-        <a href="${resolvePath(project.href)}" class="project-card" data-category="${project.category}" aria-label="${title}" style="background-image: url('${resolvePath(project.cover)}');">
+        <a href="${resolvePath(project.href)}" class="project-card" data-category="${project.category}" aria-label="${title}"${coverStyle}>
           <div class="project-overlay">
             <h3 class="project-title">${title}</h3>
             <span class="view-button">${viewLabel}</span>

@@ -1,39 +1,39 @@
 {
   "projects": [
     {
-      "id": "1",
-      "category": "design",
-      "cover": "assets/projects/projcover1.jpg",
-      "href": "projects/project.html?id=1"
-    },
-    {
       "id": "2",
       "category": "games",
-      "cover": "assets/projects/projcover2.jpg",
+      "cover": "assets/projects/JenkinsCapa.png",
       "href": "projects/project.html?id=2"
     },
     {
-      "id": "3",
+      "id": "1",
       "category": "design",
-      "cover": "assets/projects/projcover3.jpg",
-      "href": "projects/project.html?id=3"
+      "cover": "assets/projects/ImmersivusXCapa.png",
+      "href": "projects/project.html?id=1"
     },
     {
       "id": "4",
       "category": "games",
-      "cover": "assets/projects/projcover4.jpg",
+      "cover": "assets/projects/KitdeSobrevivenciaCover.png",
       "href": "projects/project.html?id=4"
     },
     {
       "id": "5",
       "category": "design",
-      "cover": "assets/projects/projcover5.jpg",
+      "cover": "assets/projects/AfterglowCapa.png",
       "href": "projects/project.html?id=5"
+    },
+    {
+      "id": "3",
+      "category": "design",
+      "cover": "assets/projects/SerpentinaCove.png",
+      "href": "projects/project.html?id=3"
     },
     {
       "id": "6",
       "category": "games",
-      "cover": "assets/projects/projcover6.jpg",
+      "cover": "assets/projects/GlitchBoxProjCover.png",
       "href": "projects/project.html?id=6"
     }
   ]
