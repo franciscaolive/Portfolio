@@ -12,6 +12,7 @@ const projectVideosNode = document.querySelector('[data-project-videos]');
 const projectPostTextNode = document.querySelector('[data-project-post-text]');
 const projectReportNode = document.querySelector('[data-project-report]');
 const projectBookNode = document.querySelector('[data-project-book]');
+const projectBottomMediaNode = document.querySelector('[data-project-bottom-media]');
 const projectGrid = document.querySelector('.project-grid');
 const filterButtons = document.querySelectorAll('.project-filter');
 
@@ -460,6 +461,54 @@ const renderProjectReport = (projectData) => {
   }
 };
 
+const renderProjectBottomMedia = (projectData) => {
+  if (!projectBottomMediaNode) {
+    return;
+  }
+
+  const videos = Array.isArray(projectData?.bottomVideos)
+    ? projectData.bottomVideos.filter((url) => typeof url === 'string' && url.trim().length > 0)
+    : [];
+
+  if (!videos.length) {
+    projectBottomMediaNode.hidden = true;
+    projectBottomMediaNode.innerHTML = '';
+    return;
+  }
+
+  projectBottomMediaNode.hidden = false;
+  projectBottomMediaNode.innerHTML = videos
+    .map((url, index) => {
+      const youtubeEmbedUrl = toYouTubeEmbedUrl(url);
+      if (youtubeEmbedUrl) {
+        return `
+          <iframe
+            class="project-video-frame"
+            src="${youtubeEmbedUrl}"
+            title="Project bottom video ${index + 1}"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        `;
+      }
+
+      const embedUrl = toEmbeddableVideoUrl(url);
+      return `
+        <video class="project-video" controls playsinline preload="metadata" aria-label="Project bottom video ${index + 1}">
+          <source src="${embedUrl}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      `;
+    })
+    .join('');
+
+  if (projectDetailNode && projectBottomMediaNode.parentElement === projectDetailNode) {
+    projectDetailNode.appendChild(projectBottomMediaNode);
+  }
+};
+
 const positionProjectDescription = (projectId, projectData) => {
   if (!projectDescriptionSection || !projectDetailNode || !projectVideosNode) {
     return;
@@ -497,6 +546,7 @@ const applyProjectPageContent = (translations) => {
     renderProjectVideos(null);
     renderProjectPostText(null);
     renderProjectReport(null);
+    renderProjectBottomMedia(null);
     positionProjectDescription(pageProjectId, null);
     return;
   }
@@ -515,6 +565,7 @@ const applyProjectPageContent = (translations) => {
   renderProjectBook(projectData, translations);
   positionProjectDescription(pageProjectId, projectData);
   renderProjectReport(projectData);
+  renderProjectBottomMedia(projectData);
 
   projectDescriptionNodes.forEach((node) => {
     const side = node.dataset.projectDescription;

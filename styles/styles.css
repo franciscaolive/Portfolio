@@ -636,6 +636,16 @@ strong {
   text-underline-offset: 0.16em;
 }
 
+.project-bottom-media {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.project-bottom-media[hidden] {
+  display: none;
+}
+
 .project-description {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -961,6 +971,11 @@ strong {
 
   .project-report-link {
     font-size: clamp(1.05rem, 3.1vw, 1.2rem);
+  }
+
+  .project-bottom-media {
+    margin-bottom: 20px;
+    gap: 10px;
   }
 
   .book-spread {
