@@ -9,6 +9,7 @@ const projectDescriptionNodes = document.querySelectorAll('.description-column[d
 const projectDescriptionSection = document.querySelector('.project-description');
 const projectDetailNode = document.querySelector('.project-detail');
 const projectVideosNode = document.querySelector('[data-project-videos]');
+const projectEmbedNode = document.querySelector('[data-project-embed]');
 const projectPostTextNode = document.querySelector('[data-project-post-text]');
 const projectReportNode = document.querySelector('[data-project-report]');
 const projectBookNode = document.querySelector('[data-project-book]');
@@ -297,6 +298,61 @@ const toYouTubeEmbedUrl = (url) => {
   }
 };
 
+const toProjectEmbedUrl = (url) => {
+  if (typeof url !== 'string' || !url.trim()) {
+    return '';
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+    if (parsedUrl.protocol === 'http:' || parsedUrl.protocol === 'https:') {
+      return parsedUrl.toString();
+    }
+  } catch {
+    return resolvePath(url);
+  }
+
+  return '';
+};
+
+const renderProjectEmbed = (projectData) => {
+  if (!projectEmbedNode) {
+    return;
+  }
+
+  const embedSource = toProjectEmbedUrl(projectData?.embedSource);
+  if (!embedSource) {
+    projectEmbedNode.hidden = true;
+    projectEmbedNode.innerHTML = '';
+    return;
+  }
+
+  const embedTitle = typeof projectData?.embedTitle === 'string' && projectData.embedTitle.trim()
+    ? projectData.embedTitle
+    : 'Interactive project embed';
+  const itchUrl = typeof projectData?.itchUrl === 'string' && projectData.itchUrl.trim()
+    ? projectData.itchUrl
+    : '';
+
+  projectEmbedNode.hidden = false;
+  projectEmbedNode.innerHTML = `
+    <iframe
+      class="project-embed-frame"
+      src="${embedSource}"
+      title="${embedTitle}"
+      loading="lazy"
+      allow="autoplay; fullscreen; gamepad; xr-spatial-tracking"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    ${
+      itchUrl
+        ? `<p class="project-embed-itch">or play on itch.io: <a href="${itchUrl}" target="_blank" rel="noreferrer">${itchUrl}</a></p>`
+        : ''
+    }
+  `;
+};
+
 const renderProjectVideos = (projectData) => {
   if (!projectVideosNode) {
     return;
@@ -519,8 +575,46 @@ const renderProjectBottomMedia = (projectData) => {
   }
 };
 
+const positionProjectSections = (projectId) => {
+  if (!projectDetailNode) {
+    return;
+  }
+
+  const defaultOrder = [
+    projectVideosNode,
+    projectEmbedNode,
+    projectPostTextNode,
+    projectReportNode,
+    projectBookNode,
+    projectBottomMediaNode,
+    projectDescriptionSection
+  ];
+
+  const afterglowOrder = [
+    projectEmbedNode,
+    projectPostTextNode,
+    projectDescriptionSection,
+    projectVideosNode,
+    projectBottomMediaNode,
+    projectReportNode,
+    projectBookNode
+  ];
+
+  const order = projectId === '5' ? afterglowOrder : defaultOrder;
+
+  order.forEach((node) => {
+    if (node && node.parentElement === projectDetailNode) {
+      projectDetailNode.appendChild(node);
+    }
+  });
+};
+
 const positionProjectDescription = (projectId, projectData) => {
   if (!projectDescriptionSection || !projectDetailNode || !projectVideosNode) {
+    return;
+  }
+
+  if (projectId === '5') {
     return;
   }
 
@@ -554,6 +648,7 @@ const applyProjectPageContent = (translations) => {
   const projectData = translations.projects?.[pageProjectId];
   if (!projectData) {
     renderProjectVideos(null);
+    renderProjectEmbed(null);
     renderProjectPostText(null);
     renderProjectReport(null);
     renderProjectBottomMedia(null);
@@ -572,11 +667,13 @@ const applyProjectPageContent = (translations) => {
 
   projectTitleRest.textContent = remaining;
   renderProjectVideos(projectData);
+  renderProjectEmbed(projectData);
   renderProjectPostText(projectData);
   renderProjectBook(projectData, translations);
-  positionProjectDescription(pageProjectId, projectData);
   renderProjectReport(projectData);
   renderProjectBottomMedia(projectData);
+  positionProjectSections(pageProjectId);
+  positionProjectDescription(pageProjectId, projectData);
 
   projectDescriptionNodes.forEach((node) => {
     const side = node.dataset.projectDescription;

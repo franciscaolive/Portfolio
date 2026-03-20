@@ -106,6 +106,9 @@
     },
     "5": {
       "title": "Afterglow",
+      "embedSource": "assets/afterglow_web/index.html",
+      "embedTitle": "Afterglow jogavel na web",
+      "itchUrl": "https://mooniightbae.itch.io/afterglow",
       "videos": [
         "https://youtu.be/hAKl-SoCxt8"
       ],

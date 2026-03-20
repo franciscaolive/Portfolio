@@ -615,6 +615,38 @@ body:not(.is-project-page) .sidebar-footer {
   border: 1px solid var(--line);
 }
 
+.project-embed {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.project-embed[hidden] {
+  display: none;
+}
+
+.project-embed-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  background: #000000;
+  display: block;
+}
+
+.project-embed-itch {
+  margin: 0;
+  font-family: "PP Editorial Ultralight", serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.project-embed-itch a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+  overflow-wrap: anywhere;
+}
+
 .book-carousel {
   display: flex;
   flex-direction: column;
@@ -1068,6 +1100,14 @@ body:not(.is-project-page) .sidebar-footer {
   .project-media {
     gap: 16px;
     margin-bottom: 20px;
+  }
+
+  .project-embed {
+    margin-bottom: 20px;
+  }
+
+  .project-embed-itch {
+    font-size: clamp(1.05rem, 3.1vw, 1.2rem);
   }
 
   .book-carousel {
