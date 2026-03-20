@@ -4,7 +4,7 @@ A responsive bilingual portfolio website showcasing selected design and game pro
 
 ## Live Website
 
-[Open Portfolio](https://franciscaolives.github.io/Portfolio/)
+[Open Portfolio](https://franciscaolive.github.io/Portfolio/)
 
 ## Overview
 
