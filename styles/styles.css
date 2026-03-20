@@ -1007,6 +1007,41 @@ body:not(.is-project-page) .sidebar-footer {
   .project-nav {
     justify-content: center;
     gap: 1rem;
+    margin: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .project-nav-controls {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: max-height 0.25s ease, opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  body:not(.is-project-page) .project-nav-controls {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  body:not(.is-project-page) .project-nav {
+    margin: 10px 0 12px;
+    overflow: visible;
+  }
+
+  body.mobile-menu-open .project-nav-controls {
+    max-height: 220px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .project-grid {

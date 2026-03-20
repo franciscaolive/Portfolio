@@ -703,12 +703,14 @@ if (themeToggle) {
 if (burgerButton && sidebar) {
   burgerButton.addEventListener('click', () => {
     const isOpen = sidebar.classList.toggle('mobile-menu-open');
+    body.classList.toggle('mobile-menu-open', isOpen);
     burgerButton.setAttribute('aria-expanded', String(isOpen));
   });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 780) {
       sidebar.classList.remove('mobile-menu-open');
+      body.classList.remove('mobile-menu-open');
       burgerButton.setAttribute('aria-expanded', 'false');
     }
   });
