@@ -44,37 +44,34 @@
           </section>
         </div>
 
-        <footer class="sidebar-footer">
-          <button class="icon-action" id="themeToggle" type="button" aria-label="Toggle theme">
-            <img id="themeIcon" src="assets/icons/moon.png" alt="Theme icon" />
-          </button>
-
-          <div class="contact-group">
-            <button class="text-action contact-toggle" id="contactToggle" type="button" data-i18n-key="contactMe" aria-expanded="false">
-              Contact Me
-            </button>
-            <div class="contact-menu" id="contactMenu" role="menu" aria-label="Contact links">
-              <a href="https://github.com/kikinhagameplays" target="_blank" rel="noreferrer" role="menuitem">GitHub</a>
-              <a href="mailto:franciscaolivmir@gmail.com" role="menuitem">Email</a>
-              <a href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noreferrer" role="menuitem">LinkedIn</a>
-            </div>
-          </div>
-
-          <a class="text-action cv-action" href="assets/cvs/CVFranciscaMirandaEnglish.pdf" download>CV</a>
-
-          <div class="language-toggle" role="group" aria-label="Language selection">
-            <button class="text-action lang-option" data-lang="pt" type="button">PT</button>
-            <span class="lang-separator">/</span>
-            <button class="text-action lang-option active-lang" data-lang="eng" type="button">ENG</button>
-          </div>
-        </footer>
       </aside>
 
       <main class="content">
-        <nav class="project-nav" aria-label="Project categories">
-          <button class="project-filter active" data-filter="all" data-i18n-key="all" type="button">All</button>
-          <button class="project-filter" data-filter="design" data-i18n-key="design" type="button">Design</button>
-          <button class="project-filter" data-filter="games" data-i18n-key="games" type="button">Games</button>
+        <nav class="project-nav" aria-label="Site actions">
+          <div class="project-nav-controls">
+            <button class="icon-action" id="themeToggle" type="button" aria-label="Toggle theme">
+              <img id="themeIcon" src="assets/icons/moon.png" alt="Theme icon" />
+            </button>
+
+            <div class="contact-group">
+              <button class="text-action contact-toggle" id="contactToggle" type="button" data-i18n-key="contactMe" aria-expanded="false">
+                Contact Me
+              </button>
+              <div class="contact-menu" id="contactMenu" role="menu" aria-label="Contact links">
+                <a href="https://github.com/kikinhagameplays" target="_blank" rel="noreferrer" role="menuitem">GitHub</a>
+                <a href="mailto:franciscaolivmir@gmail.com" role="menuitem">Email</a>
+                <a href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noreferrer" role="menuitem">LinkedIn</a>
+              </div>
+            </div>
+
+            <a class="text-action cv-action" href="assets/cvs/CVFranciscaMirandaEnglish.pdf" download>CV</a>
+
+            <div class="language-toggle" role="group" aria-label="Language selection">
+              <button class="text-action lang-option" data-lang="pt" type="button">PT</button>
+              <span class="lang-separator">/</span>
+              <button class="text-action lang-option active-lang" data-lang="eng" type="button">ENG</button>
+            </div>
+          </div>
         </nav>
 
         <section class="project-grid" aria-label="Projects"></section>

@@ -13,9 +13,10 @@ This repository contains a static front-end portfolio built with HTML, CSS, and 
 - Responsive layout for desktop and mobile
 - Language switching (Portuguese and English)
 - Light and dark theme toggle
-- Project filtering by category
 - Individual project detail pages
 - Language-aware CV download links
+- Desktop dual-scroll layout with independent left/right panel scrolling
+- Hidden desktop scrollbar visuals while preserving scroll behavior
 
 ## Tech Stack
 
