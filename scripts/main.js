@@ -1,6 +1,6 @@
 const body = document.body;
 const langButtons = document.querySelectorAll('.lang-option');
-const aboutSection = document.querySelector('[data-i18n="about"] p');
+const aboutSection = document.querySelector('[data-i18n="about"]');
 const skillsBody = document.querySelector('[data-i18n="skills"] .skills-body');
 const i18nTextNodes = document.querySelectorAll('[data-i18n-key]');
 const projectTitleRest = document.querySelector('.project-name-rest[data-project-id]');
@@ -187,12 +187,26 @@ const renderAbout = (about) => {
   }
 
   if (typeof about.html === 'string') {
-    aboutSection.innerHTML = about.html;
+    const paragraphs = about.html
+      .split(/<br\s*\/?\s*>/i)
+      .map((paragraph) => paragraph.trim())
+      .filter((paragraph) => paragraph.length > 0);
+
+    aboutSection.innerHTML = paragraphs
+      .map((paragraph) => `<p>${paragraph}</p>`)
+      .join('');
     return;
   }
 
   if (typeof about.text === 'string') {
-    aboutSection.innerHTML = about.text;
+    const paragraphs = about.text
+      .split(/<br\s*\/?\s*>/i)
+      .map((paragraph) => paragraph.trim())
+      .filter((paragraph) => paragraph.length > 0);
+
+    aboutSection.innerHTML = paragraphs
+      .map((paragraph) => `<p>${paragraph}</p>`)
+      .join('');
     return;
   }
 
@@ -201,6 +215,7 @@ const renderAbout = (about) => {
   }
 
   aboutSection.textContent = '';
+  const paragraph = document.createElement('p');
   const fragment = document.createDocumentFragment();
   about.segments.forEach((segment) => {
     if (segment.strong) {
@@ -213,7 +228,8 @@ const renderAbout = (about) => {
     fragment.append(document.createTextNode(segment.text));
   });
 
-  aboutSection.append(fragment);
+  paragraph.append(fragment);
+  aboutSection.append(paragraph);
 };
 
 const toParagraphArray = (value) => {

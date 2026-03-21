@@ -1,13 +1,12 @@
 {
   "about": {
-    "html": "Localizada no Porto e atualmente a estudar na FEUP, foco o meu trabalho na interseção entre UI/UX Design e Creative Coding. Com um percurso que une as artes e a tecnologia, procuro formas de fundir estas duas áreas, explorando como a dicotomia entre ambos os meios pode convergir para criar algo novo.<br>Movida por um compromisso rigoroso com o design, encaro cada projeto como um passo em direção a um padrão de expressão mais elevado. Procuro evoluir a minha stack técnica e capacidade estética, garantindo que o meu próximo projeto seja sempre o meu melhor trabalho."
+    "html": "Localizada no Porto e atualmente a estudar na <b>FEUP</b>, foco o meu trabalho na interseção entre UI/UX Design e Creative Coding. Com um percurso que une <b>as artes e a tecnologia</b>, procuro formas de fundir estas duas áreas, explorando como a dicotomia entre ambos os meios pode convergir para criar algo novo.<br>Movida por um compromisso rigoroso com o design, encaro cada projeto como um passo em direção a um padrão de expressão mais elevado. Procuro <b>evoluir a minha stack técnica e capacidade estética</b>, garantindo que o meu próximo projeto seja sempre o meu melhor trabalho."
   },
   "skills": [
-    { "label": "Design", "items": "Illustrator, Photoshop, InDesign, Figma, Procreate" },
-    { "label": "Vídeo", "items": "After Effects, Premiere Pro, DaVinci Resolve, Final Cut Pro" },
-    { "label": "3D", "items": "Maya, Blender, Motion Builder" },
-    { "label": "Jogos", "items": "Unity, Godot" },
-    { "label": "Código", "items": "JavaScript, Java, C#, GDScript" }
+    { "label": "Design", "items": "Figma, Adobe Creative Suite (Ps, Ai, Id), Procreate." },
+    { "label": "Motion & 3D", "items": "Blender, Autodesk Maya, After Effects, Premiere Pro, Final Cut Pro, DaVinci Resolve." },
+    { "label": "Desenvolvimento", "items": "C# (Unity), Java, JavaScript, C/C++ (Arduino), HTML5/CSS3, GDScript." },
+    { "label": "Game Dev", "items": "Unity, Godot" }
   ],
   "labels": {
     "all": "Todos",

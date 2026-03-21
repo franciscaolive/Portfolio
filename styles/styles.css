@@ -70,7 +70,7 @@ body[data-theme="dark"] .view-button {
 .layout {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 418px 1fr;
+  grid-template-columns: 440px 1fr;
 }
 
 .sidebar {
@@ -78,7 +78,7 @@ body[data-theme="dark"] .view-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 44px 35px 29px;
+  padding: 40px 30px 24px;
   min-height: 0;
   transition: border-color 0.3s ease;
 }
@@ -101,7 +101,7 @@ body[data-theme="dark"] .view-button {
   font-family: "PP Editorial Ultralight", serif;
   font-weight: 200;
   line-height: 0.9;
-  font-size: 50px;
+  font-size: 48px;
 }
 
 .name-line {
@@ -115,7 +115,7 @@ body[data-theme="dark"] .view-button {
 
 .script-letter {
   font-family: "Edwardian Script", cursive;
-  font-size: 80px;
+  font-size: 76px;
   line-height: 0;
   margin-right: 8px;
 }
@@ -124,7 +124,7 @@ body[data-theme="dark"] .view-button {
 .skill-rest {
   font-family: "PP Editorial Ultralight", serif;
   font-weight: 200;
-  font-size: 46px;
+  font-size: 44px;
 }
 
 .about {
@@ -134,8 +134,12 @@ body[data-theme="dark"] .view-button {
 .about p,
 .skills-body {
   margin: 0;
-  font-size: 20px;
-  line-height: 33px;
+  font-size: 19px;
+  line-height: 32px;
+}
+
+.about p + p {
+  text-indent: 3em;
 }
 
 strong {
@@ -152,7 +156,7 @@ strong {
   font-family: "PP Editorial Ultralight", serif;
   font-weight: 200;
   line-height: 0.9;
-  font-size: 46px;
+  font-size: 44px;
 }
 
 .skillset h2 .script-letter {
@@ -237,7 +241,7 @@ strong {
   color: var(--text);
   text-decoration: none;
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 22px;
+  font-size: 21px;
   font-style: italic;
   text-transform: none;
   letter-spacing: 0;
@@ -255,7 +259,7 @@ strong {
 .lang-separator,
 .text-action {
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 20px;
+  font-size: 19px;
   font-style: italic;
   text-transform: uppercase;
   letter-spacing: 0.01em;
@@ -276,10 +280,10 @@ strong {
   display: inline-flex;
   align-items: baseline;
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 20px;
+  font-size: 19px;
   font-style: italic;
   line-height: 1;
-  height: 20px;
+  height: 19px;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -287,7 +291,7 @@ strong {
 .lang-separator {
   display: inline-flex;
   align-items: baseline;
-  height: 20px;
+  height: 19px;
   line-height: 1;
 }
 
@@ -303,7 +307,7 @@ strong {
 
 .cv-action {
   border-bottom: 1px solid transparent;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1;
 }
 
@@ -418,8 +422,8 @@ strong {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 44px;
-  margin: 8px 0 20px;
+  gap: 36px;
+  margin: 6px 0 16px;
   flex: 0 0 auto;
 }
 
@@ -441,13 +445,9 @@ strong {
   transform: translate(-50%, 0);
 }
 
-body:not(.is-project-page) .sidebar-footer {
-  display: none;
-}
-
 .project-filter {
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1;
   background: none;
   border: none;
@@ -506,7 +506,7 @@ body:not(.is-project-page) .sidebar-footer {
 
 .project-title {
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 28px;
+  font-size: 27px;
   color: #ffffff;
   margin: 0;
   font-weight: 200;
@@ -514,7 +514,7 @@ body:not(.is-project-page) .sidebar-footer {
 
 .view-button {
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #ffffff;
   padding: 10px 24px;
   border: 1px solid #ffffff;
@@ -586,7 +586,7 @@ body:not(.is-project-page) .sidebar-footer {
   margin: 0;
   font-family: "PP Editorial Ultralight", serif;
   font-weight: 200;
-  font-size: 50px;
+  font-size: 48px;
   line-height: 1;
 }
 
@@ -729,7 +729,7 @@ body:not(.is-project-page) .sidebar-footer {
   display: inline-flex;
   align-items: center;
   font-family: "PP Editorial Ultralight", serif;
-  font-size: 20px;
+  font-size: 19px;
   color: var(--text);
   text-decoration: underline;
   text-underline-offset: 0.16em;
@@ -984,6 +984,15 @@ body:not(.is-project-page) .sidebar-footer {
     border-bottom: 1px solid transparent;
     transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.2s ease, margin 0.2s ease,
       border-color 0.2s ease;
+  }
+
+  body:not(.is-project-page) .sidebar-footer {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    border-bottom-color: transparent;
+    padding: 0;
+    margin-top: 18px;
   }
 
   .sidebar.mobile-menu-open .sidebar-footer {
