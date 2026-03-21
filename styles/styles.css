@@ -986,15 +986,6 @@ strong {
       border-color 0.2s ease;
   }
 
-  body:not(.is-project-page) .sidebar-footer {
-    max-height: none;
-    opacity: 1;
-    overflow: visible;
-    border-bottom-color: transparent;
-    padding: 0;
-    margin-top: 18px;
-  }
-
   .sidebar.mobile-menu-open .sidebar-footer {
     max-height: 220px;
     opacity: 1;
