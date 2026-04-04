@@ -346,7 +346,17 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: clamp(10px, 1.4vw, 16px);
-	flex: 1;
+	flex: 0 0 auto;
+}
+
+.site-footer {
+	margin-top: clamp(-10px, -0.5vw, -4px);
+	padding-top: clamp(0px, 0.4vw, 6px);
+	font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+	font-weight: 200;
+	font-style: normal;
+	color: var(--muted);
+	text-align: center;
 }
 
 .copy {
