@@ -191,11 +191,12 @@ a {
 .monogram {
 	display: grid;
 	place-items: center;
-	align-self: center;
+	align-self: start;
 	border: none;
 	background: none;
 	padding: 0;
 	cursor: pointer;
+	margin-top: -16px;
 }
 
 .monogram-icon {
