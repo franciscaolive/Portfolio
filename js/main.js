@@ -129,12 +129,13 @@ function renderHeader() {
 		<div class="header-right">
 			<nav class="nav" aria-label="Primary">
 				<button class="nav-link" data-section="skills" data-i18n="skills"></button>
-				<div class="contact-wrapper">
+				<div class="contact-wrapper" data-contact-wrapper>
 						<button class="nav-link contact-toggle" data-i18n="contact" type="button" aria-expanded="false" aria-controls="contact-menu" aria-haspopup="true"></button>
 						<div class="contact-menu" id="contact-menu" hidden>
 							<a class="contact-item contact-github" href="${profile.links?.github || "#"}" target="_blank" rel="noreferrer">GitHub</a>
 							<a class="contact-item contact-linkedin" href="${profile.links?.linkedin || "#"}" target="_blank" rel="noreferrer">LinkedIn</a>
 							<a class="contact-item contact-email" href="mailto:${profile.email}">Email</a>
+							<a class="contact-item contact-cv" href="#" target="_blank" rel="noreferrer" download></a>
 						</div>
 				</div>
 			</nav>
@@ -163,6 +164,7 @@ function renderHeader() {
 					<a class="contact-item contact-github" href="${profile.links?.github || "#"}" target="_blank" rel="noreferrer">GitHub</a>
 					<a class="contact-item contact-linkedin" href="${profile.links?.linkedin || "#"}" target="_blank" rel="noreferrer">LinkedIn</a>
 					<a class="contact-item contact-email" href="mailto:${profile.email}">Email</a>
+					<a class="contact-item contact-cv" href="#" target="_blank" rel="noreferrer" download></a>
 				</div>
 			</nav>
 		</div>
@@ -177,6 +179,7 @@ function cacheDom() {
 	dom.contactEmailLink = document.querySelector(".contact-email");
 	dom.contactToggle = document.querySelector(".contact-toggle");
 	dom.contactMenu = document.querySelector(".contact-menu");
+	dom.contactWrapper = document.querySelector("[data-contact-wrapper]");
 	dom.modeButtons = document.querySelectorAll("[data-mode]");
 	dom.langButtons = document.querySelectorAll("[data-lang]");
 	dom.navButtons = document.querySelectorAll(".nav-link[data-section]");
@@ -341,6 +344,19 @@ function renderProjectPageContent() {
 function updateContactLinks() {
 	const profile = state.site.profile || fallbackSite.profile;
 	const email = (profile.email || "").trim();
+	const cvConfig = {
+		eng: {
+			href: resolvePath("assets/cv/CVFranciscaMirandaEnglish.pdf"),
+			label: "CV",
+			download: "CV-Francisca-Miranda-ENG.pdf"
+		},
+		pt: {
+			href: resolvePath("assets/cv/CVFranciscaMirandaPortugues.pdf"),
+			label: "CV",
+			download: "CV-Francisca-Miranda-PT.pdf"
+		}
+	};
+	const cv = cvConfig[state.lang] || cvConfig.eng;
 
 	document.querySelectorAll(".contact-github").forEach((link) => {
 		if (profile.links?.github) link.href = profile.links.github;
@@ -353,6 +369,12 @@ function updateContactLinks() {
 	document.querySelectorAll(".contact-email").forEach((link) => {
 		link.href = email ? `mailto:${email}` : "#";
 		link.title = email ? `Email ${email}` : "";
+	});
+
+	document.querySelectorAll(".contact-cv").forEach((link) => {
+		link.href = cv.href;
+		link.textContent = cv.label;
+		link.setAttribute("download", cv.download);
 	});
 }
 
@@ -424,6 +446,7 @@ function setLanguage(lang) {
 	setActive(dom.langButtons, "lang", lang);
 	storeValue(STORAGE_KEYS.lang, lang);
 	applyTranslations();
+	updateContactLinks();
 }
 
 function setMenuOpen(isOpen) {
@@ -437,9 +460,6 @@ function setContactMenuOpen(isOpen) {
 	if (!dom.contactMenu || !dom.contactToggle) return;
 	dom.contactMenu.hidden = !isOpen;
 	dom.contactToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-	if (isOpen) {
-		dom.contactMenu.querySelector("a")?.focus();
-	}
 }
 
 function isContactMenuOpen() {
@@ -575,6 +595,16 @@ function bindEvents() {
 	dom.contactToggle?.addEventListener("click", () => {
 		setContactMenuOpen(!isContactMenuOpen());
 	});
+
+	const canHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+	if (canHover.matches && dom.contactWrapper) {
+		dom.contactWrapper.addEventListener("mouseenter", () => {
+			setContactMenuOpen(true);
+		});
+		dom.contactWrapper.addEventListener("mouseleave", () => {
+			setContactMenuOpen(false);
+		});
+	}
 
 	dom.contactMenu?.addEventListener("click", (event) => {
 		if (event.target instanceof HTMLAnchorElement) {
