@@ -24,7 +24,7 @@
 			"id": "quem-me-viu-e-quem-me-ve",
 			"route": "projects/quem-me-viu-e-quem-me-ve.html",
 			"cover": "assets/project_covers/A4 (300 DPI).png",
-			"featured": true
+			"featured": false
 		},
 		{
 			"id": "away-with-the-fairies",
