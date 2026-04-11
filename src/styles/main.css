@@ -22,6 +22,30 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "PPEditorialOld";
+	src: url("../assets/fonts/PPEditorialOld-Ultralight.otf") format("opentype");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "PPEditorialOld";
+	src: url("../assets/fonts/PPEditorialOld-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "PPEditorialOld";
+	src: url("../assets/fonts/PPEditorialOld-UltralightItalic.otf") format("opentype");
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
 :root {
 	--bg: #fffaf4;
 	--panel: #fffaf4;
@@ -195,10 +219,11 @@ body {
 
 .section-title {
 	margin: 0.38rem 0 0.02rem;
-	font-family: "PPEditorialOld-UltralightItalic", serif;
+	font-family: "PPEditorialOld", serif;
 	font-size: clamp(1.95rem, 1.42vw, 2.25rem);
 	line-height: 1;
 	font-weight: 200;
+	font-style: italic;
 }
 
 #skills-title {
@@ -322,9 +347,10 @@ body {
 }
 
 .overlay-title {
-	font-family: "PPEditorialOld-UltralightItalic", serif;
+	font-family: "PPEditorialOld", serif;
 	font-size: clamp(1.65rem, 1.5vw, 2.4rem);
 	line-height: 1.05;
+	font-style: italic;
 }
 
 .overlay-cta {
@@ -380,10 +406,11 @@ body {
 .project-title {
 	margin: 0;
 	padding-left: 0.62rem;
-	font-family: "PPEditorialOld-UltralightItalic", serif;
+	font-family: "PPEditorialOld", serif;
 	font-size: clamp(2.25rem, 2.2vw, 3.2rem);
 	line-height: 1;
 	font-weight: 200;
+	font-style: italic;
 }
 
 .finder-head::after {
