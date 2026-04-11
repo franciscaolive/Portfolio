@@ -4,6 +4,8 @@
 Icon?
 !assets/icons/
 !assets/icons/**
+!src/assets/images/icons/
+!src/assets/images/icons/**
 ._*
 .Spotlight-V100
 .Trashes
