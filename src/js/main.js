@@ -65,13 +65,26 @@ function applyHighlight(text) {
     return text.replace(/\*\*(.*?)\*\*/g, '<span class="text-highlight">$1</span>');
 }
 
+function resolveFromBase(path) {
+    return new URL(path, document.baseURI).toString();
+}
+
+function setFaviconHref() {
+    const faviconLink = document.querySelector('link[rel="icon"]');
+    if (!faviconLink) {
+        return;
+    }
+
+    faviconLink.href = resolveFromBase("src/assets/images/icons/Favicon.png");
+}
+
 function setTheme(theme) {
     state.theme = theme;
     refs.body.dataset.theme = theme;
     localStorage.setItem(THEME_STORAGE_KEY, theme);
     refs.fmIcon.src = theme === "dark"
-        ? "src/assets/images/icons/FMIconWhite.png"
-        : "src/assets/images/icons/FMIconBlack.png";
+        ? resolveFromBase("src/assets/images/icons/FMIconWhite.png")
+        : resolveFromBase("src/assets/images/icons/FMIconBlack.png");
 
     refs.themeButtons.forEach((button) => {
         const isActive = button.dataset.themeChoice === theme;
@@ -201,6 +214,7 @@ function optimizeThumbnailLoading() {
 async function init() {
     bindEvents();
     optimizeThumbnailLoading();
+    setFaviconHref();
 
     try {
         await loadCopy();
