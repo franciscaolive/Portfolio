@@ -4,40 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FM | Portfolio</title>
-    <meta name="description" content="Portfolio of Francisca Miranda featuring multimedia, game design, and interactive projects.">
-    <meta property="og:title" content="FM | Portfolio">
-    <meta property="og:description" content="Portfolio of Francisca Miranda featuring multimedia, game design, and interactive projects.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/icons/FM_FAVICON.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/FM_FAVICON.png">
-    <link rel="apple-touch-icon" href="assets/icons/FM_FAVICON.png">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="src/assets/images/icons/Favicon.png">
+    <link rel="stylesheet" href="src/styles/main.css">
 </head>
-<body class="light-mode">
-    <div class="wrapper">
-        <header class="header" data-site-header></header>
+<body data-theme="light" data-lang="en">
+    <main class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <img
+                        id="fm-icon"
+                        class="fm-icon"
+                        src="src/assets/images/icons/FMIconBlack.png"
+                        alt="FM logo"
+                    >
 
-        <main class="content">
-            <section class="copy" aria-live="polite">
-                <div class="copy-block" data-copy-target></div>
-            </section>
+                    <nav class="controls" aria-label="Site controls">
+                        <div class="segmented" aria-label="Theme toggle">
+                            <button class="segment is-active" data-theme-choice="light" type="button">LIGHT</button>
+                            <span class="dot">•</span>
+                            <button class="segment" data-theme-choice="dark" type="button">DARK</button>
+                        </div>
 
-            <div class="divider" aria-hidden="true"></div>
+                        <div class="segmented" aria-label="Language toggle">
+                            <button class="segment" data-lang-choice="pt" type="button">PT</button>
+                            <span class="dot">•</span>
+                            <button class="segment is-active" data-lang-choice="en" type="button">EN</button>
+                        </div>
 
-            <section class="projects" aria-label="Featured work">
-                <div class="carousel">
-                    <div class="carousel-viewport">
-                        <div class="carousel-track" data-carousel-track></div>
+                        <button class="segment search-trigger" type="button">SEARCH BY TAG</button>
+                    </nav>
+                </header>
+
+                <section class="about" aria-label="About and contact">
+                    <p class="body-copy intro-paragraph">
+                        <span id="intro-1"></span><br><span id="intro-2" class="intro-continued"></span>
+                    </p>
+
+                    <h2 id="skills-title" class="section-title"></h2>
+                    <p id="skills-design" class="body-copy"></p>
+                    <p id="skills-development" class="body-copy"></p>
+                    <p id="skills-motion" class="body-copy"></p>
+                    <p id="skills-3d" class="body-copy"></p>
+                    <p id="skills-gamedev" class="body-copy"></p>
+
+                    <h2 id="contact-title" class="section-title"></h2>
+                    <ul class="contact-list">
+                        <li>
+                            <span id="contact-email-label" class="contact-line-label"></span>
+                            <a id="contact-email" class="contact-handle" href="mailto:franciscaolivmir@gmail.com"></a>
+                        </li>
+                        <li>
+                            <span id="contact-github-label" class="contact-line-label"></span>
+                            <a id="contact-github" class="contact-handle" href="https://github.com/franciscaolive" target="_blank" rel="noopener noreferrer"></a>
+                        </li>
+                        <li>
+                            <span id="contact-linkedin-label" class="contact-line-label"></span>
+                            <a id="contact-linkedin" class="contact-handle" href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noopener noreferrer"></a>
+                        </li>
+                        <li><a id="contact-cv" class="contact-handle" href="src/assets/CV/CVFranciscaMirandaEnglish.pdf" target="_blank" rel="noopener noreferrer"></a></li>
+                    </ul>
+                </section>
+
+                <footer class="sidebar-footer">Francisca Miranda &copy; 2026</footer>
+            </div>
+        </aside>
+
+        <section class="projects" aria-label="Projects">
+            <a class="project-card" href="src/projects/project-frontend.html" aria-label="Front-end Development project">
+                <div class="project-media">
+                    <img src="src/assets/images/projects/COVERS/FRONTEND.png" alt="Front-end Development">
+                    <div class="project-overlay">
+                        <span class="overlay-title">Front-end Development</span>
+                        <span class="overlay-cta">View Project</span>
                     </div>
                 </div>
-            </section>
-        </main>
+                <h3 class="project-label">Front-end Development</h3>
+            </a>
 
-        <footer class="site-footer" aria-label="Footer">
-            <span>2026 ©</span>
-        </footer>
-    </div>
+            <a class="project-card" href="src/projects/project-fm.html" aria-label="FM by Francisca Miranda project">
+                <div class="project-media">
+                    <img src="src/assets/images/projects/COVERS/FM.png" alt="Branding and Web Design">
+                    <div class="project-overlay">
+                        <span class="overlay-title">FM by<br>Francisca Miranda</span>
+                        <span class="overlay-cta">View Project</span>
+                    </div>
+                </div>
+                <h3 class="project-label">Branding/Web Design</h3>
+            </a>
 
-    <script src="js/main.js"></script>
+            <a class="project-card" href="src/projects/project-qmvv.html" aria-label="quem me viu e quem me vê project">
+                <div class="project-media">
+                    <img src="src/assets/images/projects/COVERS/QMV2.png" alt="Editorial Design">
+                    <div class="project-overlay">
+                        <span class="overlay-title">quem me viu e<br>quem me vê</span>
+                        <span class="overlay-cta">View Project</span>
+                    </div>
+                </div>
+                <h3 class="project-label">Editorial Design</h3>
+            </a>
+
+            <a class="project-card" href="src/projects/project-awtf.html" aria-label="Away With The Fairies project">
+                <div class="project-media">
+                    <img src="src/assets/images/projects/COVERS/AWTF.jpg" alt="Graphic Design">
+                    <div class="project-overlay">
+                        <span class="overlay-title">Away With<br>The Fairies</span>
+                        <span class="overlay-cta">View Project</span>
+                    </div>
+                </div>
+                <h3 class="project-label">Graphic Design</h3>
+            </a>
+
+            <a class="project-card" href="src/projects/project-jenkins.html" aria-label="Jenkins and 5 Shades of Pink project">
+                <div class="project-media">
+                    <img src="src/assets/images/projects/COVERS/JENKINS.jpg" alt="Reactive Program">
+                    <div class="project-overlay">
+                        <span class="overlay-title">Jenkins /<br>5 Shades of Pink</span>
+                        <span class="overlay-cta">View Project</span>
+                    </div>
+                </div>
+                <h3 class="project-label">Reactive Program</h3>
+            </a>
+
+            <a class="project-card" href="src/projects/project-afterglow.html" aria-label="afterglow project">
+                <div class="project-media">
+                    <img src="src/assets/images/projects/COVERS/AFTERGLOW.png" alt="Game Development">
+                    <div class="project-overlay">
+                        <span class="overlay-title">afterglow</span>
+                        <span class="overlay-cta">View Project</span>
+                    </div>
+                </div>
+                <h3 class="project-label">Game Development</h3>
+            </a>
+        </section>
+    </main>
+
+    <script src="src/js/main.js"></script>
 </body>
 </html>

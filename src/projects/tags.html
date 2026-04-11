@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM | Find By Tag</title>
+    <base href="../../">
+    <link rel="icon" type="image/png" href="src/assets/images/icons/Favicon.png">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body data-theme="light" data-lang="en">
+    <main class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <a class="fm-home-link" href="index.html" aria-label="Back to homepage">
+                        <img id="fm-icon" class="fm-icon" src="src/assets/images/icons/FMIconBlack.png" alt="FM logo">
+                    </a>
+                    <nav class="controls" aria-label="Site controls">
+                        <div class="segmented" aria-label="Theme toggle">
+                            <button class="segment is-active" data-theme-choice="light" type="button">LIGHT</button>
+                            <span class="dot">•</span>
+                            <button class="segment" data-theme-choice="dark" type="button">DARK</button>
+                        </div>
+                        <div class="segmented" aria-label="Language toggle">
+                            <button class="segment" data-lang-choice="pt" type="button">PT</button>
+                            <span class="dot">•</span>
+                            <button class="segment is-active" data-lang-choice="en" type="button">EN</button>
+                        </div>
+                        <button class="segment search-trigger is-active" type="button">SEARCH BY TAG</button>
+                    </nav>
+                </header>
+
+                <section class="about" aria-label="About and contact">
+                    <p class="body-copy intro-paragraph"><span id="intro-1"></span><br><span id="intro-2" class="intro-continued"></span></p>
+                    <h2 id="skills-title" class="section-title"></h2>
+                    <p id="skills-design" class="body-copy"></p>
+                    <p id="skills-development" class="body-copy"></p>
+                    <p id="skills-motion" class="body-copy"></p>
+                    <p id="skills-3d" class="body-copy"></p>
+                    <p id="skills-gamedev" class="body-copy"></p>
+                    <h2 id="contact-title" class="section-title"></h2>
+                    <ul class="contact-list">
+                        <li><span id="contact-email-label" class="contact-line-label"></span><a id="contact-email" class="contact-handle" href="mailto:franciscaolivmir@gmail.com"></a></li>
+                        <li><span id="contact-github-label" class="contact-line-label"></span><a id="contact-github" class="contact-handle" href="https://github.com/franciscaolive" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li><span id="contact-linkedin-label" class="contact-line-label"></span><a id="contact-linkedin" class="contact-handle" href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noopener noreferrer"></a></li>
+                        <li><a id="contact-cv" class="contact-handle" href="src/assets/CV/CVFranciscaMirandaEnglish.pdf" target="_blank" rel="noopener noreferrer"></a></li>
+                    </ul>
+                </section>
+
+                <footer class="sidebar-footer">Francisca Miranda &copy; 2026</footer>
+            </div>
+        </aside>
+
+        <section class="project-detail" aria-label="Find projects by tag">
+            <a class="project-back tag-finder-back" href="index.html">Back to Portfolio</a>
+            <div class="tag-finder tag-finder-columns">
+                <section class="finder-column" aria-label="Find by genre">
+                    <header class="project-head finder-head">
+                        <h1 class="project-title"><span class="lang-en">by genre</span><span class="lang-pt">por género</span></h1>
+                    </header>
+                    <section class="finder-section">
+                        <div class="finder-list" id="genre-list"></div>
+                    </section>
+                </section>
+
+                <section class="finder-column" aria-label="Find by program">
+                    <header class="project-head finder-head">
+                        <h2 class="project-title"><span class="lang-en">by program</span><span class="lang-pt">por programa</span></h2>
+                    </header>
+                    <section class="finder-section">
+                        <div class="finder-list" id="program-list"></div>
+                    </section>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/tags.js"></script>
+</body>
+</html>

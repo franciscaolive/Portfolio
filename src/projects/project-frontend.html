@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM | Front-end Development</title>
+    <base href="../../">
+    <link rel="icon" type="image/png" href="src/assets/images/icons/Favicon.png">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body data-theme="light" data-lang="en">
+    <main class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <a class="fm-home-link" href="index.html" aria-label="Back to homepage"><img id="fm-icon" class="fm-icon" src="src/assets/images/icons/FMIconBlack.png" alt="FM logo"></a>
+                    <nav class="controls" aria-label="Site controls">
+                        <div class="segmented" aria-label="Theme toggle"><button class="segment is-active" data-theme-choice="light" type="button">LIGHT</button><span class="dot">•</span><button class="segment" data-theme-choice="dark" type="button">DARK</button></div>
+                        <div class="segmented" aria-label="Language toggle"><button class="segment" data-lang-choice="pt" type="button">PT</button><span class="dot">•</span><button class="segment is-active" data-lang-choice="en" type="button">EN</button></div>
+                        <button class="segment search-trigger" type="button">SEARCH BY TAG</button>
+                    </nav>
+                </header>
+                <section class="about" aria-label="About and contact">
+                    <p class="body-copy intro-paragraph"><span id="intro-1"></span><br><span id="intro-2" class="intro-continued"></span></p>
+                    <h2 id="skills-title" class="section-title"></h2>
+                    <p id="skills-design" class="body-copy"></p><p id="skills-development" class="body-copy"></p><p id="skills-motion" class="body-copy"></p><p id="skills-3d" class="body-copy"></p><p id="skills-gamedev" class="body-copy"></p>
+                    <h2 id="contact-title" class="section-title"></h2>
+                    <ul class="contact-list"><li><span id="contact-email-label" class="contact-line-label"></span><a id="contact-email" class="contact-handle" href="mailto:franciscaolivmir@gmail.com"></a></li><li><span id="contact-github-label" class="contact-line-label"></span><a id="contact-github" class="contact-handle" href="https://github.com/franciscaolive" target="_blank" rel="noopener noreferrer"></a></li><li><span id="contact-linkedin-label" class="contact-line-label"></span><a id="contact-linkedin" class="contact-handle" href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noopener noreferrer"></a></li><li><a id="contact-cv" class="contact-handle" href="src/assets/CV/CVFranciscaMirandaEnglish.pdf" target="_blank" rel="noopener noreferrer"></a></li></ul>
+                </section>
+                <footer class="sidebar-footer">Francisca Miranda &copy; 2026</footer>
+            </div>
+        </aside>
+        <section class="project-detail" aria-label="Project detail">
+            <header class="project-head"><h1 class="project-title">Front-end Development</h1></header>
+            <div class="project-meta"><nav class="tag-row" aria-label="Project tags"><a class="tag-chip is-active" href="#">Front-end Development</a><a class="tag-chip" href="#">JavaScript</a><a class="tag-chip" href="#">HTML/CSS</a><a class="tag-chip" href="#">Responsive Design</a></nav><a class="project-back" href="index.html">Back to Portfolio</a></div>
+            <div class="frontend-layout">
+                <p class="project-copy lang-en">This project group documents sites I built in collaboration with my friend and graphic designer Eduardo Hora. The focus is on layout systems, interaction, and responsive behavior, with the pages embedded below so they can be explored directly inside the portfolio.</p>
+                <p class="project-copy lang-pt">Este conjunto de projetos documenta sites que desenvolvi em colaboração com o meu amigo e designer gráfico Eduardo Hora. O foco está nos sistemas de layout, na interação e no comportamento responsivo, com as páginas incorporadas abaixo para que possam ser exploradas diretamente dentro do portefólio.</p>
+
+                <div class="frontend-embed-grid">
+                    <details class="frontend-embed-card">
+                        <summary class="frontend-embed-head">
+                            <h2 class="project-title frontend-embed-title">Joana P. Pinto</h2>
+                            <span class="frontend-embed-details lang-en">Details</span>
+                            <span class="frontend-embed-details lang-pt">Detalhes</span>
+                        </summary>
+                        <div class="frontend-embed-panel">
+                            <div class="frontend-iframe-frame">
+                                <iframe src="https://joana-p-pinto.github.io/Joana-Portfolio/" title="Joana P. Pinto website preview" loading="lazy"></iframe>
+                            </div>
+                            <a class="frontend-site-link lang-en" href="https://joana-p-pinto.github.io/Joana-Portfolio/" target="_blank" rel="noopener noreferrer">Visit live site</a>
+                            <a class="frontend-site-link lang-pt" href="https://joana-p-pinto.github.io/Joana-Portfolio/" target="_blank" rel="noopener noreferrer">Visitar site ao vivo</a>
+                        </div>
+                    </details>
+
+                    <details class="frontend-embed-card">
+                        <summary class="frontend-embed-head">
+                            <h2 class="project-title frontend-embed-title">T1</h2>
+                            <span class="frontend-embed-details lang-en">Details</span>
+                            <span class="frontend-embed-details lang-pt">Detalhes</span>
+                        </summary>
+                        <div class="frontend-embed-panel">
+                            <div class="frontend-iframe-frame">
+                                <iframe src="https://franciscaolive.github.io/T1/" title="T1 website preview" loading="lazy"></iframe>
+                            </div>
+                            <a class="frontend-site-link lang-en" href="https://franciscaolive.github.io/T1/" target="_blank" rel="noopener noreferrer">Visit live site</a>
+                            <a class="frontend-site-link lang-pt" href="https://franciscaolive.github.io/T1/" target="_blank" rel="noopener noreferrer">Visitar site ao vivo</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

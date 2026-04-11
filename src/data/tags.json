@@ -1,0 +1,247 @@
+{
+  "projects": {
+    "fm": {
+      "title": {
+        "en": "FM by Francisca Miranda",
+        "pt": "FM by Francisca Miranda"
+      },
+      "href": "src/projects/project-fm.html",
+      "image": "src/assets/images/projects/COVERS/FM.png"
+    },
+    "frontend": {
+      "title": {
+        "en": "Front-end Development",
+        "pt": "Desenvolvimento Front-end"
+      },
+      "href": "src/projects/project-frontend.html",
+      "image": "src/assets/images/projects/COVERS/FRONTEND.png"
+    },
+    "qmvv": {
+      "title": {
+        "en": "quem me viu e quem me vê",
+        "pt": "quem me viu e quem me vê"
+      },
+      "href": "src/projects/project-qmvv.html",
+      "image": "src/assets/images/projects/COVERS/QMV2.png"
+    },
+    "awtf": {
+      "title": {
+        "en": "Away With The Fairies",
+        "pt": "Away With The Fairies"
+      },
+      "href": "src/projects/project-awtf.html",
+      "image": "src/assets/images/projects/COVERS/AWTF.jpg"
+    },
+    "afterglow": {
+      "title": {
+        "en": "afterglow",
+        "pt": "afterglow"
+      },
+      "href": "src/projects/project-afterglow.html",
+      "image": "src/assets/images/projects/COVERS/AFTERGLOW.png"
+    },
+    "jenkins": {
+      "title": {
+        "en": "Jenkins / 5 Shades of Pink",
+        "pt": "Jenkins / 5 Shades of Pink"
+      },
+      "href": "src/projects/project-jenkins.html",
+      "image": "src/assets/images/projects/COVERS/JENKINS.jpg"
+    }
+  },
+  "sections": {
+    "genre": [
+      {
+        "label": {
+          "en": "Branding",
+          "pt": "Branding"
+        },
+        "projects": ["fm"]
+      },
+      {
+        "label": {
+          "en": "Web Design",
+          "pt": "Web Design"
+        },
+        "projects": ["fm"]
+      },
+      {
+        "label": {
+          "en": "Front-end Development",
+          "pt": "Desenvolvimento Front-end"
+        },
+        "projects": ["frontend"]
+      },
+      {
+        "label": {
+          "en": "Editorial Design",
+          "pt": "Design Editorial"
+        },
+        "projects": ["qmvv"]
+      },
+      {
+        "label": {
+          "en": "Graphic Design",
+          "pt": "Design Gráfico"
+        },
+        "projects": ["qmvv", "awtf"]
+      },
+      {
+        "label": {
+          "en": "Game Development",
+          "pt": "Desenvolvimento de Jogos"
+        },
+        "projects": ["afterglow"]
+      },
+      {
+        "label": {
+          "en": "Reactive Program",
+          "pt": "Programa Reativo"
+        },
+        "projects": ["jenkins"]
+      },
+      {
+        "label": {
+          "en": "Identity",
+          "pt": "Identidade"
+        },
+        "projects": ["fm"]
+      },
+      {
+        "label": {
+          "en": "Visual System",
+          "pt": "Sistema Visual"
+        },
+        "projects": ["fm"]
+      },
+      {
+        "label": {
+          "en": "Portfolio",
+          "pt": "Portfólio"
+        },
+        "projects": ["fm"]
+      },
+      {
+        "label": {
+          "en": "Print",
+          "pt": "Impressão"
+        },
+        "projects": ["awtf"]
+      },
+      {
+        "label": {
+          "en": "Typography",
+          "pt": "Tipografia"
+        },
+        "projects": ["awtf"]
+      },
+      {
+        "label": {
+          "en": "Illustration",
+          "pt": "Ilustração"
+        },
+        "projects": ["awtf"]
+      },
+      {
+        "label": {
+          "en": "Audio Reactive",
+          "pt": "Áudio Reativo"
+        },
+        "projects": ["afterglow"]
+      },
+      {
+        "label": {
+          "en": "Interactive",
+          "pt": "Interativo"
+        },
+        "projects": ["afterglow"]
+      },
+      {
+        "label": {
+          "en": "Interactive System",
+          "pt": "Sistema Interativo"
+        },
+        "projects": ["jenkins"]
+      }
+    ],
+    "program": [
+      {
+        "label": {
+          "en": "Adobe Illustrator",
+          "pt": "Adobe Illustrator"
+        },
+        "projects": ["qmvv", "awtf"]
+      },
+      {
+        "label": {
+          "en": "Adobe Photoshop",
+          "pt": "Adobe Photoshop"
+        },
+        "projects": ["qmvv"]
+      },
+      {
+        "label": {
+          "en": "Adobe InDesign",
+          "pt": "Adobe InDesign"
+        },
+        "projects": ["qmvv"]
+      },
+      {
+        "label": {
+          "en": "Figma",
+          "pt": "Figma"
+        },
+        "projects": ["fm"]
+      },
+      {
+        "label": {
+          "en": "JavaScript",
+          "pt": "JavaScript"
+        },
+        "projects": ["frontend"]
+      },
+      {
+        "label": {
+          "en": "HTML/CSS",
+          "pt": "HTML/CSS"
+        },
+        "projects": ["frontend"]
+      },
+      {
+        "label": {
+          "en": "Responsive Design",
+          "pt": "Design Responsivo"
+        },
+        "projects": ["frontend", "fm"]
+      },
+      {
+        "label": {
+          "en": "Processing",
+          "pt": "Processing"
+        },
+        "projects": ["jenkins"]
+      },
+      {
+        "label": {
+          "en": "Arduino IDE",
+          "pt": "Arduino IDE"
+        },
+        "projects": ["jenkins"]
+      },
+      {
+        "label": {
+          "en": "Programming",
+          "pt": "Programação"
+        },
+        "projects": ["jenkins"]
+      },
+      {
+        "label": {
+          "en": "Godot",
+          "pt": "Godot"
+        },
+        "projects": ["afterglow"]
+      }
+    ]
+  }
+}

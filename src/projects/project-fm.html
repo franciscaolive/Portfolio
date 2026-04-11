@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM | FM by Francisca Miranda</title>
+    <base href="../../">
+    <link rel="icon" type="image/png" href="src/assets/images/icons/Favicon.png">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body data-theme="light" data-lang="en">
+    <main class="layout">
+        <aside class="sidebar"><div class="sidebar-inner"><header class="sidebar-header"><a class="fm-home-link" href="index.html" aria-label="Back to homepage"><img id="fm-icon" class="fm-icon" src="src/assets/images/icons/FMIconBlack.png" alt="FM logo"></a><nav class="controls" aria-label="Site controls"><div class="segmented" aria-label="Theme toggle"><button class="segment is-active" data-theme-choice="light" type="button">LIGHT</button><span class="dot">•</span><button class="segment" data-theme-choice="dark" type="button">DARK</button></div><div class="segmented" aria-label="Language toggle"><button class="segment" data-lang-choice="pt" type="button">PT</button><span class="dot">•</span><button class="segment is-active" data-lang-choice="en" type="button">EN</button></div><button class="segment search-trigger" type="button">SEARCH BY TAG</button></nav></header><section class="about" aria-label="About and contact"><p class="body-copy intro-paragraph"><span id="intro-1"></span><br><span id="intro-2" class="intro-continued"></span></p><h2 id="skills-title" class="section-title"></h2><p id="skills-design" class="body-copy"></p><p id="skills-development" class="body-copy"></p><p id="skills-motion" class="body-copy"></p><p id="skills-3d" class="body-copy"></p><p id="skills-gamedev" class="body-copy"></p><h2 id="contact-title" class="section-title"></h2><ul class="contact-list"><li><span id="contact-email-label" class="contact-line-label"></span><a id="contact-email" class="contact-handle" href="mailto:franciscaolivmir@gmail.com"></a></li><li><span id="contact-github-label" class="contact-line-label"></span><a id="contact-github" class="contact-handle" href="https://github.com/franciscaolive" target="_blank" rel="noopener noreferrer"></a></li><li><span id="contact-linkedin-label" class="contact-line-label"></span><a id="contact-linkedin" class="contact-handle" href="https://www.linkedin.com/in/francisca-miranda-18702b347/" target="_blank" rel="noopener noreferrer"></a></li><li><a id="contact-cv" class="contact-handle" href="src/assets/CV/CVFranciscaMirandaEnglish.pdf" target="_blank" rel="noopener noreferrer"></a></li></ul></section><footer class="sidebar-footer">Francisca Miranda &copy; 2026</footer></div></aside>
+        <section class="project-detail" aria-label="Project detail">
+            <header class="project-head"><h1 class="project-title">FM by Francisca Miranda</h1></header>
+            <div class="project-meta"><nav class="tag-row" aria-label="Project tags"><a class="tag-chip is-active" href="#">Branding</a><a class="tag-chip" href="#">Web Design</a><a class="tag-chip" href="#">Identity</a><a class="tag-chip" href="#">Visual System</a><a class="tag-chip" href="#">Portfolio</a><a class="tag-chip" href="#">Responsive Design</a></nav><a class="project-back" href="index.html">Back to Portfolio</a></div>
+
+            <div class="fm-layout">
+                <div class="fm-carousel-wrap media-frame" data-carousel="fm-main">
+                    <button class="carousel-image-button" type="button" data-carousel-open="fm-main" aria-label="Open image fullscreen">
+                        <img id="fm-main-image" src="src/assets/images/projects/FM/1.png" alt="FM project image">
+                    </button>
+                    <div class="media-counter">
+                        <button type="button" data-carousel-prev="fm-main" aria-label="Previous image">&lt;</button>
+                        <span id="fm-main-counter">1/8</span>
+                        <button type="button" data-carousel-next="fm-main" aria-label="Next image">&gt;</button>
+                    </div>
+                </div>
+
+                <div class="fm-text-columns">
+                    <div>
+                        <p class="project-copy">FM is my personal brand in development. This project brings together the different iterations of my website as part of that ongoing process. It mostly functions as a record of how I have been improving the way I present myself and my work.</p>
+                        <p class="project-copy qmvv-indent">Each version began in Figma, where I could test hierarchy, typography, layout, and rhythm, before translating it into code. The project is as much about design decisions as it is about learning how to build them with precision.</p>
+                    </div>
+                    <div>
+                        <p class="project-copy qmvv-indent">At its core, FM reflects an interest in both self-improvement and self-curation. I see my personal branding not as a continuous process of my intention, taste, and making sure my work is presented with the same level of care that goes into creating it.</p>
+                        <p class="project-copy qmvv-indent">The selected screens show that evolution through different approaches to navigation, editorial structure, and tone, while maintaining the same goal: creating a portfolio that is authored, coherent, and aligned with the standard I want my work to meet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="fm-lightbox" aria-hidden="true">
+        <button class="lightbox-btn prev" id="fm-lightbox-prev" type="button" aria-label="Previous image">&lt;</button>
+        <img id="fm-lightbox-image" src="" alt="Expanded project image">
+        <button class="lightbox-btn next" id="fm-lightbox-next" type="button" aria-label="Next image">&gt;</button>
+        <button class="lightbox-btn close" id="fm-lightbox-close" type="button" aria-label="Close viewer">x</button>
+    </div>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/project-fm.js"></script>
+</body>
+</html>

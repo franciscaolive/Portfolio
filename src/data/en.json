@@ -1,0 +1,17 @@
+{
+	"intro1": "Based in Porto and currently studying at **FEUP**, I work with both art and technology, always looking for ways to merge the two and create something new.",
+	"intro2": "I see every project as an opportunity to improve both my technical skills and aesthetic voice, with the goal of making every new project better than my last one.",
+	"skillsTitle": "Skillset",
+	"skillsDesign": "**Design:** Figma, Adobe Creative Suite (Ps, Ai, Id), Procreate.",
+	"skillsDevelopment": "**Development:** C# (Unity), Java, JavaScript, C/C++ (Arduino), HTML5/CSS3, GDScript.",
+	"skillsMotion": "**Motion Design:** After Effects, Premiere Pro, Final Cut Pro, DaVinci Resolve.",
+	"skills3d": "**3D:** Blender, Autodesk Maya.",
+	"skillsGamedev": "**Game Dev:** Unity, Godot.",
+	"contactTitle": "Contact Me",
+	"contactEmail": "Email ・ franciscaolivmir@gmail.com",
+	"contactGithub": "GitHub ・ franciscaolive",
+	"contactLinkedin": "LinkedIn ・ francisca-miranda-18702b347",
+	"projectBack": "Back to Portfolio",
+	"contactCv": "Download my CV!",
+	"contactCvHref": "src/assets/CV/CVFranciscaMirandaEnglish.pdf"
+}
