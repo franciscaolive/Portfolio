@@ -5,7 +5,10 @@ const qmvvCarousels = {
             "src/assets/images/projects/QMV2/2.png",
             "src/assets/images/projects/QMV2/3.png",
             "src/assets/images/projects/QMV2/4.png",
-            "src/assets/images/projects/QMV2/5.png"
+            "src/assets/images/projects/QMV2/5.png",
+            "src/assets/images/projects/QMV2/6.png",
+            "src/assets/images/projects/QMV2/7.png",
+            "src/assets/images/projects/QMV2/8.png"
         ],
         imageEl: document.getElementById("qmvv-main-image"),
         counterEl: document.getElementById("qmvv-main-counter"),
