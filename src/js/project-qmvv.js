@@ -13,6 +13,17 @@ const qmvvCarousels = {
         imageEl: document.getElementById("qmvv-main-image"),
         counterEl: document.getElementById("qmvv-main-counter"),
         index: 0
+    },
+    process: {
+        images: [
+            "src/assets/images/projects/QMV2/esbocos+processo/processo1.png",
+            "src/assets/images/projects/QMV2/esbocos+processo/processo2.png",
+            "src/assets/images/projects/QMV2/esbocos+processo/processo3.png",
+            "src/assets/images/projects/QMV2/esbocos+processo/processo4.png"
+        ],
+        imageEl: document.getElementById("qmvv-process-image"),
+        counterEl: document.getElementById("qmvv-process-counter"),
+        index: 0
     }
 };
 
@@ -27,7 +38,7 @@ const lightbox = {
 
 function renderCarousel(name) {
     const carousel = qmvvCarousels[name];
-    if (!carousel) {
+    if (!carousel || !carousel.imageEl || !carousel.counterEl) {
         return;
     }
 
@@ -135,7 +146,7 @@ function bindLightbox() {
 }
 
 function initQmvv() {
-    renderCarousel("main");
+    Object.keys(qmvvCarousels).forEach((name) => renderCarousel(name));
     bindCarouselControls();
     bindLightbox();
 }

@@ -709,6 +709,23 @@ body[data-lang="pt"] .project-copy.lang-pt + .project-copy.lang-pt {
 	gap: 0;
 }
 
+.qmvv-process-section {
+	margin-top: 0.95rem;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.qmvv-process-frame {
+	width: min(100%, 920px);
+}
+
+.qmvv-process-frame .carousel-image-button img {
+	aspect-ratio: 16 / 10;
+	object-fit: contain;
+	background: color-mix(in srgb, var(--panel) 94%, transparent);
+}
+
 .qmvv-indent {
 	text-indent: 1.2em;
 	margin-top: 0;
@@ -1085,6 +1102,10 @@ body[data-lang="pt"] .project-copy.lang-pt + .project-copy.lang-pt {
 		grid-template-columns: 1fr;
 	}
 
+	.qmvv-process-frame {
+		width: min(100%, 820px);
+	}
+
 	.jenkins-text-columns,
 	.jenkins-bottom,
 	.fm-text-columns {
@@ -1144,6 +1165,10 @@ body[data-lang="pt"] .project-copy.lang-pt + .project-copy.lang-pt {
 
 	.qmvv-layout > .media-frame {
 		width: min(100%, 360px);
+	}
+
+	.qmvv-process-frame {
+		width: 100%;
 	}
 
 	.jenkins-video-side {
