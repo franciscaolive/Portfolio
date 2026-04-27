@@ -132,7 +132,7 @@ function renderCopy() {
     refs.contactGithub.textContent = githubLine.handle;
     refs.contactGithub.href = toSocialUrl("github", githubLine.handle);
     refs.contactLinkedinLabel.textContent = linkedinLine.label;
-    refs.contactLinkedin.textContent = linkedinLine.handle;
+    refs.contactLinkedin.textContent = 'francisca-mir';
     refs.contactLinkedin.href = toSocialUrl("linkedin", linkedinLine.handle);
     refs.contactCv.textContent = t.contactCv;
     refs.contactCv.href = t.contactCvHref;

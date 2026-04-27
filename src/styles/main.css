@@ -1,3 +1,18 @@
+.skills-section-title {
+	font-family: "PPEditorialOld-Regular", serif;
+	font-style: normal;
+	font-weight: 400;
+}
+.skills-list {
+	margin: 0.2em 0 0.5em 1.1em;
+	padding: 0;
+	list-style: disc inside;
+}
+.skills-label {
+	font-family: "PPEditorialOld-UltralightItalic", serif;
+	font-style: italic;
+	font-weight: 200;
+}
 @font-face {
 	font-family: "PPEditorialOld-Ultralight";
 	src: url("../assets/fonts/PPEditorialOld-Ultralight.otf") format("opentype");
