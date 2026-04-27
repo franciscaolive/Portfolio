@@ -133,7 +133,7 @@ function renderCopy() {
     refs.contactGithub.href = toSocialUrl("github", githubLine.handle);
     refs.contactLinkedinLabel.textContent = linkedinLine.label;
     refs.contactLinkedin.textContent = 'francisca-mir';
-    refs.contactLinkedin.href = toSocialUrl("linkedin", linkedinLine.handle);
+    refs.contactLinkedin.href = 'https://www.linkedin.com/in/francisca-miranda-18702b347/';
     refs.contactCv.textContent = t.contactCv;
     refs.contactCv.href = t.contactCvHref;
 
