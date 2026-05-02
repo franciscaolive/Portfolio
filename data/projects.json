@@ -9,10 +9,10 @@
     "thumb": "src/images/projects/covers/FRONTEND.png",
     "type": "links",
     "links": [
-      { "label": "ahliyah", "url": "https://ahliyah-luna.github.io/Portfolio/" },
-      { "label": "t1", "url": "https://franciscaolive.github.io/T1/" },
-      { "label": "diana", "url": "https://diana-coelho.github.io/Portfolio/" },
-      { "label": "joana", "url": "https://joana-p-pinto.github.io/Joana-Portfolio/" }
+      { "label": "Ahliyah Luna", "url": "https://ahliyah-luna.github.io/Portfolio/" },
+      { "label": "T1 (In Development)", "url": "https://franciscaolive.github.io/T1/" },
+      { "label": "Diana Coelho", "url": "https://diana-coelho.github.io/Portfolio/" },
+      { "label": "Joana Pinto", "url": "https://joana-p-pinto.github.io/Joana-Portfolio/" }
     ]
   },
   {
