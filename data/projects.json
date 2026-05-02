@@ -1,0 +1,102 @@
+[
+  {
+    "id": "frontend",
+    "title": { "en": "front-end development", "pt": "front-end development" },
+    "description": {
+      "en": "This project group documents websites built, some in collaboration with my friend and graphic designer Eduardo Hora. The focus is on layout systems, interaction, and responsive behavior. The pages are embedded so they can be explored directly inside the portfolio.",
+      "pt": "Este grupo de projetos documenta websites desenvolvidos, alguns em colaboração com o meu amigo e designer gráfico Eduardo Hora. O foco recai sobre sistemas de layout, interação o e comportamento responsivo. As páginas estão incorporadas de modo a poderem ser exploradas diretamente no portfólio."
+    },
+    "thumb": "src/images/projects/covers/FRONTEND.png",
+    "type": "links",
+    "links": [
+      { "label": "ahliyah", "url": "https://ahliyah-luna.github.io/Portfolio/" },
+      { "label": "t1", "url": "https://franciscaolive.github.io/T1/" },
+      { "label": "diana", "url": "https://diana-coelho.github.io/Portfolio/" },
+      { "label": "joana", "url": "https://joana-p-pinto.github.io/Joana-Portfolio/" }
+    ]
+  },
+  {
+    "id": "fm",
+    "title": { "en": "fm by francisca miranda", "pt": "fm by francisca miranda" },
+    "description": {
+      "en": "FM is my personal brand  in development. This project brings together the different iterations of my website. It functions as a  record of how I have been improving the way I present myself and my  work. Each version began in Figma, where I could test hierarchy, typography, layout, and  rhythm, before translating it into code. At its core, FM reflects an interest in self-improvement and self-curation. I  see my personal branding as a continuous process of my intention,  taste, and making sure my work is presented with the same level of care  that goes into creating it. The selected screens show that evolution through different approaches to navigation, editorial structure, and tone, while maintaining the same goal.",
+      "pt": "FM é a minha marca pessoal em desenvolvimento. Este projeto reúne as diferentes iterações do meu website, funcionando como um registo da evolução na forma como apresento a minha identidade e o meu trabalho. Cada versão teve início no Figma, onde testei hierarquia, tipografia, layout e ritmo antes da tradução para código. Na sua essência, FM reflete um interesse por auto-improvement e curadoria. Vejo o meu branding pessoal como um processo contínuo de intenção e gosto, garantindo que o meu trabalho é apresentado com o mesmo rigor aplicado na sua criação. Os ecrãs selecionados demonstram essa evolução através de diferentes abordagens, navegação, estrutura editorial e tom, mantendo sempre o mesmo propósito."
+    },
+    "thumb": "src/images/projects/covers/FM.png",
+    "type": "gallery",
+    "images": [
+      "src/images/projects/fm/1.png",
+      "src/images/projects/fm/2.png",
+      "src/images/projects/fm/3.png",
+      "src/images/projects/fm/4.png",
+      "src/images/projects/fm/5.png",
+      "src/images/projects/fm/6.png",
+      "src/images/projects/fm/7.png",
+      "src/images/projects/fm/8.png"
+    ]
+  },
+  {
+    "id": "qmv2",
+    "title": { "en": "quem me viu e quem me vê", "pt": "quem me viu e quem me vê" },
+    "description": {
+      "en": "quem me viu e quem me vê is an  original short story and editorial design project developed for an Interactive Narrative course at FEUP. The project required writing a  linear narrative around the theme of cultural identity. The  design concept came from the title itself. Quem me viu e quem me vê  is a Portuguese expression used when someone looks at their present life and can barely recognize the person they used to be; said with a  particular mix of bewilderment, tenderness, and disbelief. The visual language needed to hold that  same tension. The page borders, designed in Illustrator, are built entirely from the repeated text of the  title, rendered so small it reads as decorative line work at first  glance. The blurred calligraphy functions as a visual ghost of the title, present but not fully legible, mirroring the story's central tension. The  project was assembled in Adobe Illustrator, with page decorations  developed in Illustrator and the display typography and cover designed  in Photoshop. The typographic hierarchy, the dotted act indicators, and  the table of contents framing were all considered as extensions of the  narrative rather than purely decorative choices.",
+      "pt": "quem me viu e quem me vê é um  conto original e um projeto de design editorial desenvolvido para a unidade curricular de Narrativa Interativa na FEUP. O projeto exigia a criação de uma narrativa linear em torno do tema da identidade cultural. O conceito visual nasceu do próprio título, uma expressão utilizada quando alguém olha para o presente e mal reconhece a pessoa que costumava ser; dita com uma mistura particular de perplexidade, ternura e descrença. A linguagem visual precisava de sustentar essa mesma tensão. As margens das páginas, desenhadas no Illustrator, são construídas inteiramente a partir do texto repetido do título, renderizado numa escala tão reduzida que é lido, à primeira vista, como grafismo decorativo. A caligrafia desfocada funciona como um fantasma visual do título, presente mas não totalmente legível. A tipografia de exibição e a capa foram desenhadas no Photoshop. A hierarquia tipográfica, os indicadores de atos pontilhados e o enquadramento do índice foram todos considerados extensões da narrativa, e não meras escolhas decorativas."
+    },
+    "thumb": "src/images/projects/covers/QMV2.png",
+    "type": "gallery",
+    "images": [
+      "src/images/projects/qmv2/book/1.png",
+      "src/images/projects/qmv2/book/2.png",
+      "src/images/projects/qmv2/book/3.png",
+      "src/images/projects/qmv2/book/4.png",
+      "src/images/projects/qmv2/book/5.png",
+      "src/images/projects/qmv2/book/6.png",
+      "src/images/projects/qmv2/book/7.png",
+      "src/images/projects/qmv2/book/8.png",
+      "src/images/projects/qmv2/sketches/processo1.png",
+      "src/images/projects/qmv2/sketches/processo2.png",
+      "src/images/projects/qmv2/sketches/processo3.png",
+      "src/images/projects/qmv2/sketches/processo4.png"
+    ]
+  },
+  {
+    "id": "awtf",
+    "title": { "en": "away with the fairies", "pt": "away with the fairies" },
+    "description": {
+      "en": "away with the fairies is a  poster developed in Adobe Illustrator from an observational starting  point: a gate on the FEUP campus. Using the Rectangle Grid Tool as a generative  base, the project translates that architectural reference into a more  stylised visual composition. The work explores how a real element from the built environment can be  abstracted into a creative graphic system, balancing repetition,  symmetry, and decorative rhythm with a more contemporary poster  sensibility. The intention  was to reinterpret it and build an image that feels both structured and  atmospheric. It is a  small but formative study in observation, abstraction, and composition,  and in using digital tools not only for execution, but for discovering  visual possibilities within an initial idea.",
+      "pt": "away with the fairies é um cartaz desenvolvido no Adobe Illustrator a partir de um ponto de observação: um portão no campus da FEUP. Utilizando a Rectangle Grid Tool como base generativa, o projeto traduz essa referência arquitetónica numa composição visual estilizada. O trabalho explora a forma como um elemento real do ambiente construído pode ser abstraído num sistema gráfico criativo, equilibrando repetição, simetria e ritmo decorativo com uma sensibilidade de cartaz contemporânea. A intenção foi reinterpretar o objeto original para construir uma imagem que se sinta, simultaneamente, estruturada e atmosférica. É um estudo formativo em observação e abstração, utilizando ferramentas digitais não apenas para execução, mas para a descoberta de possibilidades visuais dentro de uma ideia inicial."
+    },
+    "thumb": "src/images/projects/covers/AWTF.jpg",
+    "type": "gallery",
+    "images": [
+      "src/images/projects/awtf/AWTF.jpg",
+      "src/images/projects/awtf/GATE.jpeg"
+    ]
+  },
+  {
+    "id": "jenkins",
+    "title": { "en": "jenkins/5 shades of pink", "pt": "jenkins/5 shades of pink" },
+    "description": {
+      "en": "Jenkins was  developed for the course unit Programming III, whose proposal was to  create a program in Processing that produces a sequence of generative  images to create a real-time video based on the user's sound input. The goal was to create a video with a mixed methodology  that explores the aesthetic and technical possibilities of Processing. It was developed entirely in Processing. The code incorporates  various inputs: the letters S, D, and H; the arrow keys; the numbers  from 1 to 5; the left mouse button; and mouse dragging. By pressing keys 1 to 5, different images from the film Marie Antoinette (2006) appear,  overlap, and disappear when the same keys are pressed again. The output  includes graphic animations that react to sound, such as a sound wave,  triangles generated through mouse movement, circles that appear when the D key is pressed, random geometric shapes generated by clicking the H  key, circles that appear with the S key and are removed by the mouse,  and circles triggered by the arrow keys. This project was done in collaboration with my colleague Alice Logvina. We  worked together to produce the various components in Processing. She  handled the 3D objects like the cube and the terrain, and I handled the  programming of the other elements. Later, in collaboration with the Interface Design course unit, this project  evolved into an interactive installation using Processing and an Arduino simultaneously, thus creating 5 Shades of Pink. Me and my colleague Alice Logvina once  again worked together, and we both worked on all components such as  coding in Processing and utilizing the Arduino. For this  project, we used the graphic developments from our midterm work and  introduced interactivity through Arduino and a webcam. The webcam,  detecting light, generates small triangles in the illuminated area. The  cube also rotates depending on the position of the light. In addition,  with the Arduino, we had 4 buttons in the center of the room to switch  between these components.",
+      "pt": "Jenkins foi desenvolvido no âmbito da Unidade Curricular de Programação III, cuja proposta consistia em criar, em Processing, um programa que produzisse uma sequência de imagens generativas para construir um vídeo em tempo real a partir do input sonoro do utilizador. Ou seja, o objetivo foi criar um vídeo com uma metodologia mista que explorasse as possibilidades estéticas e técnicas do Processing. O código inclui varios inputs: as teclas S, D e H; as setas; os números de 1 a 5; o boãao esquerdo do rato; e o arrastar do rato. Ao pressionar as teclas de 1 a 5, surgem diferentes imagens do filme Marie Antoinette (2006), que se sobrepõem e desaparecem ao voltar a carregar nas mesmas teclas. O output inclui animações gráficas que reagem ao som, como uma onda sonora, triângulos gerados pelo movimento do rato, círculos que surgem ao pressionar a tecla D, formas geométricas aleatórias geradas ao clicar na tecla H, círculos que aparecem com a tecla S e são removidos com o rato, e círculos desencadeados pelas setas do teclado. Este projeto foi realizado em colaboração com a minha colega Alice Logvina. Trabalhamos em conjunto para produzir os vários componentes em Processing. Ela ficou responsável pelos objetos 3D, como o cubo e o terreno, e eu pela programação dos restantes elementos. Mais tarde, em colaboração com a Unidade Curricular de Design de Interfaces, este projeto evoluiu para uma instalação interativa com Processing e Arduino em simultâneo, dando origem ao 5 Shades of Pink. Eu e a minha colega Alice Logvina voltamos a trabalhar em conjunto e colaboramos em todos os componentes, desde a programação em Processing até à utilização do Arduino. Neste projeto, aproveitamos os desenvolvimentos gráficos do trabalho anterior e introduzimos interatividade através do Arduino e uma webcam. A webcam, ao detetar luz, gera pequenos triângulos na área iluminada. O cubo também roda em função da posição da luz. Além disso, com o Arduino, tínhamos 4 botões no centro da sala para alternar entre estes componentes."
+    },
+    "thumb": "src/images/projects/covers/JENKINS.jpg",
+    "type": "video",
+    "videos": [
+      "https://www.dropbox.com/scl/fi/fpfwf2wg3gb31dj1yv6jt/jenkins.mp4?rlkey=6widcl3pcyiui3tujxu9fbnaz&dl=0",
+      "https://www.dropbox.com/scl/fi/doevqit748qt1kju57cct/5shadesofpink.mp4?rlkey=2p3scz3x4mxnv2zzbqtsgmnnq&dl=0"
+    ]
+  },
+  {
+    "id": "afterglow",
+    "title": { "en": "afterglow", "pt": "afterglow" },
+    "description": {
+      "en": "afterglow was developed in the final semester of my Bachelor’s Degree as an individual project that combines game  design, illustration, interface design, animation, and programming. The  project explores how a point-and-click structure can support a calm and  immersive experience centered on atmosphere rather than urgency. Set in a visually stylized  world inspired by cozy gaming and contemporary visual culture, the game conjoins players to move through spaces at their own pace, discovering interactions through observation and curiosity. Instead of directing the player through explicit instructions, the experience encourages  intuitive exploration. This approach is reinforced  by a mostly diegetic interface, where information emerges from the game  world itself. By reducing external UI noise and relying on visual cues,  the project prioritizes emotional continuity, detail, and a sense of  presence. Mechanically, Afterglow  remains intentionally light: players navigate environments, inspect  objects, and uncover hidden elements, with progression built around  free-form interaction rather than task pressure. The absence of strict  goals or tutorials turns replayability into a natural consequence of  discovery. Conceptually, the project  also reflects on gender representation, accessibility, and the value of  aesthetics in game design. It positions visual sensibility as a  legitimate design language and contributes to a broader conversation  about more diverse, welcoming forms of play. As a final outcome,  Afterglow became both a personal and academic milestone: a cohesive  project that demonstrates technical growth while preserving a clear  artistic identity across illustration, design, sound, and interaction.",
+      "pt": "afterglow foi desenvolvido no último semestre da Licenciatura em Multimédia como um projeto individual que cruza design de jogos, ilustração, interface, animação e programação. O projeto explora como a estrutura point-and-click pode sustentar uma experiência calma e imersiva, focada na atmosfera em vez da urgência. Inserido num universo visual estilizado, inspirado em cozy gaming e em referências de cultura visual contemporânea, o jogo convida o jogador a explorar os espaços ao seu ritmo, descobrindo interações através da observação e da curiosidade. Em vez de conduzir o jogador com instruções explícitas, a experiência favorece uma descoberta mais intuitiva. Esta abordagem é reforçada por uma interface maioritariamente diegética, onde a informação surge a partir do próprio mundo do jogo. Ao reduzir elementos externos de interface e apostar em pistas visuais, o projeto privilegia continuidade emocional, detalhe e presença. A nível mecânico, Afterglow mantém-se deliberadamente simples: o jogador percorre ambientes, observa objetos e descobre elementos escondidos, com uma progressão assente na interação livre e não na pressão por objetivos. A ausência de tutoriais rígidos e metas explícitas transforma a repetição em vontade natural de voltar a explorar. Conceptualmente, o projeto reflete sobre representação de género, acessibilidade e o papel da estética no design de videojogos. Afirma a sensibilidade visual como linguagem de projeto legítima e contribui para pensar formas de jogo mais diversas e acolhedoras. Como resultado final, Afterglow tornou-se uma conquista pessoal e académica: um projeto coeso que demonstra crescimento técnico, mantendo uma identidade artística clara entre ilustração, design, som e interação."
+    },
+    "thumb": "src/images/projects/covers/AFTERGLOW.png",
+    "type": "embed",
+    "embed": "src/images/projects/afterglow_web/index.html",
+    "videos": ["https://youtu.be/hAKl-SoCxt8","https://youtu.be/7YNOfbcE3HA"]
+  }
+]

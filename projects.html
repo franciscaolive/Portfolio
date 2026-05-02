@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FM — Projects</title>
+    <link rel="stylesheet" href="src/css/main.css" />
+</head>
+<body data-page="projects">
+    <div class="app frame">
+        <header class="site-header site-header--projects">
+            <nav class="controls" aria-label="Site controls">
+                <div class="toggle" role="group" aria-label="Language">
+                    <button id="langPt" class="toggle-btn" type="button" aria-pressed="false">pt</button>
+                    <span class="toggle-sep" aria-hidden="true">/</span>
+                    <button id="langEn" class="toggle-btn" type="button" aria-pressed="false">en</button>
+                </div>
+                <div class="toggle" role="group" aria-label="Theme">
+                    <button id="themeLight" class="toggle-btn" type="button" aria-pressed="false">light</button>
+                    <span class="toggle-sep" aria-hidden="true">/</span>
+                    <button id="themeDark" class="toggle-btn" type="button" aria-pressed="false">dark</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="hero hero--projects" aria-label="Projects">
+                <div class="hero-main hero-main--projects">
+                    <a id="backHome" class="projects-back" href="index.html"></a>
+                    <p id="projectsIntro" class="projects-intro"></p>
+                </div>
+                <div id="projectsList" class="projects-list" aria-label="Project list"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <small id="footerLeft"></small>
+            <nav id="footerRight" class="footer-links" aria-label="Footer links"></nav>
+        </footer>
+
+        <div id="modal" class="modal" aria-hidden="true">
+            <div class="modal-inner">
+                <button id="modalClose" class="modal-close" type="button">Close</button>
+                <div id="modalContent" class="modal-content"></div>
+            </div>
+        </div>
+
+        <section id="projectView" class="project-view" aria-hidden="true">
+            <div class="project-inner">
+                <div class="project-shell">
+                    <div class="project-shell-left">
+                        <button id="projectBack" class="project-back" type="button">back to projects page</button>
+                        <h2 id="projectTitle" class="project-title"></h2>
+                        <p id="projectDesc" class="project-desc"></p>
+                        <div id="projectExtras" class="project-extras"></div>
+                    </div>
+
+                    <div class="project-shell-right">
+                        <div id="projectContent" class="project-content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="src/js/app.js" type="module"></script>
+</body>
+</html>
