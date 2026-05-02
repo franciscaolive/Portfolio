@@ -14,4 +14,3 @@ live site: https://franciscaolive.github.io/Portfolio/
 
 - github: https://github.com/franciscaolive
 - linkedin: https://www.linkedin.com/in/francisca-miranda-18702b347/
-- email: franciscaolivmir@gmail.com

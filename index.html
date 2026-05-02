@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FM</title>
+    <link rel="stylesheet" href="src/css/main.css" />
 </head>
-<body>
-    
+<body data-page="home">
+    <div class="app frame">
+        <header class="site-header">
+            <nav class="controls" aria-label="Site controls">
+                <div class="toggle" role="group" aria-label="Language">
+                    <button id="langPt" class="toggle-btn" type="button" aria-pressed="false">pt</button>
+                    <span class="toggle-sep" aria-hidden="true">/</span>
+                    <button id="langEn" class="toggle-btn" type="button" aria-pressed="false">en</button>
+                </div>
+                <div class="toggle" role="group" aria-label="Theme">
+                    <button id="themeLight" class="toggle-btn" type="button" aria-pressed="false">light</button>
+                    <span class="toggle-sep" aria-hidden="true">/</span>
+                    <button id="themeDark" class="toggle-btn" type="button" aria-pressed="false">dark</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="hero">
+                <div class="hero-main">
+                    <p id="bio" class="bio bio--lead"></p>
+                    <a id="viewProjects" class="view-projects" href="projects.html"></a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <small id="footerLeft"></small>
+            <nav id="footerRight" class="footer-links" aria-label="Footer links"></nav>
+        </footer>
+    </div>
+
+    <script src="src/js/app.js" type="module"></script>
 </body>
 </html>

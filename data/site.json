@@ -1,0 +1,49 @@
+{
+  "title": "Francisca Miranda",
+  "locales": ["en", "pt"],
+  "strings": {
+    "en": {
+      "heroTitle": "",
+      "heroSub": "",
+      "viewProjects": "View Projects",
+      "backHome": "back to home page",
+      "backProjects": "back to projects page",
+      "projectsHeading": "PROJECTS",
+      "projectsIntro": "This is a curated selection of my work across design and development. I view this archive as a living record of technical growth and aesthetic refinement. Driven by a process of continuous iteration, I am constantly seeking to outdo my previous solutions; updating these systems as my practice evolves.",
+      "contactHeading": "CONTACT ME",
+      "footer": "",
+      "downloadCV": "Download my CV"
+    },
+    "pt": {
+      "heroTitle": "",
+      "heroSub": "",
+      "viewProjects": "Ver Projetos",
+      "backHome": "voltar à página inicial",
+      "backProjects": "voltar à página dos projetos",
+      "projectsHeading": "PROJETOS",
+      "projectsIntro": "Esta é uma seleção curada do meu trabalho entre o design e o desenvolvimento. Encaro este arquivo como um registo de crescimento técnico e estético. Procuro constantemente superar as minhas soluções anteriores; atualizando estes sistemas à medida que a minha prática evolui.",
+      "contactHeading": "CONTACTA ME",
+      "footer": "",
+      "downloadCV": "Transfere o meu CV"
+    }
+  },
+  "bio": {
+    "en": "Francisca Miranda (b. Porto) is a designer & developer pursuing a Master’s Degree at FEUP, working at the intersection of art and technology.",
+    "pt": "Francisca Miranda (n. Porto) é uma designer & developer a tirar o seu Mestrado na FEUP, a trabalhar na interseção entre arte e tecnologia."
+  },
+  "skills": {
+    "design": ["Illustrator","InDesign","Photoshop","Figma","Procreate"],
+    "development": ["JavaScript (ES6+)","HTML5","CSS3"],
+    "software": ["C/C++","Java","C#"],
+    "motion": ["After Effects","Premiere Pro","DaVinci Resolve","Final Cut Pro","Blender","Maya"],
+    "game": ["Godot","Unity"],
+    "tools": ["Git","GitHub","VS Code"]
+  },
+  "contact": {
+    "github": "https://github.com/franciscaolive",
+    "linkedin": "https://www.linkedin.com/in/francisca-miranda-18702b347/",
+    "email": "franciscaolivmir@gmail.com",
+    "cv_en": "src/cv/CVFranciscaMirandaEnglish.pdf",
+    "cv_pt": "src/cv/CVFranciscaMirandaPortugues.pdf"
+  }
+}
