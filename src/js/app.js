@@ -89,7 +89,7 @@ function openGalleryViewer(images, startIndex = 0){
   const prevButton = document.createElement('button');
   prevButton.type = 'button';
   prevButton.className = 'gallery-viewer-button';
-  prevButton.textContent = 'Prev';
+  prevButton.textContent = '<';
 
   const image = document.createElement('img');
   image.alt = 'Project image';
@@ -97,7 +97,7 @@ function openGalleryViewer(images, startIndex = 0){
   const nextButton = document.createElement('button');
   nextButton.type = 'button';
   nextButton.className = 'gallery-viewer-button';
-  nextButton.textContent = 'Next';
+  nextButton.textContent = '>';
 
   const meta = document.createElement('div');
   meta.className = 'gallery-viewer-meta';
@@ -201,6 +201,76 @@ function createAccordionItem(label, url){
   return item;
 }
 
+function createCarousel(images, projectId, title = '') {
+  if (!images || !images.length) return null;
+  
+  let currentIndex = 0;
+  const carousel = document.createElement('div');
+  carousel.className = 'project-carousel';
+
+  const main = document.createElement('div');
+  main.className = 'project-carousel-main';
+
+  if (title) {
+    const titleEl = document.createElement('p');
+    titleEl.style.margin = '0 0 14px 0';
+    titleEl.style.fontSize = '18px';
+    titleEl.style.fontWeight = '500';
+    titleEl.textContent = title;
+    carousel.appendChild(titleEl);
+  }
+
+  const image = document.createElement('img');
+  image.alt = projectId;
+
+  const nav = document.createElement('div');
+  nav.className = 'project-carousel-nav';
+
+  const prev = document.createElement('button');
+  prev.type = 'button';
+  prev.className = 'project-carousel-button';
+  prev.textContent = '<';
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'project-carousel-button';
+  next.textContent = '>';
+
+  nav.appendChild(prev);
+  nav.appendChild(next);
+  main.appendChild(image);
+  main.appendChild(nav);
+
+  const sync = () => {
+    image.src = images[currentIndex];
+    image.alt = `${projectId} image ${currentIndex + 1}`;
+    const nextIdx = (currentIndex + 1) % images.length;
+    const prevIdx = (currentIndex - 1 + images.length) % images.length;
+    [nextIdx, prevIdx].forEach(i => {
+      const pre = new Image();
+      pre.decoding = 'async';
+      pre.loading = 'eager';
+      pre.src = images[i];
+    });
+  };
+
+  main.addEventListener('click', () => openGalleryViewer(images, currentIndex));
+  prev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    sync();
+  });
+  next.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    sync();
+  });
+
+  carousel.appendChild(main);
+  sync();
+  return carousel;
+}
+
 function renderProjectContent(project){
   const content = el('projectContent');
   if(!content) return;
@@ -218,62 +288,24 @@ function renderProjectContent(project){
   }
 
   if(project.type === 'gallery' && project.images && project.images.length){
-    let currentIndex = 0;
-    const carousel = document.createElement('div');
-    carousel.className = 'project-carousel';
-
-    const main = document.createElement('div');
-    main.className = 'project-carousel-main';
-
-    const image = document.createElement('img');
-    image.alt = project.id;
-
-    const nav = document.createElement('div');
-    nav.className = 'project-carousel-nav';
-
-    const prev = document.createElement('button');
-    prev.type = 'button';
-    prev.className = 'project-carousel-button';
-    prev.textContent = '<';
-
-    const next = document.createElement('button');
-    next.type = 'button';
-    next.className = 'project-carousel-button';
-    next.textContent = '>';
-
-    nav.appendChild(prev);
-    nav.appendChild(next);
-    main.appendChild(image);
-    main.appendChild(nav);
-
-    const sync = () => {
-      image.src = project.images[currentIndex];
-      image.alt = `${project.id} image ${currentIndex + 1}`;
-      const nextIdx = (currentIndex + 1) % project.images.length;
-      const prevIdx = (currentIndex - 1 + project.images.length) % project.images.length;
-      [nextIdx, prevIdx].forEach(i => {
-        const pre = new Image();
-        pre.decoding = 'async';
-        pre.loading = 'eager';
-        pre.src = project.images[i];
-      });
-    };
-
-    main.addEventListener('click', () => openGalleryViewer(project.images, currentIndex));
-    prev.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentIndex = (currentIndex - 1 + project.images.length) % project.images.length;
-      sync();
-    });
-    next.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentIndex = (currentIndex + 1) % project.images.length;
-      sync();
-    });
-
-    carousel.appendChild(main);
-    content.appendChild(carousel);
-    sync();
+    if(project.id === 'qmv2'){
+      const book = project.images.filter(img => img.includes('/book/'));
+      const sketches = project.images.filter(img => img.includes('/sketches/'));
+      
+      if(book.length){
+        const bookCarousel = createCarousel(book, project.id, 'Book');
+        content.appendChild(bookCarousel);
+      }
+      
+      if(sketches.length){
+        const sketchCarousel = createCarousel(sketches, project.id, 'Process');
+        content.appendChild(sketchCarousel);
+      }
+      return;
+    }
+    
+    const carousel = createCarousel(project.images, project.id);
+    if(carousel) content.appendChild(carousel);
     return;
   }
 
@@ -415,6 +447,10 @@ function renderProjects(){
       title.className = 'project-row-title';
       title.textContent = (p.title && p.title[locale]) || p.id;
 
+      const subtitle = document.createElement('span');
+      subtitle.className = 'project-row-subtitle';
+      subtitle.textContent = p.subtitle || p.type || '';
+
       const thumb = document.createElement('span');
       thumb.className = 'project-row-thumb';
       if(p.thumb){
@@ -427,6 +463,7 @@ function renderProjects(){
       }
 
       row.appendChild(title);
+      row.appendChild(subtitle);
       row.appendChild(thumb);
       list.appendChild(row);
     });

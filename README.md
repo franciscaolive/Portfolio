@@ -2,6 +2,8 @@
 
 live site: https://franciscaolive.github.io/Portfolio/
 
+current status: the site is currently undergoing an active redesign. while the platform is fully functional, i am continuously refining the UI and layout systems to better reflect my current practice.
+
 ### features
 
 - english + portuguese versions

@@ -8,6 +8,7 @@
     },
     "thumb": "src/images/projects/covers/FRONTEND.png",
     "type": "links",
+    "subtitle": "HTML / CSS / JavaScript",
     "links": [
       { "label": "Ahliyah Luna", "url": "https://ahliyah-luna.github.io/Portfolio/" },
       { "label": "T1 (In Development)", "url": "https://franciscaolive.github.io/T1/" },
@@ -24,6 +25,7 @@
     },
     "thumb": "src/images/projects/covers/FM.png",
     "type": "gallery",
+    "subtitle": "branding/web design",
     "images": [
       "src/images/projects/fm/1.png",
       "src/images/projects/fm/2.png",
@@ -44,6 +46,7 @@
     },
     "thumb": "src/images/projects/covers/QMV2.png",
     "type": "gallery",
+    "subtitle": "editorial design",
     "images": [
       "src/images/projects/qmv2/book/1.png",
       "src/images/projects/qmv2/book/2.png",
@@ -68,6 +71,7 @@
     },
     "thumb": "src/images/projects/covers/AWTF.jpg",
     "type": "gallery",
+    "subtitle": "graphic design",
     "images": [
       "src/images/projects/awtf/AWTF.jpg",
       "src/images/projects/awtf/GATE.jpeg"
@@ -82,6 +86,7 @@
     },
     "thumb": "src/images/projects/covers/JENKINS.jpg",
     "type": "video",
+    "subtitle": "reactive programming",
     "videos": [
       "https://www.dropbox.com/scl/fi/fpfwf2wg3gb31dj1yv6jt/jenkins.mp4?rlkey=6widcl3pcyiui3tujxu9fbnaz&dl=0",
       "https://www.dropbox.com/scl/fi/doevqit748qt1kju57cct/5shadesofpink.mp4?rlkey=2p3scz3x4mxnv2zzbqtsgmnnq&dl=0"
@@ -96,6 +101,7 @@
     },
     "thumb": "src/images/projects/covers/AFTERGLOW.png",
     "type": "embed",
+    "subtitle": "game development",
     "embed": "src/images/projects/afterglow_web/index.html",
     "videos": ["https://youtu.be/hAKl-SoCxt8","https://youtu.be/7YNOfbcE3HA"]
   }
