@@ -14,5 +14,5 @@ live site: https://franciscaolive.github.io/Portfolio/
 
 ##### let's connect!
 
-- github: https://github.com/franciscaolive
+- email: franciscaolivmir@gmail.com
 - linkedin: https://www.linkedin.com/in/francisca-miranda-18702b347/
