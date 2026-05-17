@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Francisca Miranda</title>
+  <link rel="stylesheet" href="../styles/projects.css">
+  <link rel="icon" href="../assets/icons/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="projects-topbar">
+    <div class="theme" role="group" aria-label="Theme toggle">
+      <button data-theme="light" type="button">LIGHT</button>
+      <span>/</span>
+      <button data-theme="dark" type="button">DARK</button>
+    </div>
+
+    <a href="../../index.html" class="back-home" id="back-home"></a>
+
+    <div class="lang-toggle" role="group" aria-label="Language toggle">
+      <button data-lang="en" type="button">EN</button>
+      <span>/</span>
+      <button data-lang="pt" type="button">PT</button>
+    </div>
+  </header>
+
+  <main class="projects-page">
+    <h1 class="name"><span class="script" id="name-first"></span> <span class="script" id="name-last"></span></h1>
+
+    <nav class="filters" id="filters" aria-label="Project filters"></nav>
+
+    <section class="projects-grid" id="projects-grid" aria-live="polite"></section>
+
+    <footer class="projects-footer" id="projects-footer"></footer>
+  </main>
+
+  <script src="../scripts/projects.js" defer></script>
+</body>
+</html>

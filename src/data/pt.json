@@ -1,0 +1,187 @@
+{
+	"home": {
+		"title": "Francisca Miranda",
+		"role_label": "DESIGN\nFRONT-END DEVELOPMENT",
+		"toggle_contacts": "CONTACTOS",
+		"toggle_about": "SOBRE MIM",
+		"back_home": "VOLTAR À PÁGINA INICIAL",
+		"back_projects": "VOLTAR À PÁGINA DE PROJETOS",
+		"filter_all": "TODOS",
+		"filter_design": "DESIGN",
+		"filter_development": "DESENVOLVIMENTO",
+		"filter_others": "OUTROS",
+		"name_first": "Francisca",
+		"name_last": "Miranda",
+		"intro": "Com base no Porto, sou designer e developer, a tirar o meu Mestrado na FEUP.\nO meu trabalho explora a interseção entre arte e tecnologia através de curadoria cuidada, self improvement e experiências criativas.",
+		"view_projects": "VER TODOS OS PROJETOS",
+		"copyright": "Francisca Miranda © 2026"
+	},
+	"contacts": {
+        "CVLabel": "CV",
+		"cvHref": "src/assets/cv/CVFranciscaMirandaPortugues.pdf",
+		"emailLabel": "EMAIL",
+		"emailHref": "mailto:franciscaolivmir@gmail.com",
+		"githubLabel": "GITHUB",
+		"githubHref": "https://github.com/franciscaolive",
+		"linkedinLabel": "LINKEDIN",
+		"linkedinHref": "https://www.linkedin.com/in/francisca-miranda-18702b347"
+	},
+	"projects": {
+		"items": [
+			{
+				"slug": "frontend",
+				"title": "Front-end Development",
+				"year": "2024",
+				"thumb": "../src/projects/covers/FRONTEND.png",
+				"alt": "Capa Front-end Development",
+				"mediaPlacement": "text-first",
+				"detail": {
+					"paragraphs": [
+						"Esta seleção de projetos documenta websites feitos, alguns em colaboração com o designer Eduardo Hora.",
+						"As páginas estão incorporadas de modo a poderem ser visitadas diretamente a partir do portfólio."
+					],
+					"media": [
+						{ "type": "iframe", "src": "https://ahliyah-luna.github.io/Portfolio/", "label": "Ahliyah Luna" },
+						{ "type": "iframe", "src": "https://franciscaolive.github.io/T1/", "label": "T1 (Em Desenvolvimento)" },
+						{ "type": "iframe", "src": "https://diana-coelho.github.io/Portfolio/", "label": "Diana Coelho" },
+						{ "type": "iframe", "src": "https://joana-p-pinto.github.io/Joana-Portfolio/", "label": "Joana Pinto" }
+					]
+				}
+			},
+			{
+				"slug": "fm",
+				"title": "FM by Francisca Miranda",
+				"year": "2024",
+				"thumb": "../src/projects/covers/FM.png",
+				"alt": "Capa FM project",
+				"mediaPlacement": "text-first",
+				"detail": {
+					"paragraphs": [
+						"FM é a minha marca pessoal em desenvolvimento. Este projeto junta todas as iterações do meu website pessoal. Documenta como tenho vindo a melhorar a forma de como me apresento a mim e ao meu trabalho. Cada versão começou no Figma, onde pude testar hierarquia, tipografia, layouts e ritmo, antes de começar a programar.",
+						"No fundo, FM demonstra um interesse em desenvolvimento pessoal e curadoria. Vejo a minha marca pessoal como um processo contínuo de intenção e gosto, para que o meu trabalho seja sempre apresentado com o mesmo nível de exigência com que ele foi feito. Os ecrãs selecionados mostram essa evolução através de abordagens diferentes no que toca à navegação, estrutura e tom, mas sempre com o mesmo objetivo."
+					],
+					"media": [
+						{
+							"type": "sequence",
+							"itemType": "image",
+							"from": 1,
+							"to": 11,
+							"srcTemplate": "../src/projects/FM/{n}.png",
+							"altTemplate": "FM ecrã {n}"
+						}
+					]
+				}
+			},
+			{
+				"slug": "qmv2",
+				"title": "quem me viu e quem me vê",
+				"year": "2024",
+				"thumb": "../src/projects/covers/QMV2.png",
+				"alt": "Capa quem me viu e quem me vê",
+				"mediaPlacement": "text-first",
+				"detail": {
+					"paragraphs": [
+						"quem me viu e quem me vê é um conto original e projeto de design editorial desenvolvido para a Unidade Curricular de Narrativas Interativas, na FEUP. O projeto exigia o desenvolvimento de uma narrativa original com o tema de identidade cultural.",
+						"O conceito para o design surge do título do projeto em si, uma expressão utilizada quando alguém olha para o presente e mal reconhece a pessoa que costumava ser; dita com uma mistura particular de perplexidade, ternura e descrença. A linguagem visual precisava de sustentar essa mesma tensão. As margens das páginas, desenvolvidas no Illustrator, foram construídas a partir da repetição do título, renderizado numa escala tão reduzida que é lido, à primeira vista, como grafismo decorativo.",
+						"A caligrafia desfocada no fundo funciona como um fantasma do título, presente mas não inteiramente legível, espelhando a tensão central da história.",
+						"O projeto foi montado no Illustrator, e a tipografia na capa foi feita no Photoshop. A hierarquia tipografia, a divisão de atos e o índice foram considerados extensões da narrativa, em vez de simples escolhas decorativas."
+					],
+					"media": [
+						{
+							"type": "sequence",
+							"itemType": "image",
+							"from": 1,
+							"to": 8,
+							"srcTemplate": "../src/projects/QMV2/book/{n}.png",
+							"altTemplate": "Quem me viu e quem me vê página {n}"
+						},
+						{
+							"type": "sequence",
+							"itemType": "image",
+							"from": 1,
+							"to": 4,
+							"srcTemplate": "../src/projects/QMV2/sketches/processo{n}.png",
+							"altTemplate": "Quem me viu e quem me vê process sketch {n}"
+						}
+					]
+				}
+			},
+			{
+				"slug": "awtf",
+				"title": "Away with the Fairies",
+				"year": "2024",
+				"thumb": "../src/projects/covers/AWTF.jpg",
+				"alt": "Capa away with the fairies",
+				"mediaPlacement": "text-first",
+				"detail": {
+					"paragraphs": [
+						"away with the fairies é um poster desenvolvido no Adobe Illustrator a partir de um ponto de observação: um portão no campus da FEUP. Utilizando a Rectangle Grid Tool como base generativa, o projeto traduz essa referência arquitetónica numa composição visual estilizada.",
+						"O trabalho explora a forma como um elemento real do ambiente construído pode ser abstraído num sistema gráfico criativo, equilibrando repetição, simetria e ritmo decorativo com uma sensibilidade de cartaz contemporânea. A intenção foi reinterpretar o objeto original para construir uma imagem que se sinta, simultaneamente, estruturada e atmosférica.",
+						"É um estudo formativo em observação, abstração e composição, utilizando ferramentas digitais não apenas para execução, mas para a descoberta de possibilidades visuais dentro de uma ideia inicial."
+					],
+					"media": [
+						{ "type": "image", "src": "../src/projects/AWTF/AWTF.jpg", "alt": "Poster Away with the Fairies" },
+						{ "type": "image", "src": "../src/projects/AWTF/GATE.jpeg", "alt": "Portão referência FEUP" }
+					]
+				}
+			},
+			{
+				"slug": "jenkins",
+				"title": "Jenkins / 5 Shades of Pink",
+				"year": "2024",
+				"thumb": "../src/projects/covers/JENKINS.jpg",
+				"alt": "Capa Jenkins",
+				"mediaPlacement": "text-first",
+				"detail": {
+					"paragraphs": [
+						"Jenkins foi desenvolvido no âmbito da Unidade Curricular de Programação III, cuja proposta consistia em criar, em Processing, um programa que produzisse uma sequência de imagens generativas para construir um vídeo em tempo real a partir do input sonoro do utilizador. Ou seja, o objetivo foi criar um vídeo com uma metodologia mista que explorasse as possibilidades estéticas e técnicas do Processing.",
+						"O código inclui vários inputs: as teclas S, D e H; as setas; os números de 1 a 5; o botão esquerdo do rato; e o arrastar do rato. Ao pressionar as teclas de 1 a 5, surgem diferentes imagens do filme Marie Antoinette (2006), que se sobrepõem e desaparecem ao voltar a carregar nas mesmas teclas.",
+						"O output inclui animações gráficas que reagem ao som, como uma onda sonora, triângulos gerados pelo movimento do rato, círculos que surgem ao pressionar a tecla D, formas geométricas aleatórias geradas ao clicar na tecla H, círculos que aparecem com a tecla S e são removidos com o rato, e círculos desencadeados pelas setas do teclado.",
+						"Este projeto foi realizado em colaboração com a minha colega Alice Logvina. Trabalhamos em conjunto para produzir os vários componentes em Processing. Ela ficou responsável pelos objetos 3D, como o cubo e o terreno, e eu pela programação dos restantes elementos.",
+						"Mais tarde, em colaboração com a Unidade Curricular de Design de Interfaces, este projeto evoluiu para uma instalação interativa com Processing e Arduino em simultâneo, dando origem ao 5 Shades of Pink.",
+						"Eu e a minha colega Alice Logvina voltamos a trabalhar em conjunto e colaboramos em todos os componentes, desde a programação em Processing até à utilização do Arduino.",
+						"Neste projeto, aproveitamos os desenvolvimentos gráficos do trabalho anterior e introduzimos interatividade através do Arduino e uma webcam. A webcam, ao detetar luz, gera pequenos triângulos na área iluminada. O cubo também roda em função da posição da luz. Além disso, com o Arduino, tínhamos 4 botões no centro da sala para alternar entre estes componente."
+					],
+					"media": [
+						{
+							"type": "video",
+							"src": "https://dl.dropboxusercontent.com/scl/fi/fpfwf2wg3gb31dj1yv6jt/jenkins.mp4?rlkey=6widcl3pcyiui3tujxu9fbnaz&st=oxbw7s4z&raw=1",
+							"label": "Jenkins 1º vídeo"
+						},
+						{
+							"type": "video",
+							"src": "https://dl.dropboxusercontent.com/scl/fi/doevqit748qt1kju57cct/5shadesofpink.mp4?rlkey=2p3scz3x4mxnv2zzbqtsgmnnq&st=005gqmk7&raw=1",
+							"label": "Jenkins 2º vídeo"
+						}
+					]
+				}
+			},
+			{
+				"slug": "afterglow",
+				"title": "afterglow",
+				"year": "2024",
+				"thumb": "../src/projects/covers/AFTERGLOW.png",
+				"alt": "Capa Afterglow",
+				"mediaPlacement": "media-first",
+				"detail": {
+					"paragraphs": [
+						"afterglow foi desenvolvido no último semestre da Licenciatura em Multimédia como um projeto individual que cruza design de jogos, ilustração, interface, animação e programação.",
+						"O projeto explora como a estrutura point-and-click pode sustentar uma experiência calma e imersiva, focada na atmosfera em vez da urgência.",
+						"Inserido num universo visual estilizado, inspirado em cozy gaming e em referências de cultura visual contemporânea, o jogo convida o jogador a explorar os espaços ao seu ritmo, descobrindo interações através da observação e da curiosidade. Em vez de conduzir o jogador com instruções explícitas, a experiência favorece uma descoberta mais intuitiva.",
+						"Esta abordagem é reforçada por uma interface maioritariamente diegética, onde a informação surge a partir do próprio mundo do jogo. Ao reduzir elementos externos de interface e apostar em pistas visuais, o projeto privilegia continuidade emocional, detalhe e presença.",
+						"A nível mecânico, Afterglow mantém-se deliberadamente simples: o jogador percorre ambientes, observa objetos e descobre elementos escondidos, com uma progressão assente na interação livre e não na pressão por objetivos. A ausência de tutoriais rígidos e metas explícitas transforma a repetição em vontade natural de voltar a explorar.",
+						"Conceptualmente, o projeto reflete sobre representação de género, acessibilidade e o papel da estética no design de videojogos. Afirma a sensibilidade visual como linguagem de projeto legítima e contribui para pensar formas de jogo mais diversas e acolhedoras.",
+						"Como resultado final, Afterglow tornou-se uma conquista pessoal e académica: um projeto coeso que demonstra crescimento técnico, mantendo uma identidade artística clara entre ilustração, design, som e interação."
+					],
+					"media": [
+						{ "type": "iframe", "src": "src/assets/afterglow/index.html", "label": "Web export jogável" },
+						{ "type": "image", "src": "../src/projects/covers/AFTERGLOW.png", "alt": "Capa Afterglow" }
+					],
+					"links": [
+						{ "href": "https://mooniightbae.itch.io/afterglow", "label": "ou joga no itch" }
+					]
+				}
+			}
+		]
+	}
+}

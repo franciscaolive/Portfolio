@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project - Francisca Miranda</title>
+  <link rel="stylesheet" href="../styles/project-detail.css">
+  <link rel="icon" href="../assets/icons/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="projects-topbar">
+    <div class="theme" role="group" aria-label="Theme toggle">
+      <button data-theme="light" type="button">LIGHT</button>
+      <span>/</span>
+      <button data-theme="dark" type="button">DARK</button>
+    </div>
+
+    <a href="projects-landing-page.html" class="back-home" id="back-projects"></a>
+
+    <div class="lang-toggle" role="group" aria-label="Language toggle">
+      <button data-lang="en" type="button">EN</button>
+      <span>/</span>
+      <button data-lang="pt" type="button">PT</button>
+    </div>
+  </header>
+
+  <main class="project-page" id="project-page"></main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close fullscreen">×</button>
+    <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightbox-image" alt="Expanded project image">
+    <button class="lightbox-nav next" id="lightbox-next" aria-label="Next image">›</button>
+  </div>
+
+  <script src="../scripts/project-detail.js" defer></script>
+</body>
+</html>
