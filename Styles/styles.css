@@ -1,0 +1,277 @@
+@font-face {
+    font-family: "Neue Haas";
+    src: url("../Assets/Fonts/NeueHaasDisplayRoman.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Neue Haas";
+    src: url("../Assets/Fonts/NeueHaasDisplayBlack.ttf") format("truetype");
+    font-weight: 900;
+    font-display: swap;
+}
+
+:root {
+    --cream: #fff9f3;
+    --peach: #e2a082;
+    --brown: #482a0d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: "Neue Haas", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+.home-page {
+    min-height: 100dvh;
+    overflow: hidden;
+    position: relative;
+}
+
+.site-header {
+    left: 3vw;
+    position: absolute;
+    top: 6.2vh;
+    z-index: 3;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 0.2em;
+}
+
+.nav-link,
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: var(--peach);
+    font-size: clamp(1rem, 1.25vw, 1.3rem);
+    font-weight: 900;
+    transition: color 180ms ease;
+}
+
+.nav-link:not(:last-child)::after {
+    color: var(--peach);
+    content: "•";
+    margin: 0 0.2em;
+}
+
+.nav-link.is-active {
+    color: var(--brown);
+}
+
+.nav-link:hover {
+    color: var(--brown);
+}
+
+.nav-link:focus-visible,
+.site-footer a:focus-visible,
+.contact-list a:focus-visible {
+    border-radius: 0.15em;
+    outline: 2px solid currentColor;
+    outline-offset: 0.2em;
+}
+
+.nav-link.is-active:hover {
+    color: var(--brown);
+}
+
+.site-footer a:hover {
+    color: var(--peach);
+}
+
+.name-mark {
+    left: 1vw;
+    max-width: 52vw;
+    position: absolute;
+    top: 2.5vh;
+    width: 53rem;
+    z-index: 2;
+}
+
+.portrait {
+    display: block;
+    height: 72vh;
+    left: 0;
+    object-fit: cover;
+    object-position: center top;
+    position: absolute;
+    top: 28vh;
+    width: 36vw;
+}
+
+.flourish {
+    position: absolute;
+    right: 2.6vw;
+    top: 2vh;
+    width: clamp(12rem, 22vw, 18rem);
+}
+
+.intro {
+    left: 37.2vw;
+    position: absolute;
+    top: 37.4vh;
+}
+
+.intro p {
+    color: var(--peach);
+    font-size: clamp(1.7rem, 2.55vw, 3rem);
+    font-weight: 900;
+    letter-spacing: 0.005em;
+    line-height: 1.16;
+    margin: 0;
+}
+
+.intro-details {
+    text-indent: 0.5em;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(1.7rem, 2.55vw, 3rem);
+    font-weight: 900;
+    gap: 0.1em;
+    line-height: 1.16;
+    position: absolute;
+    right: 2.7vw;
+    text-align: right;
+    top: 37.4vh;
+}
+
+.contact-list a {
+    color: var(--peach);
+    letter-spacing: 0.005em;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.contact-list a:hover {
+    color: var(--peach);
+}
+
+.contact-list a.cv-link:hover {
+    color: var(--brown);
+}
+
+.contact-value {
+    transition: color 180ms ease;
+}
+
+.contact-list a:hover .contact-value {
+    color: var(--brown);
+}
+
+.site-footer {
+    bottom: 3.7vh;
+    font-size: clamp(0.9rem, 1.12vw, 1.25rem);
+    font-weight: 900;
+    line-height: 1.12;
+    position: absolute;
+    right: 2.7vw;
+    text-align: right;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-page {
+        min-height: 100svh;
+        overflow: auto;
+    }
+
+    .site-header {
+        left: 6vw;
+        top: 4vh;
+    }
+
+    .name-mark {
+        left: 4vw;
+        max-width: 92vw;
+        top: 8vh;
+        width: 100%;
+    }
+
+    .flourish {
+        right: 5vw;
+        top: 3vh;
+        width: 25vw;
+    }
+
+    .portrait {
+        height: 58svh;
+        top: 32svh;
+        width: 100%;
+    }
+
+    .intro {
+        background: var(--cream);
+        left: 0;
+        padding: 1.75rem 6vw 2rem;
+        top: 90svh;
+        width: 100%;
+    }
+
+    .intro p {
+        font-size: clamp(1.5rem, 7vw, 2.3rem);
+    }
+
+    .contact-list {
+        background: var(--cream);
+        font-size: clamp(1.5rem, 7vw, 2.3rem);
+        padding: 1.75rem 6vw 2rem;
+        position: absolute;
+        right: 0;
+        text-align: left;
+        top: 90svh;
+        width: 100%;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .site-footer {
+        font-size: 0.9rem;
+        padding: 3rem 6vw 2rem;
+        position: static;
+        text-align: left;
+    }
+}
