@@ -36,6 +36,11 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+::selection {
+    background: var(--brown);
+    color: var(--cream);
+}
+
 .home-page {
     min-height: 100dvh;
     overflow: hidden;
@@ -160,22 +165,19 @@ body {
     color: var(--peach);
     letter-spacing: 0.005em;
     text-decoration: none;
-    transition: color 180ms ease;
 }
 
-.contact-list a:hover {
-    color: var(--peach);
-}
-
-.contact-list a.cv-link:hover {
-    color: var(--brown);
-}
-
+.contact-label,
 .contact-value {
+    color: var(--peach);
     transition: color 180ms ease;
 }
 
 .contact-list a:hover .contact-value {
+    color: var(--brown);
+}
+
+.contact-list a.cv-link:hover .contact-label {
     color: var(--brown);
 }
 
@@ -191,6 +193,174 @@ body {
 
 .site-footer p {
     margin: 0;
+}
+
+.projects-page {
+    min-height: 100dvh;
+    overflow: hidden;
+}
+
+.projects-layout {
+    display: grid;
+    gap: 7vw;
+    grid-template-columns: minmax(17rem, 36vw) minmax(0, 1fr);
+    min-height: 100dvh;
+    padding: 15rem 2.7vw 5rem 0;
+}
+
+.project-index {
+    min-width: 0;
+    overflow: auto;
+    padding-top: 3rem;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--brown);
+    cursor: pointer;
+    display: block;
+    font: inherit;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.project-card img {
+    aspect-ratio: 1.78 / 1;
+    display: block;
+    filter: saturate(0.86);
+    object-fit: cover;
+    opacity: 0.58;
+    transition: opacity 180ms ease;
+    width: 100%;
+}
+
+.project-card span {
+    display: block;
+    font-size: clamp(0.95rem, 1.18vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    padding: 0.55rem 0 0.1rem;
+}
+
+.project-card.is-selected img,
+.project-card:hover img {
+    opacity: 1;
+}
+
+.project-card.is-selected span {
+    font-weight: 900;
+}
+
+.project-card:focus-visible,
+.project-arrow:focus-visible,
+.project-open-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 0.3rem;
+}
+
+.project-display {
+    align-self: start;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr) 2rem;
+    grid-template-rows: auto auto auto;
+    margin-top: 3rem;
+    min-width: 0;
+    position: relative;
+}
+
+.project-frame-wrap {
+    aspect-ratio: 1.28 / 1;
+    background: #f0e8df;
+    grid-column: 2;
+    min-width: 0;
+    position: relative;
+}
+
+.project-frame {
+    background: #fff;
+    border: 0;
+    display: block;
+    height: 100%;
+    opacity: 1;
+    width: 100%;
+}
+
+.project-frame-status {
+    background: var(--cream);
+    bottom: 0.6rem;
+    font-size: 0.75rem;
+    left: 0.6rem;
+    opacity: 0.88;
+    padding: 0.35rem 0.5rem;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 180ms ease;
+}
+
+.project-frame-status.is-loaded {
+    opacity: 0;
+}
+
+.project-arrow {
+    align-self: center;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--brown);
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.7rem;
+    line-height: 1;
+    padding: 0.5rem;
+}
+
+.project-arrow:hover {
+    color: var(--peach);
+}
+
+.project-arrow--previous {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.project-arrow--next {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.project-open-link {
+    color: var(--brown);
+    font-size: 0.85rem;
+    grid-column: 2;
+    justify-self: end;
+    margin-top: 0.7rem;
+    text-decoration: none;
+}
+
+.project-open-link:hover {
+    color: var(--peach);
+}
+
+.project-description {
+    font-size: clamp(1.35rem, 2vw, 2.2rem);
+    font-weight: 900;
+    grid-column: 2;
+    line-height: 1.08;
+    margin: 1.4rem 0 0;
+}
+
+.projects-footer {
+    bottom: 2rem;
+    right: 2.7vw;
 }
 
 .visually-hidden {
@@ -273,5 +443,41 @@ body {
         padding: 3rem 6vw 2rem;
         position: static;
         text-align: left;
+    }
+
+    .projects-page {
+        overflow: auto;
+    }
+
+    .projects-layout {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        min-height: 0;
+        padding: 9rem 6vw 3rem;
+    }
+
+    .project-index,
+    .project-display {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .project-display {
+        grid-template-columns: 2rem minmax(0, 1fr) 2rem;
+    }
+
+    .project-frame-wrap {
+        aspect-ratio: 0.78 / 1;
+    }
+
+    .project-card span {
+        font-size: 1rem;
+    }
+
+    .projects-footer {
+        bottom: auto;
+        padding-top: 0;
     }
 }
