@@ -19,10 +19,27 @@
 :root {
     --blue: #032669;
     --beige: #fff9f3;
+    --background-color: var(--beige);
+    --text-color: var(--blue);
+}
+
+body.night-mode {
+    --background-color: var(--blue);
+    --text-color: var(--beige);
 }
 
 * {
     box-sizing: border-box;
+}
+
+::selection {
+    background: var(--blue);
+    color: var(--beige);
+}
+
+body.night-mode ::selection {
+    background: var(--beige);
+    color: var(--blue);
 }
 
 html {
@@ -37,9 +54,10 @@ html::-webkit-scrollbar {
 
 body {
     margin: 0;
-    background: var(--beige);
-    color: var(--blue);
+    background: var(--background-color);
+    color: var(--text-color);
     font-family: "Alte Haas Grotesk", Arial, sans-serif;
+    transition: background-color 180ms ease, color 180ms ease;
 }
 
 a {
@@ -60,11 +78,13 @@ a {
 
 .site-header {
     height: 111px;
-    border-bottom: 2px solid var(--blue);
+    border-bottom: 2px solid var(--text-color);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0 31px;
+    position: relative;
+    z-index: 2;
 }
 
 .site-title {
@@ -76,31 +96,42 @@ a {
     white-space: nowrap;
 }
 
-.site-nav {
-    display: flex;
-    align-items: center;
-    gap: 31px;
-    font-size: 29px;
-    line-height: 1;
-}
-
-.site-nav a,
-.work-link {
+.hero-links a,
+.theme-toggle {
     text-decoration: none;
     transition: opacity 180ms ease;
 }
 
-.site-nav a:hover,
-.work-link:hover {
+.hero-links a:hover,
+.theme-toggle:hover {
     opacity: 0.55;
 }
 
-.site-nav a:focus-visible,
-.work-link:focus-visible,
-.contact-work-link:focus-visible,
+.hero-links a:focus-visible,
+.theme-toggle:focus-visible,
 .contact-details a:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 5px;
+}
+
+.theme-toggle {
+    position: fixed;
+    right: 24px;
+    bottom: 18px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: 48px/1 "Times New Roman", serif;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity 180ms ease;
+    z-index: 3;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    opacity: 0.8;
 }
 
 .hero {
@@ -138,16 +169,21 @@ a {
     text-indent: 1.2em;
 }
 
-.work-link {
+.hero-links {
     position: absolute;
     bottom: 70px;
-    left: 50vw;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 31px;
     font-size: 32px;
     line-height: 1;
+}
+
+.hero-links a {
     text-decoration: underline;
     text-underline-offset: 5px;
-    white-space: nowrap;
 }
 
 .portrait {
@@ -188,23 +224,6 @@ a {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.contact-work-link {
-    position: absolute;
-    left: calc(100% + 20px);
-    bottom: 0;
-    color: inherit;
-    font-size: 28px;
-    line-height: 1;
-    white-space: nowrap;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    transition: opacity 180ms ease;
-}
-
-.contact-work-link:hover {
-    opacity: 0.55;
 }
 
 .contact-details {
@@ -252,6 +271,8 @@ a {
     width: 58%;
     height: auto;
     margin-top: 2%;
+    position: relative;
+    top: 35px;
 }
 
 .work-intro {
@@ -328,9 +349,9 @@ a {
         padding: 0 20px;
     }
 
-    .site-nav {
-        gap: 20px;
-        font-size: 22px;
+    .theme-toggle {
+        right: 20px;
+        bottom: 16px;
     }
 
     .hero {
@@ -356,7 +377,7 @@ a {
         text-indent: 1.2em;
     }
 
-    .work-link {
+    .hero-links {
         bottom: 35px;
         font-size: 28px;
     }
@@ -389,11 +410,6 @@ a {
         margin-top: 40px;
     }
 
-    .contact-work-link {
-        left: calc(100% + 14px);
-        font-size: 24px;
-    }
-
     .contact-details {
         order: 1;
         align-items: flex-end;
@@ -413,6 +429,7 @@ a {
         align-self: flex-end;
         width: 65%;
         margin: 0 0 40px;
+        top: auto;
     }
 
     .work-intro {
