@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Francisca Miranda, designer based in Porto.">
+    <link rel="icon" type="image/png" href="src/assets/images/favicon-64.png">
+    <link rel="stylesheet" href="src/assets/styles/styles.css">
     <title>Francisca Miranda—Portfolio</title>
 </head>
-<body>
-    
+<body id="top">
+    <header class="site-header">
+        <a class="site-title" href="#top" aria-label="Francisca Miranda home">Francisca Miranda</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#contact">Contacts</a>
+            <a href="#work">Work</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <section class="intro" aria-labelledby="intro-title">
+            <img class="name-mark" src="src/assets/images/text/name.png" alt="Francisca Miranda" width="1745" height="604" fetchpriority="high">
+            <p id="intro-title">
+                designer based in Porto.
+                <span>Currently pursuing a Master’s Degree in Multimedia at Faculdade de Engenharia
+                da Universidade do Porto and interning in UX/UI Design at LTPlabs.</span>
+            </p>
+            <a class="work-link" href="#work">view my work</a>
+        </section>
+        <img class="portrait" src="src/assets/images/homePage.webp" alt="Portrait detail of Francisca Miranda" width="556" height="753" fetchpriority="high">
+    </main>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <h2 class="visually-hidden" id="contact-title">Contacts</h2>
+        <img class="contact-mark" src="src/assets/images/text/contact.png" alt="" width="1311" height="511" loading="lazy" decoding="async">
+        <div class="contact-visual">
+            <img class="contact-portrait" src="src/assets/images/contactsPage.webp" alt="Portrait detail of Francisca Miranda" width="556" height="753" loading="lazy" decoding="async">
+            <a class="contact-work-link" href="#work">view my work</a>
+        </div>
+        <div class="contact-details">
+            <a href="mailto:franciscaolivmir@gmail.com">Email—franciscaolivmir@gmail.com</a>
+            <a href="https://www.instagram.com/kikinhagameplays">Instagram—kikinhagameplays</a>
+            <a href="https://github.com/franciscaolive">GitHub—franciscaolive</a>
+            <a href="https://www.linkedin.com/in/franciscaolive">LinkedIn—franciscaolive</a>
+            <span class="contact-cv">Download my CV</span>
+        </div>
+    </section>
+
+    <section class="work-section" aria-labelledby="work-title">
+        <span class="work-target" id="work" aria-hidden="true"></span>
+        <h2 class="visually-hidden" id="work-title">Work</h2>
+        <img class="work-mark" src="src/assets/images/text/work.png" alt="" width="1209" height="568" loading="lazy" decoding="async">
+        <div class="work-intro">
+            <p>
+                Eum repellendus autem omnis. Et rem autem rerum delectus. Dolor doloremque ea aut.
+                Sunt voluptates accusantium non nihil aut quia quia.
+            </p>
+            <p>
+                Eum repellendus autem omnis. Et rem autem rerum delectus. Dolor doloremque ea aut.
+                Sunt voluptates accusantium non nihil aut quia quia.
+            </p>
+        </div>
+        <div class="project-list">
+            <div class="project-card">
+                <img src="src/assets/images/projects/placeholder1.png" alt="Project 1 preview" width="515" height="183" loading="lazy" decoding="async">
+                <span>Project 1 (2026) - Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="project-card">
+                <img src="src/assets/images/projects/project2.png" alt="Web development project preview" width="2723" height="1564" loading="lazy" decoding="async">
+                <span>web development (2026) - collection of websites</span>
+            </div>
+            <div class="project-card">
+                <img src="src/assets/images/projects/placeholder3.png" alt="Project 2 preview" width="513" height="182" loading="lazy" decoding="async">
+                <span>Project 2 (2026) - Lorem ipsum dolor sit amet</span>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <span>built and designed by Francisca Miranda</span>
+            <span>2026 ©</span>
+        </footer>
+    </section>
 </body>
 </html>
