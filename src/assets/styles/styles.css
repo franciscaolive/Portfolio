@@ -137,9 +137,8 @@ a {
 }
 
 .theme-toggle {
-    position: fixed;
+    position: absolute;
     left: 31px;
-    bottom: 18px;
     padding: 0;
     border: 0;
     background: none;
@@ -147,13 +146,12 @@ a {
     cursor: pointer;
     opacity: 1;
     transition: opacity 180ms ease;
-    z-index: 3;
 }
 
 .theme-toggle img {
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
 }
 
 .theme-toggle:hover,
@@ -362,11 +360,6 @@ a {
     .site-nav {
         gap: 20px;
         font-size: 22px;
-    }
-
-    .theme-toggle {
-        left: 20px;
-        bottom: 16px;
     }
 
     .hero {

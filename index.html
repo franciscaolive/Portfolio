@@ -12,6 +12,9 @@
     <header class="site-header">
         <a class="site-title" href="#top" aria-label="Francisca Miranda home">Francisca Miranda</a>
         <nav class="site-nav" aria-label="Main navigation">
+            <button class="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false">
+                <img src="src/assets/images/icons/moon.png" data-light-src="src/assets/images/icons/moon.png" data-night-src="src/assets/images/icons/sun.png" alt="">
+            </button>
             <a href="#contact">Contacts</a>
             <a href="#work">Work</a>
         </nav>
@@ -77,25 +80,9 @@
             <span>2026 ©</span>
         </footer>
     </section>
-    <button class="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false">
-        <img src="src/assets/images/icons/moon.png" data-light-src="src/assets/images/icons/moon.png" data-night-src="src/assets/images/icons/sun.png" alt="">
-    </button>
     <script>
         const themeToggle = document.querySelector(".theme-toggle");
         const themedImages = document.querySelectorAll("[data-light-src][data-night-src]");
-        const siteFooter = document.querySelector(".site-footer");
-
-        const updateThemeTogglePosition = () => {
-            const footerBounds = siteFooter.getBoundingClientRect();
-            const defaultBottom = window.innerWidth <= 700 ? 16 : 18;
-            const footerGap = 12;
-            const shouldAvoidFooter = footerBounds.top < window.innerHeight - defaultBottom
-                && footerBounds.bottom > 0;
-
-            themeToggle.style.bottom = shouldAvoidFooter
-                ? `${window.innerHeight - footerBounds.top + footerGap}px`
-                : `${defaultBottom}px`;
-        };
 
         themeToggle.addEventListener("click", () => {
             const isNightMode = document.body.classList.toggle("night-mode");
@@ -106,10 +93,6 @@
                 image.src = isNightMode ? image.dataset.nightSrc : image.dataset.lightSrc;
             });
         });
-
-        window.addEventListener("scroll", updateThemeTogglePosition, { passive: true });
-        window.addEventListener("resize", updateThemeTogglePosition);
-        updateThemeTogglePosition();
     </script>
 </body>
 </html>
