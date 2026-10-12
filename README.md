@@ -1,4 +1,4 @@
-##### Francisca Miranda—Portfolio
+### Francisca Miranda—Portfolio
 
 .｡✧･ﾟ:* ~♡
 
